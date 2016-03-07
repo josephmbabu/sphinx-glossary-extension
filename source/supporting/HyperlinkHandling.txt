@@ -1,0 +1,36 @@
+.. index::
+   single: hyperlink; handling missing links for reStructuredText documentation
+
+.. important:: **Hyperlink Handling**
+   
+   Quite a few of the hyperlinks do not work between the reStructuredText documents which were from the Internet. We began repairing them when we found that there are places where the documentation is going to be added to and we'd lose all our work when we downloaded the new version. It is easier and better to teach you what to do because you will run into this other times on the Internet and it gives you a away to handle it. When you click on a bad link, look at the link and find the file it is referring to. It will also have a title after the # sign. You can use that file name and title to find what you are looking for. The following table will help you know where to find the files.
+
+.. list-table:: 
+   :header-rows: 1
+
+   * - Site Title
+     - Internet Name
+     - Local Name
+   * - An Introduction to reStructuredText
+     - introduction.html
+     - rstIntroduction.rst
+   * - A ReStructuredText Primer
+     - quickstart.html
+     - rstQuickstart.rst
+   * - reStructuredText Markup Specification
+     - restructuredtext.html
+     - restructuredtext.rst
+   * - reStructuredText Directives
+     - directives.html
+     - rstDirectives.html
+   * - reStructuredText Interpreted Text Roles
+     - roles.html
+     - rstRoles.rst
+   * - reStructuredText Standard Definition Files
+     - definitions.html
+     - rstDefinitions.rst
+   * - The Docutils Document Tree
+     - docTree.html
+     - docTree.rst
+
+

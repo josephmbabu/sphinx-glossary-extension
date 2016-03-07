@@ -1,0 +1,10 @@
+These are supporting files for building this site. They are not directly included in the site. 
+
+ten3 directory - this contains the theme for this site. Place it with the other Sphinx themes if you want to use. The site explains how to use it. If you UPDATE the source theme, be sure to put the new copy here. 
+
+sphinxdoc3 is another fun theme.
+
+HypertextHandling.txt - this explains what to do about missing hyperlinks. It is included into multiple files. We named it .txt so we do not get a warning that it is not included in a toctree.
+
+imageSubstitutions.txt is so we can change the substituions in just one place.
+
