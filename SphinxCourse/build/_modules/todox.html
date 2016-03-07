@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>todox &mdash; Sphinx Course</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Sphinx Course" href="../index.html" />
+    <link rel="up" title="Module code" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Sphinx Course</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/TEN3Logo.gif" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for todox</h1><div class="highlight"><pre>
+<span></span>
+
+<span class="kn">from</span> <span class="nn">docutils</span> <span class="kn">import</span> <span class="n">nodes</span>
+
+<div class="viewcode-block" id="todo"><a class="viewcode-back" href="../coderst/todox.html#todox.todo">[docs]</a><span class="k">class</span> <span class="nc">todo</span><span class="p">(</span><span class="n">nodes</span><span class="o">.</span><span class="n">Admonition</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Element</span><span class="p">):</span>
+    <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="todolist"><a class="viewcode-back" href="../coderst/todox.html#todox.todolist">[docs]</a><span class="k">class</span> <span class="nc">todolist</span><span class="p">(</span><span class="n">nodes</span><span class="o">.</span><span class="n">General</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Element</span><span class="p">):</span>
+    <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="visit_todo_node"><a class="viewcode-back" href="../coderst/todox.html#todox.visit_todo_node">[docs]</a><span class="k">def</span> <span class="nf">visit_todo_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">visit_admonition</span><span class="p">(</span><span class="n">node</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="depart_todo_node"><a class="viewcode-back" href="../coderst/todox.html#todox.depart_todo_node">[docs]</a><span class="k">def</span> <span class="nf">depart_todo_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">depart_admonition</span><span class="p">(</span><span class="n">node</span><span class="p">)</span></div>
+
+<span class="kn">from</span> <span class="nn">docutils.parsers.rst</span> <span class="kn">import</span> <span class="n">Directive</span>
+
+<div class="viewcode-block" id="TodolistDirective"><a class="viewcode-back" href="../coderst/todox.html#todox.TodolistDirective">[docs]</a><span class="k">class</span> <span class="nc">TodolistDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TodolistDirective.run"><a class="viewcode-back" href="../coderst/todox.html#todox.TodolistDirective.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">todolist</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)]</span></div></div>
+
+<span class="kn">from</span> <span class="nn">sphinx.util.compat</span> <span class="kn">import</span> <span class="n">make_admonition</span>
+<span class="kn">from</span> <span class="nn">sphinx.locale</span> <span class="kn">import</span> <span class="n">_</span>
+
+<div class="viewcode-block" id="TodoDirective"><a class="viewcode-back" href="../coderst/todox.html#todox.TodoDirective">[docs]</a><span class="k">class</span> <span class="nc">TodoDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
+
+    <span class="c1"># this enables content in the directive</span>
+    <span class="n">has_content</span> <span class="o">=</span> <span class="bp">True</span>
+
+<div class="viewcode-block" id="TodoDirective.run"><a class="viewcode-back" href="../coderst/todox.html#todox.TodoDirective.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">env</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">document</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">env</span>
+
+        <span class="n">targetid</span> <span class="o">=</span> <span class="s2">&quot;todo-</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">env</span><span class="o">.</span><span class="n">new_serialno</span><span class="p">(</span><span class="s1">&#39;todo&#39;</span><span class="p">)</span>
+        <span class="n">targetnode</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">target</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="n">targetid</span><span class="p">])</span>
+
+        <span class="n">ad</span> <span class="o">=</span> <span class="n">make_admonition</span><span class="p">(</span><span class="n">todo</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="p">[</span><span class="n">_</span><span class="p">(</span><span class="s1">&#39;Todo&#39;</span><span class="p">)],</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lineno</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_offset</span><span class="p">,</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">block_text</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">state_machine</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="s1">&#39;todo_all_todos&#39;</span><span class="p">):</span>
+            <span class="n">env</span><span class="o">.</span><span class="n">todo_all_todos</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">env</span><span class="o">.</span><span class="n">todo_all_todos</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s1">&#39;docname&#39;</span><span class="p">:</span> <span class="n">env</span><span class="o">.</span><span class="n">docname</span><span class="p">,</span>
+            <span class="s1">&#39;lineno&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">lineno</span><span class="p">,</span>
+            <span class="s1">&#39;todo&#39;</span><span class="p">:</span> <span class="n">ad</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(),</span>
+            <span class="s1">&#39;target&#39;</span><span class="p">:</span> <span class="n">targetnode</span><span class="p">,</span>
+        <span class="p">})</span>
+
+        <span class="k">return</span> <span class="p">[</span><span class="n">targetnode</span><span class="p">]</span> <span class="o">+</span> <span class="n">ad</span></div></div>
+
+<div class="viewcode-block" id="purge_todos"><a class="viewcode-back" href="../coderst/todox.html#todox.purge_todos">[docs]</a><span class="k">def</span> <span class="nf">purge_todos</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">env</span><span class="p">,</span> <span class="n">docname</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="s1">&#39;todo_all_todos&#39;</span><span class="p">):</span>
+        <span class="k">return</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">todo_all_todos</span> <span class="o">=</span> <span class="p">[</span><span class="n">todo</span> <span class="k">for</span> <span class="n">todo</span> <span class="ow">in</span> <span class="n">env</span><span class="o">.</span><span class="n">todo_all_todos</span>
+                          <span class="k">if</span> <span class="n">todo</span><span class="p">[</span><span class="s1">&#39;docname&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">docname</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="process_todo_nodes"><a class="viewcode-back" href="../coderst/todox.html#todox.process_todo_nodes">[docs]</a><span class="k">def</span> <span class="nf">process_todo_nodes</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">doctree</span><span class="p">,</span> <span class="n">fromdocname</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">todo_include_todos</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">doctree</span><span class="o">.</span><span class="n">traverse</span><span class="p">(</span><span class="n">todo</span><span class="p">):</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+
+    <span class="c1"># Replace all todolist nodes with a list of the collected todos.</span>
+    <span class="c1"># Augment each todo with a backlink to the original location.</span>
+    <span class="n">env</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">env</span>
+
+    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">doctree</span><span class="o">.</span><span class="n">traverse</span><span class="p">(</span><span class="n">todolist</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">todo_include_todos</span><span class="p">:</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">replace_self</span><span class="p">([])</span>
+            <span class="k">continue</span>
+
+        <span class="n">content</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">todo_info</span> <span class="ow">in</span> <span class="n">env</span><span class="o">.</span><span class="n">todo_all_todos</span><span class="p">:</span>
+            <span class="n">para</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">paragraph</span><span class="p">()</span>
+            <span class="n">filename</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">doc2path</span><span class="p">(</span><span class="n">todo_info</span><span class="p">[</span><span class="s1">&#39;docname&#39;</span><span class="p">],</span> <span class="n">base</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+            <span class="n">description</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">_</span><span class="p">(</span><span class="s1">&#39;(The original entry is located in </span><span class="si">%s</span><span class="s1">, line </span><span class="si">%d</span><span class="s1"> and can be found &#39;</span><span class="p">)</span> <span class="o">%</span>
+                <span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">todo_info</span><span class="p">[</span><span class="s1">&#39;lineno&#39;</span><span class="p">]))</span>
+            <span class="n">para</span> <span class="o">+=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="n">description</span><span class="p">,</span> <span class="n">description</span><span class="p">)</span>
+
+            <span class="c1"># Create a reference</span>
+            <span class="n">newnode</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">reference</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+            <span class="n">innernode</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">emphasis</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s1">&#39;here&#39;</span><span class="p">),</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;here&#39;</span><span class="p">))</span>
+            <span class="n">newnode</span><span class="p">[</span><span class="s1">&#39;refdocname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">todo_info</span><span class="p">[</span><span class="s1">&#39;docname&#39;</span><span class="p">]</span>
+            <span class="n">newnode</span><span class="p">[</span><span class="s1">&#39;refuri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">get_relative_uri</span><span class="p">(</span>
+                <span class="n">fromdocname</span><span class="p">,</span> <span class="n">todo_info</span><span class="p">[</span><span class="s1">&#39;docname&#39;</span><span class="p">])</span>
+            <span class="n">newnode</span><span class="p">[</span><span class="s1">&#39;refuri&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="n">todo_info</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">][</span><span class="s1">&#39;refid&#39;</span><span class="p">]</span>
+            <span class="n">newnode</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">innernode</span><span class="p">)</span>
+            <span class="n">para</span> <span class="o">+=</span> <span class="n">newnode</span>
+            <span class="n">para</span> <span class="o">+=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s1">&#39;.)&#39;</span><span class="p">,</span> <span class="s1">&#39;.)&#39;</span><span class="p">)</span>
+
+            <span class="c1"># Insert into the todolist</span>
+            <span class="n">content</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">todo_info</span><span class="p">[</span><span class="s1">&#39;todo&#39;</span><span class="p">])</span>
+            <span class="n">content</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">para</span><span class="p">)</span>
+
+        <span class="n">node</span><span class="o">.</span><span class="n">replace_self</span><span class="p">(</span><span class="n">content</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="setup"><a class="viewcode-back" href="../coderst/todox.html#todox.setup">[docs]</a><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_config_value</span><span class="p">(</span><span class="s1">&#39;todox_include_todos&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="s1">&#39;html&#39;</span><span class="p">)</span>
+
+    <span class="n">app</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">todolist</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">todo</span><span class="p">,</span>
+                 <span class="n">html</span><span class="o">=</span><span class="p">(</span><span class="n">visit_todo_node</span><span class="p">,</span> <span class="n">depart_todo_node</span><span class="p">),</span>
+                 <span class="n">latex</span><span class="o">=</span><span class="p">(</span><span class="n">visit_todo_node</span><span class="p">,</span> <span class="n">depart_todo_node</span><span class="p">),</span>
+                 <span class="n">text</span><span class="o">=</span><span class="p">(</span><span class="n">visit_todo_node</span><span class="p">,</span> <span class="n">depart_todo_node</span><span class="p">))</span>
+
+    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s1">&#39;todox&#39;</span><span class="p">,</span> <span class="n">TodoDirective</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s1">&#39;todoxlist&#39;</span><span class="p">,</span> <span class="n">TodolistDirective</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;doctree-resolved&#39;</span><span class="p">,</span> <span class="n">process_todo_nodes</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;env-purge-doc&#39;</span><span class="p">,</span> <span class="n">purge_todos</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;0.1&#39;</span><span class="p">}</span>   <span class="c1"># identifies the version of our extension</span></div>
+
+
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Sphinx Course</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, TEN3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+  </body>
+</html>
