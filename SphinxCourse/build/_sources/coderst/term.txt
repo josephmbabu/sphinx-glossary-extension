@@ -1,7 +1,7 @@
-todox module
-============
+term module
+===========
 
-.. automodule:: todox
+.. automodule:: term
     :members:
     :undoc-members:
     :show-inheritance:

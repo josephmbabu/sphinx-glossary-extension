@@ -6,4 +6,4 @@ Code
 
    hello
    moduleExample
-   todox
+   termx

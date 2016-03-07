@@ -46,8 +46,13 @@ From the Terminal: [#f1]_
 
 Or you can use the Synaptic Package Manager or the software loading method used by the Linux distro you are using, such as the Ubuntu Software Center. 
 
-.. todo::
+.. termx::
    My system seems to be using Python 2. I'm not sure how to clean that up before we build a linux iso for the course? ajp
+
+.. termx::
+   Example term for todox.
+
+.. termxlist::
 
 
 Windows
@@ -59,10 +64,6 @@ Windows
    * To install pip go to http://sphinx-doc.org/latest/install.html and search for https://bootstrap.pypa.io/get-pip.py then download it somewhere. After download, invoke the command prompt, go to the directory with get-pip.py and run this command:
    * C:\> python get-pip.py
 * the docutils, Jinja2, Pygments libraries. 
-
-.. todo::
-  
-   find out how to do these libraries in Windows!!!
 
 * C:\> pip install sphinx. You may have to find the pip.exe. I found it under Python33\Scripts. Change to that directory and run the command there to test it. Then decide where you want to put the program and other folders. You may not decide this until you've done some testing in the tutorial. Then you may want to add the sphinx to your path if you are using Windows.
 
