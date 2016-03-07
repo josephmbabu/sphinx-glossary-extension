@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Changing the theme &mdash; Sphinx Course</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Sphinx Course" href="../index.html" />
+    <link rel="up" title="Documentation" href="documentation.html" />
+    <link rel="next" title="Experimenting" href="Experiment.html" />
+    <link rel="prev" title="Adding Python Code" href="AddingPython.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="Experiment.html" title="Experimenting"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="AddingPython.html" title="Adding Python Code"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Sphinx Course</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="documentation.html" accesskey="U">Documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/TEN3Logo.gif" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Changing the theme</a><ul>
+<li><a class="reference internal" href="#making-our-own-theme">Making our own theme</a></li>
+<li><a class="reference internal" href="#adding-a-logo">Adding a logo</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="AddingPython.html"
+                        title="previous chapter">Adding Python Code</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Experiment.html"
+                        title="next chapter">Experimenting</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/doc/ChangingTheme.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="changing-the-theme">
+<span id="changingtheme"></span><h1>Changing the theme<a class="headerlink" href="#changing-the-theme" title="Permalink to this headline">¶</a></h1>
+<p id="index-0">Now to have some fun. Let&#8217;s change the entire way your site looks with just a couple of keystrokes.</p>
+<ul>
+<li><p class="first">Find the <cite>Options for HTML output</cite> section of conf.py.</p>
+</li>
+<li><p class="first">Place a comment sign (#) in the first column of the <cite>html_theme = &#8216;alabaster&#8217;</cite> line.</p>
+</li>
+<li><p class="first">Add the following line, or if it already exists, then remove the comment mark. Remember, Python works on indents so keep the indentation of the code the same:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;classic&#39;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Change the <cite>html_theme_options</cite> line to be:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;rightsidebar&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;relbarbgcolor&quot;</span><span class="p">:</span> <span class="s2">&quot;black&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Rebuild your site and see the effect.</p>
+</li>
+</ul>
+<div class="section" id="making-our-own-theme">
+<h2>Making our own theme<a class="headerlink" href="#making-our-own-theme" title="Permalink to this headline">¶</a></h2>
+<p id="index-1">The first thing we need to do is to fine out where Sphinx stores is themes, which are .css (cascading style sheets) files. We can find it by using our file browser and search for classic.css. We found it in two locations. One is with the local Sphinx documentation we include with the course. The other was found in:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>/usr/local/lib/python2.7/dist-packages/sphinx/themes
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This material is written for Linux. If you are using Windows, make sure you use the backslash \.</p>
+</div>
+<p>We are going to need privileges to work with these directories and files.</p>
+<ul>
+<li><p class="first">Open a terminal.</p>
+</li>
+<li><p class="first">Change to the directory where the themes are located and issue:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>sudo cp -r classic ten3
+</pre></div>
+</div>
+</li>
+</ul>
+<p>You will be asked for your password. If this is a school system, you will need your teacher to enter the password.</p>
+<p>The cp command made a copy of the classic directory and named it ten3. The -r option made the command recursive incase there are sub-directories.</p>
+<ul class="simple">
+<li>Change the theme in conf.py to ten3</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">We will use the name ten3.css_t in our examples. However, you use the name you&#8217;ve choosen for your style sheet.</p>
+</div>
+<p>Now we have a theme we can play with and change as we like. We need to change the permissions on the files and directory in the directory we just made so we can edit them. The file we want to work on is the subfolder static. Issue the following command:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; sudo chmod 777 static
+&gt; sudo chmod 777 theme.conf
+&gt; cd ..
+&gt; sudo chmod 777 ten3
+</pre></div>
+</div>
+<p>Do the following:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; cd ten3/static
+&gt; sudo mv classic.css_t ten3.css_t
+&gt; sudo chmod 777 ten3.css_t
+</pre></div>
+</div>
+<p>The mv (move) command basically renamed the file for us. Then we changed the permissions so now we can edit the ten3.css_t file. We are now ready to start making changes and see what that does to our site.</p>
+<ul>
+<li><p class="first">edit theme.conf and change the stylesheet to ten3.</p>
+</li>
+<li><p class="first">edit ten3.css_t and find code that looks like:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>body {
+    font-family: {{ theme_bodyfont }};
+    font-size: 100%;
+    background-color: {{ theme_footerbgcolor }};
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+</pre></div>
+</div>
+</li>
+<li><p class="first">Change the 100% font-size to %200</p>
+</li>
+<li><p class="first">Open the index.rst and type in a space and then delete and then save the file.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The changes we made to the styles will not force a rebuild, but changing a .rst file will make sure a rebuild happens.</p>
+</div>
+<ul class="simple">
+<li>Rebuild your site and see what happened.</li>
+</ul>
+<p><a class="reference internal" href="../_images/Pencil1.png"><img alt="Try It" class="align-middle" src="../_images/Pencil1.png" style="width: 38px;" /></a> Now play with colors and sizes in your new style sheet. Rebuilding to see the effect. Note, if you want to find out the hex numbers for colors open GIMP to the following.</p>
+<ul class="simple">
+<li>If the tool box is not open, use Windows &gt; New Toolbox and then click on the forground/background option.</li>
+</ul>
+<img alt="../_images/GIMPToolBoxForeground.png" class="align-center" src="../_images/GIMPToolBoxForeground.png" />
+<ul class="simple">
+<li>Click on a color and you&#8217;ll see the HTML notation which is the hex number for the color that was clicked on. It is ed1c1c in the example below.</li>
+</ul>
+<img alt="../_images/GIMPColorPaletHexNumbers.png" class="align-center" src="../_images/GIMPColorPaletHexNumbers.png" />
+<ul>
+<li><p class="first">Open ten3.css_t for editting and change the opening links to something like:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>/*
+ * ten3.css_t
+ * ~~~~~~~~~~~~~
+ *
+ * TEN3 stylesheet -- default theme.
+ *
+ * Adapted from the Sphinx stylesheet,
+ * :copyright: Copyright 2007-2015 by the Sphinx team, see AUTHORS.
+ * :license: BSD, see LICENSE for details.
+ *
+ */
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Notice, we make it clear that we got this material from Sphinx. The BSD licences allows us to do this. We do not change the license because part of using BSD materials is to keep it BSD, that is open for others to use.</p>
+</div>
+<div class="section" id="adding-a-logo">
+<h2>Adding a logo<a class="headerlink" href="#adding-a-logo" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Find a small graphic you&#8217;d like to use as a logo.</li>
+<li>In the source directory add a sub-directory named images.</li>
+<li>Put your logo in the images directory.</li>
+<li>Edit the conf.py and search for <code class="docutils literal"><span class="pre">html_logo</span></code> and change <code class="docutils literal"><span class="pre">None</span></code> to <code class="docutils literal"><span class="pre">'images/TEN3Logo.gif'</span></code> replacing TEN3Logo.gif to the name of your logo.</li>
+<li>Rebuilt the site.</li>
+</ul>
+<p><a class="reference internal" href="../_images/Pencil1.png"><img alt="Try It" class="align-middle" src="../_images/Pencil1.png" style="width: 38px;" /></a> Pick another theme, such as sphinxdoc, make a copy and customize it.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="Experiment.html" title="Experimenting"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="AddingPython.html" title="Adding Python Code"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Sphinx Course</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="documentation.html" >Documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, TEN3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+  </body>
+</html>

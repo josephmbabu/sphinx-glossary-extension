@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>–equipLocData.sql &mdash; Sphinx Course</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Sphinx Course" href="../index.html" />
+    <link rel="up" title="SQL Code" href="scode.html" />
+    <link rel="next" title="Code" href="../coderst/modules.html" />
+    <link rel="prev" title="SQL Code" href="scode.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../coderst/modules.html" title="Code"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="scode.html" title="SQL Code"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Sphinx Course</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="scode.html" accesskey="U">SQL Code</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/TEN3Logo.gif" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">&#8211;equipLocData.sql</a><ul>
+<li><a class="reference internal" href="#add-equipment">Add Equipment</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="scode.html"
+                        title="previous chapter">SQL Code</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../coderst/modules.html"
+                        title="next chapter">Code</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/scode/equipLocData.sql.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="equiplocdata-sql">
+<h1>&#8211;equipLocData.sql<a class="headerlink" href="#equiplocdata-sql" title="Permalink to this headline">¶</a></h1>
+<p>/*</p>
+<p>Setting up the equipment and location portion of the equipment subsystem.</p>
+<blockquote>
+<div></div></blockquote>
+<p id="index-0">This is just an example that we can put Sphinx commands in an SQL document if we:</p>
+<ul>
+<li><p class="first">Give the file an rst extension so they are evaluated.</p>
+</li>
+<li><p class="first">The first two lines in the file should be a subsection title because this is seen as a comment:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>--equipLocData
+--------------
+</pre></div>
+</div>
+</li>
+<li><p class="first">Use the multiple line comment / * and * / for your other comments. (Do not include spaces between the slashes and stars. We did that so there is not an error when SQL processes this file.)</p>
+</li>
+<li><p class="first">You can add formatting, indexing and so forth inside the comments.</p>
+</li>
+</ul>
+<p>*/</p>
+<p>INSERT INTO tblLocation (id,name,detail) VALUES (1,&#8217;room 105&#8217;,&#8217;math class&#8217;);</p>
+<p>INSERT INTO tblLocation (id,name,detail) VALUES (2,&#8217;room 107&#8217;,&#8217;science class&#8217;);</p>
+<p>INSERT INTO tblLocation (id,name,detail) VALUES (3,&#8217;room 209&#8217;,&#8217;art class&#8217;);</p>
+<p>/*</p>
+<div class="section" id="add-equipment">
+<h2>Add Equipment<a class="headerlink" href="#add-equipment" title="Permalink to this headline">¶</a></h2>
+<p>Notice we didn&#8217;t put blank lines so the commands are written as paragraphs which are harder to read.</p>
+<p>*/</p>
+<p>INSERT INTO tblEquipment (id,name,locationId) VALUES (1,&#8217;Desktop01&#8217;,1);
+INSERT INTO tblEquipment (id,name,locationId) VALUES (2,&#8217;Desktop02&#8217;,1);
+INSERT INTO tblEquipment (id,name,locationId) VALUES (3,&#8217;Desktop03&#8217;,1);</p>
+<p>INSERT INTO tblEquipment (id,name,locationId) VALUES (11,&#8217;Desktop11&#8217;,2);
+INSERT INTO tblEquipment (id,name,locationId) VALUES (21,&#8217;Desktop21&#8217;,3);
+INSERT INTO tblEquipment (id,name,locationId) VALUES (22,&#8217;Desktop22&#8217;,3);</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../coderst/modules.html" title="Code"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="scode.html" title="SQL Code"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Sphinx Course</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="scode.html" >SQL Code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, TEN3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+  </body>
+</html>

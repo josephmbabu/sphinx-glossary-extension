@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Organizing your work &mdash; Sphinx Course</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Sphinx Course" href="../index.html" />
+    <link rel="up" title="Documentation" href="documentation.html" />
+    <link rel="next" title="Adding Python Code" href="AddingPython.html" />
+    <link rel="prev" title="Hello World" href="HelloWorld.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="AddingPython.html" title="Adding Python Code"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="HelloWorld.html" title="Hello World"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Sphinx Course</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="documentation.html" accesskey="U">Documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/TEN3Logo.gif" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Organizing your work</a><ul>
+<li><a class="reference internal" href="#table-of-contents-tree-toctree-directive">Table of Contents Tree (toctree directive)</a><ul>
+<li><a class="reference internal" href="#cross-referencing">Cross-referencing</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#getting-files-to-show-up-in-the-toc">Getting files to show up in the TOC</a></li>
+<li><a class="reference internal" href="#directories">Directories</a></li>
+<li><a class="reference internal" href="#adding-sql-files">Adding SQL files</a></li>
+<li><a class="reference internal" href="#indexing">Indexing</a></li>
+<li><a class="reference internal" href="#rebuild-site">Rebuild Site</a><ul>
+<li><a class="reference internal" href="#no-targets-are-out-of-date">no targets are out of date</a></li>
+<li><a class="reference internal" href="#build-succeeded-with-no-warnings">build succeeded with no warnings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="HelloWorld.html"
+                        title="previous chapter">Hello World</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="AddingPython.html"
+                        title="next chapter">Adding Python Code</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/doc/Organizing.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="organizing-your-work">
+<span id="organizing"></span><h1>Organizing your work<a class="headerlink" href="#organizing-your-work" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="table-of-contents-tree-toctree-directive">
+<span id="index-0"></span><h2>Table of Contents Tree (toctree directive)<a class="headerlink" href="#table-of-contents-tree-toctree-directive" title="Permalink to this headline">¶</a></h2>
+<p>In this chapter we will explore how the toctree works. We will not exhaust the options, but get it to the point were we can organize our work.</p>
+<dl class="glossary docutils">
+<dt id="term-toc-standards-for-table-of-contents">TOC standards for table of contents.</dt>
+<dd></dd>
+</dl>
+<ul class="simple">
+<li>First we will build a template page that we can use to start other pages. In an editor make the following page. Name it template.rst and save it in the source folder with the index.rst.</li>
+</ul>
+<div class="code highlight-python" id="index-2"><div class="highlight"><pre><span></span>.. _template:
+
+########################
+Template for Pages
+########################
+
+The # above and below are used for Parts headings.
+
+This is an empty page that we can use to build other pages.
+
+We also uses it to keep track of some of our most used formatting so can find it quickly.
+
+*****************
+Chapters
+*****************
+
+Sections
+==================
+
+Subsections
+--------------------
+
+Subsubsections
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Paragraphs
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+</pre></div>
+</div>
+<p>As you work with Sphinx you can save whatever you desire in the template to help you make pages. The above is just an example. You do not need to include all the heading examples if you do not desire.</p>
+<dl class="docutils">
+<dt>Tibits::</dt>
+<dd><ul class="first last simple">
+<li>The lines (symbols) have to be at least as long as the title.</li>
+<li>The above and below lines needs to be the same length.</li>
+<li>The hierarchy of symbols is not fixed. That is, if you use = first in your document and then use # later, the = becomes heading 1 and the # becomes a lower level heading.</li>
+</ul>
+</dd>
+</dl>
+<div class="admonition-todo admonition" id="index-3">
+<p class="first admonition-title">Todo</p>
+<p class="last">Test this more. Concerning the last tidbit, the heading methods systems to be dynamic. If you throw in a ## now it will not be at the top of the list. See if it can be the top by putting it in the first file or something. Find out how this works and decide what to do.</p>
+</div>
+<div class="section" id="cross-referencing">
+<span id="cross-reference"></span><span id="index-4"></span><h3>Cross-referencing<a class="headerlink" href="#cross-referencing" title="Permalink to this headline">¶</a></h3>
+<p>The first line, <code class="docutils literal"><span class="pre">..</span> <span class="pre">_template:</span></code>, is a label name (also called a target) for cross-referencing purpose. It other applications this is often called a bookmark. The underscore and one : indicating it as a reference. (Directives have two colons :.) Having a label name means we can refer to this file from other pages by including:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>:ref:`template`
+</pre></div>
+</div>
+<p>Notice that the underscore does not proceed the name when you use it.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Label names need to be directly above the section title. There should not be anything between them besides a blank line.</p>
+</div>
+<ul class="simple">
+<li>In a terminal run <code class="docutils literal"><span class="pre">sphinx-build</span> <span class="pre">-b</span> <span class="pre">html</span> <span class="pre">source</span> <span class="pre">build</span></code></li>
+</ul>
+<p>The -b html tells sphinx-build to create a website with html. There are other formats that you can build like PDF. We can consider those later. We just wanted to give you the reason for the -b html to help you remember the syntax so when we tell you to rebuild the site, you know to use this command and options. The other two options are the location of the source files and the next is where to put the results. Hence, we are telling sphinx-build that the source files are in source and we want the result in the build directory.</p>
+<p>You will notices a _template directory in the source directory. Do not confuse this with the file we just created.</p>
+<ul class="simple">
+<li>Refresh the Hello World Welcome page in your browser.</li>
+</ul>
+<p>Do you see the template page?</p>
+</div>
+</div>
+<div class="section" id="getting-files-to-show-up-in-the-toc">
+<h2>Getting files to show up in the TOC<a class="headerlink" href="#getting-files-to-show-up-in-the-toc" title="Permalink to this headline">¶</a></h2>
+<p id="index-5">The template file did not show up. Add to the index.rst after the line :maxdepth: 2 add the following code:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>:glob:
+
+*
+</pre></div>
+</div>
+<p>Be sure that these are indented the same about as the :maxdepth: option.</p>
+<ul class="simple">
+<li>rebuild the site and reload the Hello World wlecome page.</li>
+</ul>
+<p><a class="reference internal" href="../_images/Pencil1.png"><img alt="Try It" class="align-middle" src="../_images/Pencil1.png" style="width: 38px;" /></a> Now add serveral pages to determine:</p>
+<ul class="simple">
+<li>Do the other pages show up?</li>
+<li>What order do the show up?</li>
+<li>Does it matter if the file name begins with a capital letter or not?</li>
+</ul>
+<p id="index-6">When you are creating a book the chapters do not tend to be in aphabetical order. To have your chapters in the order you want, you list them as part of the toctree directive.</p>
+<p id="index-7">This is the first time to use a directive so we should an idea of how they work in general:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>.. directive type:: directive
+   block
+</pre></div>
+</div>
+<p>The general format of the block is:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">options</span><span class="p">]</span>
+
+<span class="n">Data</span>
+</pre></div>
+</div>
+<p>With toctree we have in the index.rst file, we already have the options of :maxdepth: and :glob:, which we added just above to get the alphabetic listing. Now we will make order by:</p>
+<ul class="simple">
+<li>Delete the :glob: option.</li>
+<li>Replace the * with the names of your files in the order you desire. Put one file name per line and make sure you indent them all the same about as the options are indented (typically 3 or 4 spaces).</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The order you choose is the order that the previous and next button will use. That is, toctree makes is so that your files can be worked through in the order you gave them. The user will not need to return to the TOC to know what file is next.</p>
+</div>
+</div>
+<div class="section" id="directories">
+<h2>Directories<a class="headerlink" href="#directories" title="Permalink to this headline">¶</a></h2>
+<p>Let&#8217;s assume you are developing a system that uses Python code and SQL code. You may want to keep your documentaiton and system organized with sub-directories of the source directory, such as pcode, scode and doc.</p>
+<p><a class="reference internal" href="../_images/Pencil1.png"><img alt="Try It" class="align-middle" src="../_images/Pencil1.png" style="width: 38px;" /></a> Set up the following directors and then put files in each of them. The files can be simple copies of the template file with the file name, label name (that is, the <code class="docutils literal"><span class="pre">..</span> <span class="pre">_template:</span></code>) and chapter title changed:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>* source/pcode
+* source/scode
+* source/doc
+</pre></div>
+</div>
+<ul class="simple">
+<li>Rebuild the site and reload the Hello World Welcome page.</li>
+</ul>
+<p>Do you see the new directories and files?</p>
+<ul>
+<li><p class="first">In the pcode directory, add a file pcode.rst with the following:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>.. _pcode:
+
+Programmer Documentation
+=======================================
+
+Contents:
+
+.. toctree::
+   :maxdepth: 10
+   :glob:
+
+   *
+</pre></div>
+</div>
+</li>
+<li><p class="first">Now add into index.rst after the file names you have listed the line:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">pcode</span><span class="o">/</span><span class="n">pcode</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Which means in the pcode directory access the pcode.rst file.</p>
+<p>For the files in pcode directory, what order are they in the TOC and why? <a class="footnote-reference" href="#f1" id="id1">[1]</a></p>
+<p><a class="reference internal" href="../_images/Pencil1.png"><img alt="Try It" class="align-middle" src="../_images/Pencil1.png" style="width: 38px;" /></a> Read <a class="reference external" href="/home/mbabu/Desktop/sge/Sphinx1.3.3.Doc/build/markup/toctree.html#toctree-directive" title="(in Sphinx v1.3.3)"><span>The TOC tree</span></a> page and explain what will happen if you put de* the line before the * in your pcode.rst file. <a class="footnote-reference" href="#f2" id="id2">[2]</a></p>
+</div>
+<div class="section" id="adding-sql-files">
+<span id="index-8"></span><h2>Adding SQL files<a class="headerlink" href="#adding-sql-files" title="Permalink to this headline">¶</a></h2>
+<p>The easiest way to add your SQL files is to take advantage of the fact that they are text files and many of database managers that read in SQL from a text file do not care what the extension of the file is. So we name our files as name.sql.rst. This way the toctree directive will process the files.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">We are assuming that you have the source file suffix set to <strong>.rst</strong>. This should be the case if you followed our direction. .rst is the default when you run sphinx-quickstart. It can be changed in the conf.py which we&#8217;ve not discussed yet.</p>
+</div>
+<ul class="simple">
+<li>Create a file as follows and give it the name equipLocData.sql.rst. Store the file in the scode directory.</li>
+</ul>
+<div class="code highlight-python" id="sqlexample"><div class="highlight"><pre><span></span>--equipLocData.sql
+------------------
+/*
+
+Setting up the equipment and location portion of the equipment subsystem.
+
+    .. index::
+       single: equipLocData
+       single: SQL; equipLocData
+       single: equipment subsystem; equipLocData
+
+This is just an example that we can put Sphinx commands in an SQL document if we:
+
+* Give the file an rst extension so they are evaluated.
+* The first two lines in the file should be a subsection title because this is seen as a comment::
+
+   --equipLocData
+   --------------
+
+* Use the multiple line comment / * and \* / for your other comments. (Do not include spaces between the slashes and stars. We did that so there is not an error when SQL processes this file.)
+* You can add formatting, indexing and so forth inside the comments.
+
+\*/
+</pre></div>
+</div>
+<p>INSERT INTO tblLocation (id,name,detail) VALUES (1,&#8217;room 105&#8217;,&#8217;math class&#8217;);</p>
+<p>INSERT INTO tblLocation (id,name,detail) VALUES (2,&#8217;room 107&#8217;,&#8217;science class&#8217;);</p>
+<p>INSERT INTO tblLocation (id,name,detail) VALUES (3,&#8217;room 209&#8217;,&#8217;art class&#8217;);</p>
+<p>What we have done here is take advantage that SQL uses &#8211; as a comment and the Sphinx uses &#8211; for a heading. This way we can start our files with something that Sphinx recognizes and can process.</p>
+<p>Then we take advantage of the multiple line comment (/* and */) available in SQL so we can add our Sphinx mark-up language in the comments and have them show as we desire. If we desire, we can even include pictures with the image directive.</p>
+<p>We double space the INSERT commands to make them easy for you to read. We could leave them single line but Sphinx would make them into a single paragraph which is harder to read. As far as SQL is concerned, they can be all on one line. It will still process them.</p>
+<p id="index-9">Typically, you would not have \*/ to end a comment in SQL. We included the first backslash as an escape for Sphinx. If we do not include that slash then Sphinx will give you a warning that you started and emphasis and didn&#8217;t end it. You can use this switch for other characters you want to show. For an example, look at the source of this paragraph and you&#8217;ll see we used the slash to show both the star and the slash.</p>
+<p><a class="reference internal" href="../_images/Pencil1.png"><img alt="Try It" class="align-middle" src="../_images/Pencil1.png" style="width: 38px;" /></a> Try it. Take off the \ slash and rebuild the site. You&#8217;ll see the warning. You will also see another warning which will discuss next.</p>
+<p>We are doing this extra work so we do not have superfluous (warnings that are not real). That way we can focus on warnings we do get and work to get our site working properly.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Making changes to a page and rebuilding the site to see what happens is a great way to learn Sphinx and any programming language.</p>
+</div>
+<p id="index-10">Now let&#8217;s consider the warning that ends with <em>source/scode/equipLocData.sql.rst:: WARNING: document isn&#8217;t included in any toctree</em>. Let&#8217;s try to think through this. What files have we already used the toctree directive?</p>
+<p>In those files, how have we include the .rst files in their directories?</p>
+<p>Okay, we&#8217;ve used two methods. In doc.rst we included in the order we want them. In the index.rst we&#8217;ve referenced the doc.rst in its directory. Prior to this we&#8217;ve also used :glob: to show all the .rst files in a directory in alphabetically order - kind-of - it is case-sensitive so the capital letters are before the lowercase letters.</p>
+<ul class="simple">
+<li>Use the :glob: method and create a scode.rst file so show the files in the pcode folder.</li>
+<li>Rebuild the site. Did it work or did you get an warning?</li>
+</ul>
+<p>You should have got a warning the scode.rst is not in any toctree.</p>
+<ul class="simple">
+<li>Look back at the index.rst and decide what to do. Then rebuild the site. <a class="footnote-reference" href="#f3" id="id3">[3]</a></li>
+</ul>
+</div>
+<div class="section" id="indexing">
+<span id="index-11"></span><h2>Indexing<a class="headerlink" href="#indexing" title="Permalink to this headline">¶</a></h2>
+<p>We put a simple example of indexing in the SQL code <a class="reference internal" href="#sqlexample"><span>above</span></a>.</p>
+<ul class="simple">
+<li>Rebuild the site.</li>
+<li>Go to the index and find the entries for the SQL you just added.</li>
+</ul>
+<p>Indexing is very important to organizing your work. An index that is more than just the words used, but indexes concepts allows people to find what they need. This is more powerful than just a search. You should think about the different ways someone may be looking for the material and including index entries for these. Again, indexing the concepts rather than just the words is very powerful.</p>
+<p><a class="reference internal" href="../_images/Pencil1.png"><img alt="Try It" class="align-middle" src="../_images/Pencil1.png" style="width: 38px;" /></a> Find and read the indexing section on <a class="reference external" href="/home/mbabu/Desktop/sge/Sphinx1.3.3.Doc/build/markup/misc.html#metadata" title="(in Sphinx v1.3.3)"><span class="xref std std-ref">this page</span></a>. Test out the single, pair, triple and see options. At least once in your testing use the inline :index: method.</p>
+<p><a class="reference internal" href="../_images/Pencil1.png"><img alt="Try It" class="align-middle" src="../_images/Pencil1.png" style="width: 38px;" /></a> Convert the document/spreadsheet you have been developing with the terms you are learning into a text file. Call it myGlossary.rst. Put the words you have it this file using the formatting we&#8217;ve learned thus far or look up new directives and try them out if you desire. Index each of the words so they show up in the index as you desire. You can even use another language if you prefer.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If you make it your habit to index just above a section, you will want to keep in mind that if the section also has a label name, to be sure to put the index directive above the label name. Label names need to be directly above the section title.</p>
+</div>
+</div>
+<div class="section" id="rebuild-site">
+<span id="index-12"></span><h2>Rebuild Site<a class="headerlink" href="#rebuild-site" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="no-targets-are-out-of-date">
+<h3>no targets are out of date<a class="headerlink" href="#no-targets-are-out-of-date" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>In a terminal run <code class="docutils literal"><span class="pre">sphinx-build</span> <span class="pre">-b</span> <span class="pre">html</span> <span class="pre">source</span> <span class="pre">build</span></code></li>
+<li>Do it again, run <code class="docutils literal"><span class="pre">sphinx-build</span> <span class="pre">-b</span> <span class="pre">html</span> <span class="pre">source</span> <span class="pre">build</span></code></li>
+</ul>
+<p>Notice the line <code class="docutils literal"><span class="pre">no</span> <span class="pre">targets</span> <span class="pre">are</span> <span class="pre">out</span> <span class="pre">of</span> <span class="pre">date.</span></code>. This means that there were no files changed so they were not rebuilt. The significance of this can be seen in this example. Let&#8217;s say the following happens when I&#8217;m build this course.</p>
+<ul class="simple">
+<li>In a file (abc.rst) we make a label <code class="docutils literal"><span class="pre">..</span> <span class="pre">_blah:</span></code>.</li>
+<li>We reference the new label the Expeirment.rst file.</li>
+<li>We rebuild the site and get no warnings.</li>
+<li>A week later we decided to change the label in abc.rst to <code class="docutils literal"><span class="pre">..</span> <span class="pre">_blahblah:</span></code>.</li>
+<li>We rebuild the site and get no warnings.</li>
+</ul>
+<p>However, we do have a problem. sphinx-build only rebuilds files that were changed. Hence, Experiment.rst&#8217;s link is out-of-date and points to blah, but blah doesn&#8217;t exist any longer. If we had made a change to Experiment.rst then the rebuild would have given us a warning on this unknown label.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Things to keep in mind:</p>
+<ul class="last simple">
+<li>Keep in mind that if you want to see changes in a file, you need to save it again so it is rebuilt.</li>
+<li>You need to think of what side-effects might occor when you change things like labels.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="build-succeeded-with-no-warnings">
+<h3>build succeeded with no warnings<a class="headerlink" href="#build-succeeded-with-no-warnings" title="Permalink to this headline">¶</a></h3>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">When you do a build or rebuild, it is important to get <code class="docutils literal"><span class="pre">build</span> <span class="pre">succeeded.</span></code> with no warnings as the last line.</p>
+</div>
+<p>If you do get warnings, you should clean them up so you know your site is working properly.</p>
+<p class="rubric">Footnotes</p>
+<table class="docutils footnote" frame="void" id="f1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>They are in alphabetic order because we used the :glob: and *.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="f2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>All the files starting with de will be listed before the other files in the folder.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="f3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td>Be sure to include pcode/pcode in the index.rst file so your pcode.rst is processed.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="AddingPython.html" title="Adding Python Code"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="HelloWorld.html" title="Hello World"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Sphinx Course</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="documentation.html" >Documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, TEN3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+  </body>
+</html>
