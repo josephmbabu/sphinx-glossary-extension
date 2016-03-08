@@ -11,6 +11,10 @@ The terms are also placed in the index.
 
 This documenation assumes you are familiar with using Sphinx. 
 
+.. index::
+   pair: directive; terminology
+   pair: directive; terminologylist
+
 *****************************
 Directives
 *****************************
@@ -30,6 +34,9 @@ If you setup the conf.py correctly,
 If you setup the conf.py correctly, `.. terminology::` directive will place the term and defintion on your page.
 
 The `.. terminilogylist::` directive is used to place a sorted list of the terms anywhere in your documentation. For example, you might make a glossary page and include the `.. terminilogylist::` directive to get a sorted list of all the terms you have defined.
+
+.. index::
+   single: example
 
 *****************************
 Examples

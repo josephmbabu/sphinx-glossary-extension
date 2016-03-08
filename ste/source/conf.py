@@ -145,7 +145,7 @@ html_theme = 'sphinxdoc'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = u'Sphinx Course'
+html_title = u'Sphinx Terminology Extension'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -227,7 +227,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'SphinxCoursedoc'
+htmlhelp_basename = 'SphinxTerminologyExtensiondoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -249,7 +249,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'SphinxCourse.tex', u'Sphinx Course',
+  (master_doc, 'SphinxTerminologyExtension.tex', u'Sphinx Terminology Extension',
    u'TEN3', 'manual'),
 ]
 
@@ -279,7 +279,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'sphinxcourse', u'Sphinx Course',
+    (master_doc, 'sphinxterminologyextension', u'Sphinx Terminology Extension',
      [author], 1)
 ]
 
@@ -293,9 +293,9 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'SphinxCourse', u'Sphinx Course',
-   author, 'SphinxCourse', 'One line description of project.',
-   'Miscellaneous'),
+  (master_doc, 'SphinxTerminologyExtension', u'Sphinx Terminology Extension',
+   author, 'SphinxTerminologyExtension', 'Give term and definition (like glossary) and list all the terms.',
+   'Sphinx Extension'),
 ]
 
 # Documents to append as an appendix to all manuals.
@@ -313,12 +313,7 @@ texinfo_documents = [
 
 # Example configuration for intersphinx: refer to the Python standard library.
 #intersphinx_mapping = {'https://docs.python.org/': None}
-#3# sld stands for Sphinx Local Documentation
-#3# pysite refers to the python website, we didn't use py because that is already assigned to the python domain for local code.
-intersphinx_mapping = {
-   'sld': (os.path.abspath('../../Sphinx1.3.3.Doc/build'), None),
-   'pysite': ('https://docs.python.org/', None)
-}
+
 
 
 

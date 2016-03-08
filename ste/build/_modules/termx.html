@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>termx &mdash; Sphinx Terminology Extension</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Sphinx Terminology Extension" href="../index.html" />
+    <link rel="up" title="Module code" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Sphinx Terminology Extension</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/TEN3Logo.gif" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for termx</h1><div class="highlight"><pre>
+<span class="kn">from</span> <span class="nn">docutils</span> <span class="kn">import</span> <span class="n">nodes</span>
+
+<div class="viewcode-block" id="termx"><a class="viewcode-back" href="../coderst/termx.html#termx.termx">[docs]</a><span class="k">class</span> <span class="nc">termx</span><span class="p">(</span><span class="n">nodes</span><span class="o">.</span><span class="n">Admonition</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Element</span><span class="p">):</span>
+    <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="termxlist"><a class="viewcode-back" href="../coderst/termx.html#termx.termxlist">[docs]</a><span class="k">class</span> <span class="nc">termxlist</span><span class="p">(</span><span class="n">nodes</span><span class="o">.</span><span class="n">General</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Element</span><span class="p">):</span>
+    <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="visit_termx_node"><a class="viewcode-back" href="../coderst/termx.html#termx.visit_termx_node">[docs]</a><span class="k">def</span> <span class="nf">visit_termx_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">visit_admonition</span><span class="p">(</span><span class="n">node</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="depart_termx_node"><a class="viewcode-back" href="../coderst/termx.html#termx.depart_termx_node">[docs]</a><span class="k">def</span> <span class="nf">depart_termx_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">depart_admonition</span><span class="p">(</span><span class="n">node</span><span class="p">)</span></div>
+
+<span class="kn">from</span> <span class="nn">docutils.parsers.rst</span> <span class="kn">import</span> <span class="n">Directive</span>
+
+<div class="viewcode-block" id="TermxlistDirective"><a class="viewcode-back" href="../coderst/termx.html#termx.TermxlistDirective">[docs]</a><span class="k">class</span> <span class="nc">TermxlistDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span></div>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">termxlist</span><span class="p">(</span><span class="s">&#39;&#39;</span><span class="p">)]</span>
+
+<span class="kn">from</span> <span class="nn">sphinx.util.compat</span> <span class="kn">import</span> <span class="n">make_admonition</span>
+<span class="kn">from</span> <span class="nn">sphinx.locale</span> <span class="kn">import</span> <span class="n">_</span>
+
+<div class="viewcode-block" id="TermxDirective"><a class="viewcode-back" href="../coderst/termx.html#termx.TermxDirective">[docs]</a><span class="k">class</span> <span class="nc">TermxDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span></div>
+
+    <span class="c"># this enables content in the directive</span>
+    <span class="n">has_content</span> <span class="o">=</span> <span class="bp">True</span>
+
+    <span class="c"># Allows 15 directive arguments max, requires 1</span>
+    <span class="n">required_arguments</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">optional_arguments</span> <span class="o">=</span> <span class="mi">14</span>
+    <span class="n">final_argument_whitespace</span> <span class="o">=</span> <span class="bp">False</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">env</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">document</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">env</span>
+
+        <span class="n">targetid</span> <span class="o">=</span> <span class="s">&quot;termx-</span><span class="si">%d</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">env</span><span class="o">.</span><span class="n">new_serialno</span><span class="p">(</span><span class="s">&#39;termx&#39;</span><span class="p">)</span>
+        <span class="n">targetnode</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">target</span><span class="p">(</span><span class="s">&#39;&#39;</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="n">targetid</span><span class="p">])</span>
+        <span class="k">print</span> <span class="s">&#39;arguments:&#39;</span>
+        <span class="k">print</span> <span class="bp">self</span><span class="o">.</span><span class="n">arguments</span>
+        <span class="n">ad</span> <span class="o">=</span> <span class="n">make_admonition</span><span class="p">(</span><span class="n">termx</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="p">[</span><span class="n">_</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">arguments</span><span class="p">))],</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lineno</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_offset</span><span class="p">,</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">block_text</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">state_machine</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="s">&#39;termx_all_termxs&#39;</span><span class="p">):</span>
+            <span class="n">env</span><span class="o">.</span><span class="n">termx_all_termxs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">env</span><span class="o">.</span><span class="n">termx_all_termxs</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s">&#39;docname&#39;</span><span class="p">:</span> <span class="n">env</span><span class="o">.</span><span class="n">docname</span><span class="p">,</span>
+            <span class="s">&#39;lineno&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">lineno</span><span class="p">,</span>
+            <span class="s">&#39;termx&#39;</span><span class="p">:</span> <span class="n">ad</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(),</span>
+            <span class="s">&#39;target&#39;</span><span class="p">:</span> <span class="n">targetnode</span><span class="p">,</span>
+        <span class="p">})</span>
+
+        <span class="k">return</span> <span class="p">[</span><span class="n">targetnode</span><span class="p">]</span> <span class="o">+</span> <span class="n">ad</span>
+
+<div class="viewcode-block" id="purge_termxs"><a class="viewcode-back" href="../coderst/termx.html#termx.purge_termxs">[docs]</a><span class="k">def</span> <span class="nf">purge_termxs</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">env</span><span class="p">,</span> <span class="n">docname</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="s">&#39;termx_all_termxs&#39;</span><span class="p">):</span>
+        <span class="k">return</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">termx_all_termxs</span> <span class="o">=</span> <span class="p">[</span><span class="n">termx</span> <span class="k">for</span> <span class="n">termx</span> <span class="ow">in</span> <span class="n">env</span><span class="o">.</span><span class="n">termx_all_termxs</span>
+                          <span class="k">if</span> <span class="n">termx</span><span class="p">[</span><span class="s">&#39;docname&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">docname</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="process_termx_nodes"><a class="viewcode-back" href="../coderst/termx.html#termx.process_termx_nodes">[docs]</a><span class="k">def</span> <span class="nf">process_termx_nodes</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">doctree</span><span class="p">,</span> <span class="n">fromdocname</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">termx_include_termxs</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">doctree</span><span class="o">.</span><span class="n">traverse</span><span class="p">(</span><span class="n">termx</span><span class="p">):</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+
+    <span class="c"># Replace all termxlist nodes with a list of the collected termxs.</span>
+    <span class="c"># Augment each termx with a backlink to the original location.</span>
+    <span class="n">env</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">env</span>
+
+    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">doctree</span><span class="o">.</span><span class="n">traverse</span><span class="p">(</span><span class="n">termxlist</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">termx_include_termxs</span><span class="p">:</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">replace_self</span><span class="p">([])</span>
+            <span class="k">continue</span>
+
+        <span class="n">content</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">termx_info</span> <span class="ow">in</span> <span class="n">env</span><span class="o">.</span><span class="n">termx_all_termxs</span><span class="p">:</span>
+            <span class="n">para</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">paragraph</span><span class="p">()</span>
+            <span class="n">filename</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">doc2path</span><span class="p">(</span><span class="n">termx_info</span><span class="p">[</span><span class="s">&#39;docname&#39;</span><span class="p">],</span> <span class="n">base</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+            <span class="n">description</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">_</span><span class="p">(</span><span class="s">&#39;(The original entry is located in </span><span class="si">%s</span><span class="s">, line </span><span class="si">%d</span><span class="s"> and can be found &#39;</span><span class="p">)</span> <span class="o">%</span>
+                <span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">termx_info</span><span class="p">[</span><span class="s">&#39;lineno&#39;</span><span class="p">]))</span>
+            <span class="n">para</span> <span class="o">+=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="n">description</span><span class="p">,</span> <span class="n">description</span><span class="p">)</span>
+
+            <span class="c"># Create a reference</span>
+            <span class="n">newnode</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">reference</span><span class="p">(</span><span class="s">&#39;&#39;</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">)</span>
+            <span class="n">innernode</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">emphasis</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s">&#39;here&#39;</span><span class="p">),</span> <span class="n">_</span><span class="p">(</span><span class="s">&#39;here&#39;</span><span class="p">))</span>
+            <span class="n">newnode</span><span class="p">[</span><span class="s">&#39;refdocname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">termx_info</span><span class="p">[</span><span class="s">&#39;docname&#39;</span><span class="p">]</span>
+            <span class="n">newnode</span><span class="p">[</span><span class="s">&#39;refuri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">get_relative_uri</span><span class="p">(</span>
+                <span class="n">fromdocname</span><span class="p">,</span> <span class="n">termx_info</span><span class="p">[</span><span class="s">&#39;docname&#39;</span><span class="p">])</span>
+            <span class="n">newnode</span><span class="p">[</span><span class="s">&#39;refuri&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="s">&#39;#&#39;</span> <span class="o">+</span> <span class="n">termx_info</span><span class="p">[</span><span class="s">&#39;target&#39;</span><span class="p">][</span><span class="s">&#39;refid&#39;</span><span class="p">]</span>
+            <span class="n">newnode</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">innernode</span><span class="p">)</span>
+            <span class="n">para</span> <span class="o">+=</span> <span class="n">newnode</span>
+            <span class="n">para</span> <span class="o">+=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s">&#39;.)&#39;</span><span class="p">,</span> <span class="s">&#39;.)&#39;</span><span class="p">)</span>
+
+            <span class="c"># Insert into the termxlist</span>
+            <span class="n">content</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">termx_info</span><span class="p">[</span><span class="s">&#39;termx&#39;</span><span class="p">])</span>
+            <span class="n">content</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">para</span><span class="p">)</span>
+
+        <span class="n">node</span><span class="o">.</span><span class="n">replace_self</span><span class="p">(</span><span class="n">content</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="setup"><a class="viewcode-back" href="../coderst/termx.html#termx.setup">[docs]</a><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_config_value</span><span class="p">(</span><span class="s">&#39;termx_include_termxs&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="s">&#39;html&#39;</span><span class="p">)</span>
+
+    <span class="n">app</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">termxlist</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">termx</span><span class="p">,</span>
+                 <span class="n">html</span><span class="o">=</span><span class="p">(</span><span class="n">visit_termx_node</span><span class="p">,</span> <span class="n">depart_termx_node</span><span class="p">),</span>
+                 <span class="n">latex</span><span class="o">=</span><span class="p">(</span><span class="n">visit_termx_node</span><span class="p">,</span> <span class="n">depart_termx_node</span><span class="p">),</span>
+                 <span class="n">text</span><span class="o">=</span><span class="p">(</span><span class="n">visit_termx_node</span><span class="p">,</span> <span class="n">depart_termx_node</span><span class="p">))</span>
+
+    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s">&#39;termx&#39;</span><span class="p">,</span> <span class="n">TermxDirective</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s">&#39;termxlist&#39;</span><span class="p">,</span> <span class="n">TermxlistDirective</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;doctree-resolved&#39;</span><span class="p">,</span> <span class="n">process_termx_nodes</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;env-purge-doc&#39;</span><span class="p">,</span> <span class="n">purge_termxs</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">{</span><span class="s">&#39;version&#39;</span><span class="p">:</span> <span class="s">&#39;0.1&#39;</span><span class="p">}</span>   <span class="c"># identifies the version of our extension</span></div>
+
+
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Sphinx Terminology Extension</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, TEN3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.3.
+    </div>
+  </body>
+</html>

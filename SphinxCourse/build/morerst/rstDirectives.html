@@ -314,10 +314,10 @@ prefixed).  For example, this admonition:</p>
 </div>
 <p>The <a class="reference internal" href="#common-options">common options</a> are recognized:</p>
 <dl class="docutils">
-<dt><code class="docutils literal"><span class="pre">class</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">text</span></dt>
-<dd>Overrides the computed <a class="reference internal" href="docTree.html#classes2"><span>classes</span></a> attribute value.</dd>
-<dt><code class="docutils literal"><span class="pre">name</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">text</span></dt>
-<dd>Add <cite>text</cite> to the <a class="reference internal" href="docTree.html#names"><span>names</span></a> attribute of the admonition element.</dd>
+<dt><code class="docutils literal"><span class="pre">class</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">text</span><div class="admonition">
+Overrides the computed <a class="reference internal" href="docTree.html#classes2"><span>classes</span></a> attribute value.</div>
+<dt><code class="docutils literal"><span class="pre">name</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">text</span><div class="admonition">
+Add <cite>text</cite> to the <a class="reference internal" href="docTree.html#names"><span>names</span></a> attribute of the admonition element.</div>
 </dl>
 </div>
 </div>
@@ -370,41 +370,41 @@ together.</p>
 </div>
 <p>The following options are recognized:</p>
 <dl class="docutils">
-<dt><code class="docutils literal"><span class="pre">alt</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">text</span></dt>
-<dd>Alternate text: a short description of the image, displayed by
+<dt><code class="docutils literal"><span class="pre">alt</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">text</span><div class="admonition">
+Alternate text: a short description of the image, displayed by
 applications that cannot display images, or spoken by applications
-for visually impaired users.</dd>
-<dt><code class="docutils literal"><span class="pre">height</span></code> <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference internal" href="restructuredtext.html#length-units"><span>Length Units</span></a></span></dt>
-<dd>The desired height of the image.
+for visually impaired users.</div>
+<dt><code class="docutils literal"><span class="pre">height</span></code> <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference internal" href="restructuredtext.html#length-units"><span>Length Units</span></a></span><div class="admonition">
+The desired height of the image.
 Used to reserve space or scale the image vertically.  When the &#8220;scale&#8221;
 option is also specified, they are combined.  For example, a height of
-200px and a scale of 50 is equivalent to a height of 100px with no scale.</dd>
-<dt><code class="docutils literal"><span class="pre">width</span></code> <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference internal" href="restructuredtext.html#length-units"><span>Length Units</span></a> or <a class="reference internal" href="restructuredtext.html#percentage-units"><span>Percentage Units</span></a> of the current line width</span></dt>
-<dd>The width of the image.
+200px and a scale of 50 is equivalent to a height of 100px with no scale.</div>
+<dt><code class="docutils literal"><span class="pre">width</span></code> <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference internal" href="restructuredtext.html#length-units"><span>Length Units</span></a> or <a class="reference internal" href="restructuredtext.html#percentage-units"><span>Percentage Units</span></a> of the current line width</span><div class="admonition">
+The width of the image.
 Used to reserve space or scale the image horizontally.  As with &#8220;height&#8221;
-above, when the &#8220;scale&#8221; option is also specified, they are combined.</dd>
+above, when the &#8220;scale&#8221; option is also specified, they are combined.</div>
 </dl>
 <dl class="docutils">
-<dt><code class="docutils literal"><span class="pre">scale</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer percentage (the &#8220;%&#8221; symbol is optional)</span></dt>
-<dd><p class="first">The uniform scaling factor of the image.  The default is &#8220;100Â %&#8221;, i.e.
+<dt><code class="docutils literal"><span class="pre">scale</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer percentage (the &#8220;%&#8221; symbol is optional)</span><div class="admonition">
+<p class="first">The uniform scaling factor of the image.  The default is &#8220;100Â %&#8221;, i.e.
 no scaling.</p>
 <p class="last">If no &#8220;height&#8221; or &#8220;width&#8221; options are specified, the <a class="reference external" href="http://www.pythonware.com/products/pil/">Python Imaging
 Library</a> (PIL) may be used to determine them, if it is installed and
 the image file is available.</p>
-</dd>
-<dt><code class="docutils literal"><span class="pre">align</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">&#8220;top&#8221;, &#8220;middle&#8221;, &#8220;bottom&#8221;, &#8220;left&#8221;, &#8220;center&#8221;, or &#8220;right&#8221;</span></dt>
-<dd>The alignment of the image, equivalent to the HTML <code class="docutils literal"><span class="pre">&lt;img&gt;</span></code> tag&#8217;s
+</div>
+<dt><code class="docutils literal"><span class="pre">align</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">&#8220;top&#8221;, &#8220;middle&#8221;, &#8220;bottom&#8221;, &#8220;left&#8221;, &#8220;center&#8221;, or &#8220;right&#8221;</span><div class="admonition">
+The alignment of the image, equivalent to the HTML <code class="docutils literal"><span class="pre">&lt;img&gt;</span></code> tag&#8217;s
 &#8220;align&#8221; attribute.  The values &#8220;top&#8221;, &#8220;middle&#8221;, and &#8220;bottom&#8221;
 control an image&#8217;s vertical alignment (relative to the text
 baseline); they are only useful for inline images (substitutions).
 The values &#8220;left&#8221;, &#8220;center&#8221;, and &#8220;right&#8221; control an image&#8217;s
 horizontal alignment, allowing the image to float and have the
 text flow around it.  The specific behavior depends upon the
-browser or rendering software used.</dd>
-<dt><code class="docutils literal"><span class="pre">target</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">text (URI or reference name)</span></dt>
-<dd>Makes the image into a hyperlink reference (&#8220;clickable&#8221;).  The
+browser or rendering software used.</div>
+<dt><code class="docutils literal"><span class="pre">target</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">text (URI or reference name)</span><div class="admonition">
+Makes the image into a hyperlink reference (&#8220;clickable&#8221;).  The
 option argument may be a URI (relative or absolute), or a
-<a class="reference internal" href="restructuredtext.html#reference-names"><span>Reference Names</span></a> with underscore suffix (e.g. <code class="docutils literal"><span class="pre">`a</span> <span class="pre">name`_</span></code>).</dd>
+<a class="reference internal" href="restructuredtext.html#reference-names"><span>Reference Names</span></a> with underscore suffix (e.g. <code class="docutils literal"><span class="pre">`a</span> <span class="pre">name`_</span></code>).</div>
 </dl>
 <p>and the common options <a class="reference internal" href="#id16">:class:</a> and <a class="reference internal" href="#name">:name:</a>.</p>
 </div>
@@ -463,15 +463,15 @@ legend.  To specify a legend without a caption, use an empty comment
 directive (see <a class="reference internal" href="#image-options">image options</a> above). These options (except
 &#8220;align&#8221;) are passed on to the contained image.</p>
 <dl class="docutils">
-<dt><code class="docutils literal"><span class="pre">align</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">&#8220;left&#8221;, &#8220;center&#8221;, or &#8220;right&#8221;</span></dt>
-<dd>The horizontal alignment of the figure, allowing the image to
+<dt><code class="docutils literal"><span class="pre">align</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">&#8220;left&#8221;, &#8220;center&#8221;, or &#8220;right&#8221;</span><div class="admonition">
+The horizontal alignment of the figure, allowing the image to
 float and have the text flow around it.  The specific behavior
-depends upon the browser or rendering software used.</dd>
+depends upon the browser or rendering software used.</div>
 </dl>
 <p>In addition, the following options are recognized:</p>
 <dl class="docutils">
-<dt><code class="docutils literal"><span class="pre">figwidth</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">&#8220;image&#8221;, <a class="reference internal" href="restructuredtext.html#length-units"><span>Length Units</span></a>, or <a class="reference internal" href="restructuredtext.html#percentage-units"><span>Percentage Units</span></a> of current line width</span></dt>
-<dd><p class="first">The width of the figure.
+<dt><code class="docutils literal"><span class="pre">figwidth</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">&#8220;image&#8221;, <a class="reference internal" href="restructuredtext.html#length-units"><span>Length Units</span></a>, or <a class="reference internal" href="restructuredtext.html#percentage-units"><span>Percentage Units</span></a> of current line width</span><div class="admonition">
+<p class="first">The width of the figure.
 Limits the horizontal space used by the figure.
 A special value of &#8220;image&#8221; is allowed, in which case the
 included image&#8217;s actual width is used (requires the <a class="reference external" href="http://www.pythonware.com/products/pil/">Python Imaging
@@ -496,10 +496,10 @@ unavailable, this option is ignored.</p>
 +---------------------------+
 </pre></div>
 </div>
-</dd>
-<dt><code class="docutils literal"><span class="pre">figclass</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">text</span></dt>
-<dd>Set a <a class="reference internal" href="docTree.html#classes2"><span>classes</span></a> attribute value on the figure element.  See the
-<a class="reference internal" href="#class">class</a> directive below.</dd>
+</div>
+<dt><code class="docutils literal"><span class="pre">figclass</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">text</span><div class="admonition">
+Set a <a class="reference internal" href="docTree.html#classes2"><span>classes</span></a> attribute value on the figure element.  See the
+<a class="reference internal" href="#class">class</a> directive below.</div>
 </dl>
 </div>
 </div>
@@ -587,8 +587,8 @@ interpreted as body elements.  For example:</p>
 </div>
 <p>The following options are recognized:</p>
 <dl class="docutils">
-<dt><code class="docutils literal"><span class="pre">subtitle</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">text</span></dt>
-<dd>The sidebar&#8217;s subtitle.</dd>
+<dt><code class="docutils literal"><span class="pre">subtitle</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">text</span><div class="admonition">
+The sidebar&#8217;s subtitle.</div>
 </dl>
 <p>and the common options <a class="reference internal" href="#id16">:class:</a> and <a class="reference internal" href="#name">:name:</a>.</p>
 </div>
@@ -725,14 +725,14 @@ when <a class="reference external" href="http://pygments.org/">Pygments</a> is n
 <p>For inline code, use the <a class="reference external" href="roles.html#code">&#8220;code&#8221; role</a>.</p>
 <p>The following options are recognized:</p>
 <dl class="docutils">
-<dt><code class="docutils literal"><span class="pre">number-lines</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">[start line number]</span></dt>
-<dd>Precede every line with a line number.
-The optional argument is the number of the first line (defaut 1).</dd>
+<dt><code class="docutils literal"><span class="pre">number-lines</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">[start line number]</span><div class="admonition">
+Precede every line with a line number.
+The optional argument is the number of the first line (defaut 1).</div>
 </dl>
 <p>and the common options <a class="reference internal" href="#id16">:class:</a> and <a class="reference internal" href="#name">:name:</a>.</p>
 <dl class="docutils">
-<dt>Example::</dt>
-<dd><p class="first">The content of the following directive</p>
+<dt>Example::<div class="admonition">
+<p class="first">The content of the following directive</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>.. code:: python
 
   def my_function():
@@ -741,7 +741,7 @@ The optional argument is the number of the first line (defaut 1).</dd>
 </pre></div>
 </div>
 <p class="last">is parsed and marked up as Python source code.</p>
-</dd>
+</div>
 </dl>
 </div>
 <div class="section" id="math">
@@ -1145,46 +1145,46 @@ under PythonÂ 3.</td></tr>
 </table>
 <p>The following options are recognized:</p>
 <dl class="docutils">
-<dt><code class="docutils literal"><span class="pre">widths</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer [, integer...]</span></dt>
-<dd>A comma- or space-separated list of relative column widths.  The
-default is equal-width columns (100%/#columns).</dd>
-<dt><code class="docutils literal"><span class="pre">header-rows</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer</span></dt>
-<dd>The number of rows of CSV data to use in the table header.
-Defaults to 0.</dd>
-<dt><code class="docutils literal"><span class="pre">stub-columns</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer</span></dt>
-<dd>The number of table columns to use as stubs (row titles, on the
-left).  Defaults to 0.</dd>
-<dt><code class="docutils literal"><span class="pre">header</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">CSV data</span></dt>
-<dd>Supplemental data for the table header, added independently of and
+<dt><code class="docutils literal"><span class="pre">widths</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer [, integer...]</span><div class="admonition">
+A comma- or space-separated list of relative column widths.  The
+default is equal-width columns (100%/#columns).</div>
+<dt><code class="docutils literal"><span class="pre">header-rows</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer</span><div class="admonition">
+The number of rows of CSV data to use in the table header.
+Defaults to 0.</div>
+<dt><code class="docutils literal"><span class="pre">stub-columns</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer</span><div class="admonition">
+The number of table columns to use as stubs (row titles, on the
+left).  Defaults to 0.</div>
+<dt><code class="docutils literal"><span class="pre">header</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">CSV data</span><div class="admonition">
+Supplemental data for the table header, added independently of and
 before any <code class="docutils literal"><span class="pre">header-rows</span></code> from the main CSV data.  Must use the
-same CSV format as the main CSV data.</dd>
-<dt><code class="docutils literal"><span class="pre">file</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">string (newlines removed)</span></dt>
-<dd>The local filesystem path to a CSV data file.</dd>
-<dt><code class="docutils literal"><span class="pre">url</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">string (whitespace removed)</span></dt>
-<dd>An Internet URL reference to a CSV data file.</dd>
-<dt><code class="docutils literal"><span class="pre">encoding</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">name of text encoding</span></dt>
-<dd>The text encoding of the external CSV data (file or URL).
-Defaults to the document&#8217;s encoding (if specified).</dd>
-<dt><code class="docutils literal"><span class="pre">delim</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">char | &#8220;tab&#8221; | &#8220;space&#8221; <a class="footnote-reference" href="#whitespace-delim" id="id5">[2]</a></span></dt>
-<dd>A one-character string<a class="footnote-reference" href="#ascii-char" id="id6">[3]</a> used to separate fields.
+same CSV format as the main CSV data.</div>
+<dt><code class="docutils literal"><span class="pre">file</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">string (newlines removed)</span><div class="admonition">
+The local filesystem path to a CSV data file.</div>
+<dt><code class="docutils literal"><span class="pre">url</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">string (whitespace removed)</span><div class="admonition">
+An Internet URL reference to a CSV data file.</div>
+<dt><code class="docutils literal"><span class="pre">encoding</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">name of text encoding</span><div class="admonition">
+The text encoding of the external CSV data (file or URL).
+Defaults to the document&#8217;s encoding (if specified).</div>
+<dt><code class="docutils literal"><span class="pre">delim</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">char | &#8220;tab&#8221; | &#8220;space&#8221; <a class="footnote-reference" href="#whitespace-delim" id="id5">[2]</a></span><div class="admonition">
+A one-character string<a class="footnote-reference" href="#ascii-char" id="id6">[3]</a> used to separate fields.
 Defaults to <code class="docutils literal"><span class="pre">,</span></code> (comma).  May be specified as a Unicode code
-point; see the <a class="reference internal" href="#unicode">unicode</a> directive for syntax details.</dd>
-<dt><code class="docutils literal"><span class="pre">quote</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">char</span></dt>
-<dd>A one-character string<a class="footnote-reference" href="#ascii-char" id="id7">[3]</a> used to quote elements
+point; see the <a class="reference internal" href="#unicode">unicode</a> directive for syntax details.</div>
+<dt><code class="docutils literal"><span class="pre">quote</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">char</span><div class="admonition">
+A one-character string<a class="footnote-reference" href="#ascii-char" id="id7">[3]</a> used to quote elements
 containing the delimiter or which start with the quote
 character.  Defaults to <code class="docutils literal"><span class="pre">&quot;</span></code> (quote).  May be specified as a
 Unicode code point; see the <a class="reference internal" href="#unicode">unicode</a> directive for syntax
-details.</dd>
-<dt><code class="docutils literal"><span class="pre">keepspace</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">flag</span></dt>
-<dd>Treat whitespace immediately following the delimiter as
-significant.  The default is to ignore such whitespace.</dd>
-<dt><code class="docutils literal"><span class="pre">escape</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">char</span></dt>
-<dd>A one-character<a class="footnote-reference" href="#ascii-char" id="id8">[3]</a> string used to escape the
+details.</div>
+<dt><code class="docutils literal"><span class="pre">keepspace</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">flag</span><div class="admonition">
+Treat whitespace immediately following the delimiter as
+significant.  The default is to ignore such whitespace.</div>
+<dt><code class="docutils literal"><span class="pre">escape</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">char</span><div class="admonition">
+A one-character<a class="footnote-reference" href="#ascii-char" id="id8">[3]</a> string used to escape the
 delimiter or quote characters.  May be specified as a Unicode
 code point; see the <a class="reference internal" href="#unicode">unicode</a> directive for syntax details.  Used
 when the delimiter is used in an unquoted field, or when quote
 characters are used within a field.  The default is to double-up
-the character, e.g. &#8220;He said, &#8220;&#8221;Hi!&#8221;&#8220;&#8221;</dd>
+the character, e.g. &#8220;He said, &#8220;&#8221;Hi!&#8221;&#8220;&#8221;</div>
 </dl>
 <p>and the common options <a class="reference internal" href="#id16">:class:</a> and <a class="reference internal" href="#name">:name:</a>.</p>
 </div>
@@ -1237,15 +1237,15 @@ uniform two-level bullet list.  &#8220;Uniform&#8221; means that each sublist
 </div>
 <p>The following options are recognized:</p>
 <dl class="docutils">
-<dt><code class="docutils literal"><span class="pre">widths</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer [integer...]</span></dt>
-<dd>A comma- or space-separated list of relative column widths.  The
-default is equal-width columns (100%/#columns).</dd>
-<dt><code class="docutils literal"><span class="pre">header-rows</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer</span></dt>
-<dd>The number of rows of list data to use in the table header.
-Defaults to 0.</dd>
-<dt><code class="docutils literal"><span class="pre">stub-columns</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer</span></dt>
-<dd>The number of table columns to use as stubs (row titles, on the
-left).  Defaults to 0.</dd>
+<dt><code class="docutils literal"><span class="pre">widths</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer [integer...]</span><div class="admonition">
+A comma- or space-separated list of relative column widths.  The
+default is equal-width columns (100%/#columns).</div>
+<dt><code class="docutils literal"><span class="pre">header-rows</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer</span><div class="admonition">
+The number of rows of list data to use in the table header.
+Defaults to 0.</div>
+<dt><code class="docutils literal"><span class="pre">stub-columns</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer</span><div class="admonition">
+The number of table columns to use as stubs (row titles, on the
+left).  Defaults to 0.</div>
 </dl>
 <p>and the common options <a class="reference internal" href="#id16">:class:</a> and <a class="reference internal" href="#name">:name:</a>.</p>
 </div>
@@ -1305,19 +1305,19 @@ on the same line as the directive marker:</p>
 </div>
 <p>The following options are recognized:</p>
 <dl class="docutils">
-<dt><code class="docutils literal"><span class="pre">depth</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer</span></dt>
-<dd>The number of section levels that are collected in the table of
-contents.  The default is unlimited depth.</dd>
-<dt><code class="docutils literal"><span class="pre">local</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">flag (empty)</span></dt>
-<dd>Generate a local table of contents.  Entries will only include
+<dt><code class="docutils literal"><span class="pre">depth</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer</span><div class="admonition">
+The number of section levels that are collected in the table of
+contents.  The default is unlimited depth.</div>
+<dt><code class="docutils literal"><span class="pre">local</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">flag (empty)</span><div class="admonition">
+Generate a local table of contents.  Entries will only include
 subsections of the section in which the directive is given.  If no
-explicit title is given, the table of contents will not be titled.</dd>
-<dt><code class="docutils literal"><span class="pre">backlinks</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">&#8220;entry&#8221; or &#8220;top&#8221; or &#8220;none&#8221;</span></dt>
-<dd>Generate links from section headers back to the table of contents
-entries, the table of contents itself, or generate no backlinks.</dd>
-<dt><code class="docutils literal"><span class="pre">class</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">text</span></dt>
-<dd>Set a <a class="reference internal" href="docTree.html#classes2"><span>classes</span></a> attribute value on the topic element.  See the
-<a class="reference internal" href="#class">class</a> directive below.</dd>
+explicit title is given, the table of contents will not be titled.</div>
+<dt><code class="docutils literal"><span class="pre">backlinks</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">&#8220;entry&#8221; or &#8220;top&#8221; or &#8220;none&#8221;</span><div class="admonition">
+Generate links from section headers back to the table of contents
+entries, the table of contents itself, or generate no backlinks.</div>
+<dt><code class="docutils literal"><span class="pre">class</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">text</span><div class="admonition">
+Set a <a class="reference internal" href="docTree.html#classes2"><span>classes</span></a> attribute value on the topic element.  See the
+<a class="reference internal" href="#class">class</a> directive below.</div>
 </dl>
 </div>
 <div class="section" id="automatic-section-numbering">
@@ -1361,23 +1361,23 @@ enclosed in a &#8220;generated&#8221; element, and titles have their &#8220;auto
 attribute set to &#8220;1&#8221;.</p>
 <p>The following options are recognized:</p>
 <dl class="docutils">
-<dt><code class="docutils literal"><span class="pre">depth</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer</span></dt>
-<dd>The number of section levels that are numbered by this directive.
-The default is unlimited depth.</dd>
-<dt><code class="docutils literal"><span class="pre">prefix</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
-<dd>An arbitrary string that is prefixed to the automatically
+<dt><code class="docutils literal"><span class="pre">depth</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer</span><div class="admonition">
+The number of section levels that are numbered by this directive.
+The default is unlimited depth.</div>
+<dt><code class="docutils literal"><span class="pre">prefix</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">string</span><div class="admonition">
+An arbitrary string that is prefixed to the automatically
 generated section numbers.  It may be something like &#8220;3.2.&#8221;, which
 will produce &#8220;3.2.1&#8221;, &#8220;3.2.2&#8221;, &#8220;3.2.2.1&#8221;, and so on.  Note that
 any separating punctuation (in the example, a period, &#8221;.&#8221;) must be
-explicitly provided.  The default is no prefix.</dd>
-<dt><code class="docutils literal"><span class="pre">suffix</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
-<dd>An arbitrary string that is appended to the automatically
-generated section numbers.  The default is no suffix.</dd>
-<dt><code class="docutils literal"><span class="pre">start</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer</span></dt>
-<dd>The value that will be used for the first section number.
+explicitly provided.  The default is no prefix.</div>
+<dt><code class="docutils literal"><span class="pre">suffix</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">string</span><div class="admonition">
+An arbitrary string that is appended to the automatically
+generated section numbers.  The default is no suffix.</div>
+<dt><code class="docutils literal"><span class="pre">start</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer</span><div class="admonition">
+The value that will be used for the first section number.
 Combined with <code class="docutils literal"><span class="pre">prefix</span></code>, this may be used to force the right
 numbering for a document split over several source files.  The
-default is 1.</dd>
+default is 1.</div>
 </dl>
 </div>
 <div class="section" id="document-header-footer">
@@ -1695,13 +1695,13 @@ all rights reserved.
 <div>Copyright © 2003, BogusMegaCorp™—all rights reserved.</div></blockquote>
 <p>The following options are recognized:</p>
 <dl class="docutils">
-<dt><code class="docutils literal"><span class="pre">ltrim</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">flag</span></dt>
-<dd>Whitespace to the left of the substitution reference is removed.</dd>
-<dt><code class="docutils literal"><span class="pre">rtrim</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">flag</span></dt>
-<dd>Whitespace to the right of the substitution reference is removed.</dd>
-<dt><code class="docutils literal"><span class="pre">trim</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">flag</span></dt>
-<dd>Equivalent to <code class="docutils literal"><span class="pre">ltrim</span></code> plus <code class="docutils literal"><span class="pre">rtrim</span></code>; whitespace on both sides
-of the substitution reference is removed.</dd>
+<dt><code class="docutils literal"><span class="pre">ltrim</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">flag</span><div class="admonition">
+Whitespace to the left of the substitution reference is removed.</div>
+<dt><code class="docutils literal"><span class="pre">rtrim</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">flag</span><div class="admonition">
+Whitespace to the right of the substitution reference is removed.</div>
+<dt><code class="docutils literal"><span class="pre">trim</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">flag</span><div class="admonition">
+Equivalent to <code class="docutils literal"><span class="pre">ltrim</span></code> plus <code class="docutils literal"><span class="pre">rtrim</span></code>; whitespace on both sides
+of the substitution reference is removed.</div>
 </dl>
 </div>
 <div class="section" id="date">
@@ -1810,37 +1810,37 @@ substitution definitions.  See <a class="reference external" href="definitions.h
 Files</a> for details.</p>
 <p>The following options are recognized:</p>
 <dl class="docutils">
-<dt><code class="docutils literal"><span class="pre">start-line</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer</span></dt>
-<dd>Only the content starting from this line will be included.
+<dt><code class="docutils literal"><span class="pre">start-line</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer</span><div class="admonition">
+Only the content starting from this line will be included.
 (As usual in Python, the first line has index 0 and negative values
-count from the end.)</dd>
-<dt><code class="docutils literal"><span class="pre">end-line</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer</span></dt>
-<dd>Only the content up to (but excluding) this line will be included.</dd>
-<dt><code class="docutils literal"><span class="pre">start-after</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">text to find in the external data file</span></dt>
-<dd>Only the content after the first occurrence of the specified text
-will be included.</dd>
-<dt><code class="docutils literal"><span class="pre">end-before</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">text to find in the external data file</span></dt>
-<dd>Only the content before the first occurrence of the specified text
-(but after any <code class="docutils literal"><span class="pre">after</span></code> text) will be included.</dd>
-<dt><code class="docutils literal"><span class="pre">literal</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">flag (empty)</span></dt>
-<dd>The entire included text is inserted into the document as a single
-literal block.</dd>
-<dt><code class="docutils literal"><span class="pre">code</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">formal language (optional)</span></dt>
-<dd>The argument and the content of the included file are passed to
+count from the end.)</div>
+<dt><code class="docutils literal"><span class="pre">end-line</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer</span><div class="admonition">
+Only the content up to (but excluding) this line will be included.</div>
+<dt><code class="docutils literal"><span class="pre">start-after</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">text to find in the external data file</span><div class="admonition">
+Only the content after the first occurrence of the specified text
+will be included.</div>
+<dt><code class="docutils literal"><span class="pre">end-before</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">text to find in the external data file</span><div class="admonition">
+Only the content before the first occurrence of the specified text
+(but after any <code class="docutils literal"><span class="pre">after</span></code> text) will be included.</div>
+<dt><code class="docutils literal"><span class="pre">literal</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">flag (empty)</span><div class="admonition">
+The entire included text is inserted into the document as a single
+literal block.</div>
+<dt><code class="docutils literal"><span class="pre">code</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">formal language (optional)</span><div class="admonition">
+The argument and the content of the included file are passed to
 the <a class="reference internal" href="#code">code</a> directive (useful for program listings).
-(New in Docutils 0.9)</dd>
-<dt><code class="docutils literal"><span class="pre">number-lines</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">[start line number]</span></dt>
-<dd>Precede every code line with a line number.
+(New in Docutils 0.9)</div>
+<dt><code class="docutils literal"><span class="pre">number-lines</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">[start line number]</span><div class="admonition">
+Precede every code line with a line number.
 The optional argument is the number of the first line (defaut 1).
 Works only with <code class="docutils literal"><span class="pre">code</span></code> or <code class="docutils literal"><span class="pre">literal</span></code>.
-(New in Docutils 0.9)</dd>
-<dt><code class="docutils literal"><span class="pre">encoding</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">name of text encoding</span></dt>
-<dd>The text encoding of the external data file.  Defaults to the
-document&#8217;s <a class="reference external" href="../../user/config.html#input-encoding">input_encoding</a>.</dd>
-<dt><code class="docutils literal"><span class="pre">tab-width</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer</span></dt>
-<dd>Number of spaces for hard tab expansion.
+(New in Docutils 0.9)</div>
+<dt><code class="docutils literal"><span class="pre">encoding</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">name of text encoding</span><div class="admonition">
+The text encoding of the external data file.  Defaults to the
+document&#8217;s <a class="reference external" href="../../user/config.html#input-encoding">input_encoding</a>.</div>
+<dt><code class="docutils literal"><span class="pre">tab-width</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">integer</span><div class="admonition">
+Number of spaces for hard tab expansion.
 A negative value prevents expansion of hard tabs. Defaults to the
-<a class="reference external" href="../../user/config.html#tab-width">tab_width</a> configuration setting.</dd>
+<a class="reference external" href="../../user/config.html#tab-width">tab_width</a> configuration setting.</div>
 </dl>
 <p>With <code class="docutils literal"><span class="pre">code</span></code> or <code class="docutils literal"><span class="pre">literal</span></code> the common options <a class="reference internal" href="#id16">:class:</a> and
 <a class="reference internal" href="#name">:name:</a> are recognized as well.</p>
@@ -1922,13 +1922,13 @@ example:</p>
 <a class="reference internal" href="#custom-interpreted-text-roles">custom interpreted text roles</a> derived from the <a class="reference external" href="roles.html#raw">&#8220;raw&#8221; role</a>.</p>
 <p>The following options are recognized:</p>
 <dl class="docutils">
-<dt><code class="docutils literal"><span class="pre">file</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">string (newlines removed)</span></dt>
-<dd>The local filesystem path of a raw data file to be included.</dd>
-<dt><code class="docutils literal"><span class="pre">url</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">string (whitespace removed)</span></dt>
-<dd>An Internet URL reference to a raw data file to be included.</dd>
-<dt><code class="docutils literal"><span class="pre">encoding</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">name of text encoding</span></dt>
-<dd>The text encoding of the external raw data (file or URL).
-Defaults to the document&#8217;s encoding (if specified).</dd>
+<dt><code class="docutils literal"><span class="pre">file</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">string (newlines removed)</span><div class="admonition">
+The local filesystem path of a raw data file to be included.</div>
+<dt><code class="docutils literal"><span class="pre">url</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">string (whitespace removed)</span><div class="admonition">
+An Internet URL reference to a raw data file to be included.</div>
+<dt><code class="docutils literal"><span class="pre">encoding</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">name of text encoding</span><div class="admonition">
+The text encoding of the external raw data (file or URL).
+Defaults to the document&#8217;s encoding (if specified).</div>
 </dl>
 </div>
 <div class="section" id="class">
@@ -2166,12 +2166,12 @@ attribute that is different from the role name.  For example:</p>
 <p id="role-class">The following option is recognized by the &#8220;role&#8221; directive for most
 base roles:</p>
 <dl class="docutils">
-<dt><code class="docutils literal"><span class="pre">class</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">text</span></dt>
-<dd>Set the <a class="reference internal" href="docTree.html#classes2"><span>classes</span></a> attribute value on the element produced
+<dt><code class="docutils literal"><span class="pre">class</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">text</span><div class="admonition">
+Set the <a class="reference internal" href="docTree.html#classes2"><span>classes</span></a> attribute value on the element produced
 (<code class="docutils literal"><span class="pre">inline</span></code>, or element associated with a base class) when the
 custom interpreted text role is used.  If no directive options are
 specified, a &#8220;class&#8221; option with the directive argument (role
-name) as the value is implied.  See the <a class="reference internal" href="#class">class</a> directive above.</dd>
+name) as the value is implied.  See the <a class="reference internal" href="#class">class</a> directive above.</div>
 </dl>
 <p>Specific base roles may support other options and/or directive
 content.  See the <a class="reference external" href="roles.html">reStructuredText Interpreted Text Roles</a> document
@@ -2289,11 +2289,11 @@ block.</p>
 <p>Most of the directives that generate doctree elements support the following
 options:</p>
 <dl class="docutils">
-<dt><span class="target" id="id16">:class:</span> <span class="classifier-delimiter">:</span> <span class="classifier">text</span></dt>
-<dd>Set a <a class="reference internal" href="docTree.html#classes2"><span>classes</span></a> attribute value on the doctree element generated by
-the directive. See also the <a class="reference internal" href="#class">class</a> directive.</dd>
-<dt><span class="target" id="name">:name:</span> <span class="classifier-delimiter">:</span> <span class="classifier">text</span></dt>
-<dd><p class="first">Add <cite>text</cite> to the <a class="reference internal" href="docTree.html#names"><span>names</span></a> attribute of the doctree element generated
+<dt><span class="target" id="id16">:class:</span> <span class="classifier-delimiter">:</span> <span class="classifier">text</span><div class="admonition">
+Set a <a class="reference internal" href="docTree.html#classes2"><span>classes</span></a> attribute value on the doctree element generated by
+the directive. See also the <a class="reference internal" href="#class">class</a> directive.</div>
+<dt><span class="target" id="name">:name:</span> <span class="classifier-delimiter">:</span> <span class="classifier">text</span><div class="admonition">
+<p class="first">Add <cite>text</cite> to the <a class="reference internal" href="docTree.html#names"><span>names</span></a> attribute of the doctree element generated
 by the directive. This allows <a class="reference internal" href="restructuredtext.html#id23"><span>hyperlink references</span></a> to the element
 using <cite>text</cite> as <a class="reference internal" href="restructuredtext.html#reference-names"><span>Reference Names</span></a>.</p>
 <p>Specifying the <cite>name</cite> option of a directive, e.g.,</p>
@@ -2308,7 +2308,7 @@ using <cite>text</cite> as <a class="reference internal" href="restructuredtext.
 </pre></div>
 </div>
 <p class="last">New in Docutils 0.8.</p>
-</dd>
+</div>
 </dl>
 </div>
 </div>

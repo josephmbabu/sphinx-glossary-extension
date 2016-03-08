@@ -5,6 +5,7 @@
 Setup
 *****************************
 
+<<<<<<< HEAD
 Locate terminology.py
 ============================
 
@@ -21,11 +22,118 @@ inserts the absolute path of termx.py into the system path relative to the conf.
 
 
 sys.path.insert(0,"/home/admin2/it@houghton.academy/syncPetrillo/Jobs/Courses/Sphinx/sge/sphinx-glossary-extension/sge/")
+=======
+To use this extension, you need to:
+
+* place the terminology.py script somewhere
+* edit the conf.py 
+
+.. index::
+   triple: find; terminology.py; location
+   pair: place; terminology.py
+
+Place terminology.py
+============================
+
+If you downloaded :download:`sve.zip <../zipped/ste.zip>`, you can unzip it and read this documentation on your system. You will find the terminlogy.py in /build/downloads/ folder. 
+
+Otherwise you saved terminology.py using the method under :ref:`download`. 
+
+You now need to decide where you want to place the terminology.py script on your system so that it is found you do a build. For example:
+
+* in the same directory as the conf.py
+* in a directory that you want to reference for multiple Sphinx projects
+* with the Sphinx software or another location you know is already in system path
+
+For this Sphinx site, we have placed terminology in our code and have included it in the site so you can look at the code and comments. This is shown in our conf.py. 
+
+>>>>>>> d36a7ff6e978b6d2760f63e7e5eea6e8c65ef75a
 
 
 Edit conf.py
 =======================
 
+<<<<<<< HEAD
+=======
+If you downloaded our
+
+You need to make three changes to conf.py:
+
+* set the path to terminology.py
+* add to extension list
+* set include to true
+
+.. index::
+   : conf.py; path; extension
+
+Set the path
+--------------------
+
+The default conf.py as of 2016 included a line ``# If extensions (or modules to document with autodoc) are in another directory,`` which is near the top of the script. It explains you should the path for the extension if it is not in a place it will be found. 
+
+For example, we have the extension in the code folder of our documentation so we added the line::
+
+   sys.path.insert(0,os.path.abspath('./code'))
+
+Remember, the dot means the current folder. 
+
+You can also give the full path in quotes, such as::
+
+   sys.path.insert(0,"/home/user/ste/source/code")
+
+
+.. index::
+   : conf.py; list; extension
+
+Extension list
+--------------------
+
+Search for ``extensions =`` and you'll find a list of extensions being used. Add terminology to the end of the list.
+
+::
+
+   extensions = [
+       'sphinx.ext.autodoc',
+       'sphinx.ext.doctest',
+       'sphinx.ext.intersphinx',
+       'sphinx.ext.todo',
+       'sphinx.ext.viewcode',
+       'terminology',
+   ]
+
+You probably will not be using the same extensions as our example. The point is to add terminology to the end of the list.
+
+.. index::
+   : conf.py; include; extension
+
+Set include
+--------------------
+
+Search ``todo_inc``. Add these lines below that line::
+
+   # If true, 'terminology' and 'terminologylist' produce output, else they produce nothing.
+   terminology_include_terminologys = True
+
+
+
+
+
+**********************
+Optional changes
+**********************
+
+.. index:: 
+   pair: hyperlink; change
+
+Terminology list hyperlink
+======================================
+
+You can change the appearance of the hyperlink. In terminology.py the ``process_termx_nodes()`` function has ``description`` string. You can change the string to how what you desire for the hyperlink that takes you back to where the term was defined. 
+
+
+.. index::
+   triple: word; count; term
+>>>>>>> d36a7ff6e978b6d2760f63e7e5eea6e8c65ef75a
 
 .. _moreWords:
 
