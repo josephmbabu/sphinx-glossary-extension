@@ -124,41 +124,55 @@
 =======
 <p>The terms are also placed in the index.</p>
 <p>This documenation assumes you are familiar with using Sphinx.</p>
+<p>This extension is a modification of the example given on <a class="reference external" href="http://www.sphinx-doc.org/en/stable/extdev/tutorial.html">http://www.sphinx-doc.org/en/stable/extdev/tutorial.html</a>.</p>
 </div>
 <div class="section" id="directives">
 <span id="index-0"></span><h1>Directives<a class="headerlink" href="#directives" title="Permalink to this headline">¶</a></h1>
+<<<<<<< HEAD
 >>>>>>> d36a7ff6e978b6d2760f63e7e5eea6e8c65ef75a
 <p>The directives are:</p>
+=======
+>>>>>>> e5e2ba6bdebea41870ba11cc2fae04c7653fc3ba
 <div class="highlight-python"><div class="highlight"><pre>.. terminology:: term to define
-   The definition goes here.
 
-.. terminologylist::
+   The definition goes here.
 </pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">There needs to be a blank between the directive (and term) and the defintion.</p>
 </div>
 <p>The <cite>.. terminlogy::</cite> directive requires at least one word and can have up to 15 words. See <a class="reference internal" href="setup.html#morewords"><span>Changing number of words in the &#8220;term&#8221;</span></a> if you want a different number of words.</p>
 <<<<<<< HEAD
 =======
 <p>If you setup the conf.py correctly, <cite>.. terminology::</cite> directive will place the term and defintion on your page.</p>
+<div class="highlight-python"><div class="highlight"><pre>.. terminologylist::
+</pre></div>
+</div>
 <p>The <cite>.. terminilogylist::</cite> directive is used to place a sorted list of the terms anywhere in your documentation. For example, you might make a glossary page and include the <cite>.. terminilogylist::</cite> directive to get a sorted list of all the terms you have defined.</p>
 </div>
 <div class="section" id="examples">
 <span id="index-1"></span><h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
 <p>Two terms follow:</p>
-<div class="admonition-term-a-definition-of-term-a admonition" id="termx-0">
-<p class="first last admonition-title">Term A Definition of term A</p>
+<div class="admonition-term-a admonition" id="termx-0">
+<p class="first admonition-title">Term A</p>
+<p class="last">Definition of term A</p>
 </div>
-<div class="admonition-b-term-definition-of-term-b admonition" id="termx-1">
-<p class="first last admonition-title">B term Definition of term B</p>
+<div class="admonition-b-term admonition" id="termx-1">
+<p class="first admonition-title">B term</p>
+<p class="last">Definition of term B</p>
 </div>
 <p>The alphabetic list of the terms follow:</p>
-<div class="admonition-term-a-definition-of-term-a admonition">
-<p class="first last admonition-title">Term A Definition of term A</p>
+<div class="admonition-b-term admonition">
+<p class="first admonition-title">B term</p>
+<p class="last">Definition of term B</p>
 </div>
-<p>(The original entry is located in doc/intro.rst, line 44 and can be found <a class="reference external" href="#termx-0"><em>here</em></a>.)</p>
-<div class="admonition-b-term-definition-of-term-b admonition">
-<p class="first last admonition-title">B term Definition of term B</p>
+<p>(The original entry is located in doc/intro.rst, line 57 and can be found <a class="reference external" href="#termx-1"><em>here</em></a>.)</p>
+<div class="admonition-term-a admonition">
+<p class="first admonition-title">Term A</p>
+<p class="last">Definition of term A</p>
 </div>
-<p>(The original entry is located in doc/intro.rst, line 48 and can be found <a class="reference external" href="#termx-1"><em>here</em></a>.)</p>
+<p>(The original entry is located in doc/intro.rst, line 52 and can be found <a class="reference external" href="#termx-0"><em>here</em></a>.)</p>
 </div>
 <div class="section" id="download">
 <span id="id2"></span><h1>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h1>
