@@ -41,7 +41,7 @@ From the Terminal: [#f1]_
 * sudo apt-get install python3-pygments
 * sudo pip install Sphinx
 
-.. termx:: Turtle
+.. termx:: Title
 
    go back to other document and see if I need to load pip on this newer python or test it. 
 
