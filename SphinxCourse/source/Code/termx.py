@@ -75,8 +75,11 @@ def process_termx_nodes(app, doctree, fromdocname):
             node.replace_self([])
             continue
 
+        # The array to store all the termxs accross the site
+        # Structure: [term_info_1, term_reference_1, term_info_2, term_reference_2, ... term_info_n, term_reference_n]
         content = []
 
+        # Loop through each termx in the site environment
         for termx_info in env.termx_all_termxs:
             para = nodes.paragraph()
             filename = env.doc2path(termx_info['docname'], base=None)
@@ -96,16 +99,15 @@ def process_termx_nodes(app, doctree, fromdocname):
             para += newnode
             para += nodes.Text('.)', '.)')
 
+            # The data to enter into the termxlist array
             input_list = [termx_info['termx'], para]
+
+            # Add the input to the termxlist in order
             content = __insert_in_order(input_list, content)
 
-            # Insert into the termxlist
-            # content.append(termx_info['termx'])
-            # content.append(para)
-
-        # newlist = sorted(content, key=lambda x: x, reverse=True)
         node.replace_self(content)
 
+# Insert a termx into a termxlist in order
 def __insert_in_order(the_input, the_list):
     new_list =[]
     is_inserted = False
@@ -125,6 +127,7 @@ def __insert_in_order(the_input, the_list):
 
     return new_list
 
+# Search the title of the termx object
 def __get_title_from_termx_info(info):
     return re.findall('(?<=<title>)(.*?)(?=<\/title>)', info)
 
