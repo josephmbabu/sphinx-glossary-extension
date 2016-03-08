@@ -27,7 +27,9 @@ import shlex
 #3# Python code path added
 #sys.path.insert(0,'/home/anthony/it@houghton.academy/insyncLimited/Sphinx/SphinxCourse/source/Code')
 #sys.path.insert(0,'/home/admin2/it@houghton.academy/insyncLimited/Sphinx/SphinxCourse/source/Code')
-sys.path.insert(0,os.path.abspath('./Code'))
+sys.path.insert(0, os.path.abspath('./Code'))
+
+sys.path.insert(0, os.path.abspath('../../sge'))
 
 
 # -- General configuration ------------------------------------------------
@@ -44,7 +46,8 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.viewcode',
-    'termx'
+    'termx',
+    'test_unit'
 ]
 
 
