@@ -107,8 +107,6 @@
 
         <span class="n">targetid</span> <span class="o">=</span> <span class="s2">&quot;termx-</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">env</span><span class="o">.</span><span class="n">new_serialno</span><span class="p">(</span><span class="s1">&#39;termx&#39;</span><span class="p">)</span>
         <span class="n">targetnode</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">target</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="n">targetid</span><span class="p">])</span>
-        <span class="k">print</span> <span class="s1">&#39;arguments:&#39;</span>
-        <span class="k">print</span> <span class="bp">self</span><span class="o">.</span><span class="n">arguments</span>
         <span class="n">ad</span> <span class="o">=</span> <span class="n">make_admonition</span><span class="p">(</span><span class="n">termx</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="p">[</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">arguments</span><span class="p">))],</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span>
                              <span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lineno</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_offset</span><span class="p">,</span>
                              <span class="bp">self</span><span class="o">.</span><span class="n">block_text</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">state_machine</span><span class="p">)</span>
@@ -132,7 +130,6 @@
                           <span class="k">if</span> <span class="n">termx</span><span class="p">[</span><span class="s1">&#39;docname&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">docname</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="process_termx_nodes"><a class="viewcode-back" href="../coderst/termx.html#termx.process_termx_nodes">[docs]</a><span class="k">def</span> <span class="nf">process_termx_nodes</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">doctree</span><span class="p">,</span> <span class="n">fromdocname</span><span class="p">):</span>
-    <span class="k">print</span> <span class="s2">&quot;Is calling proccess.&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">termx_include_termxs</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">doctree</span><span class="o">.</span><span class="n">traverse</span><span class="p">(</span><span class="n">termx</span><span class="p">):</span>
             <span class="n">node</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
@@ -172,7 +169,6 @@
 
             <span class="c1"># The data to enter into the termxlist array</span>
             <span class="n">input_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">termx_info</span><span class="p">[</span><span class="s1">&#39;termx&#39;</span><span class="p">],</span> <span class="n">para</span><span class="p">]</span>
-<<<<<<< HEAD
 
             <span class="c1"># Add the input to the termxlist in order</span>
             <span class="n">content</span> <span class="o">=</span> <span class="n">__insert_in_order</span><span class="p">(</span><span class="n">input_list</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span>
@@ -181,15 +177,10 @@
             <span class="c1"># content.append(termx_info[&#39;termx&#39;])</span>
             <span class="c1"># content.append(para)</span>
             
-        <span class="k">for</span> <span class="n">item2</span> <span class="ow">in</span> <span class="n">content</span><span class="p">:</span>
-            <span class="n">title</span> <span class="o">=</span> <span class="n">__get_title_from_termx_info</span><span class="p">(</span><span class="n">item2</span><span class="o">.</span><span class="n">__str__</span><span class="p">())</span>
-            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">title</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="k">print</span> <span class="n">title</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-=======
-
-            <span class="c1"># Add the input to the termxlist in order</span>
-            <span class="n">content</span> <span class="o">=</span> <span class="n">__insert_in_order</span><span class="p">(</span><span class="n">input_list</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span>
->>>>>>> 8660f92f64e87f429fd408287e7b90d3c4c94eb4
+        <span class="c1"># for item2 in content:</span>
+        <span class="c1">#     title = __get_title_from_termx_info(item2.__str__())</span>
+        <span class="c1">#     if len(title) &gt; 0:</span>
+        <span class="c1">#         print title[0]</span>
 
         <span class="n">node</span><span class="o">.</span><span class="n">replace_self</span><span class="p">(</span><span class="n">content</span><span class="p">)</span></div>
 
@@ -198,9 +189,9 @@
     <span class="n">new_list</span> <span class="o">=</span><span class="p">[]</span>
     <span class="n">is_inserted</span> <span class="o">=</span> <span class="bp">False</span>
 
-    <span class="k">print</span> <span class="s2">&quot;Entered list:&quot;</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">the_list</span><span class="p">)):</span>
-        <span class="k">print</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="s2">&quot;:&quot;</span><span class="p">,</span><span class="n">the_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="c1"># print &quot;Entered list:&quot;</span>
+    <span class="c1"># for i in xrange(len(the_list)):</span>
+    <span class="c1">#     print &quot;\t&quot;,i,&quot;:&quot;,the_list[i]</span>
 
     <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">the_list</span><span class="p">)):</span>
         <span class="k">if</span> <span class="n">the_list</span><span class="p">[</span><span class="n">item</span><span class="p">]</span><span class="o">.</span><span class="n">__str__</span><span class="p">()</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;&lt;termx&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
@@ -209,18 +200,18 @@
             <span class="k">if</span> <span class="n">item_title</span> <span class="o">&gt;</span> <span class="n">input_title</span><span class="p">:</span>
                 <span class="c1"># Insert our entry into content</span>
                 <span class="n">new_list</span> <span class="o">=</span> <span class="n">the_list</span><span class="p">[:</span><span class="n">item</span><span class="p">]</span> <span class="o">+</span> <span class="n">the_input</span> <span class="o">+</span>  <span class="n">the_list</span><span class="p">[</span><span class="n">item</span><span class="p">:]</span>
-                <span class="k">print</span> <span class="n">input_title</span><span class="p">,</span><span class="s2">&quot;is less than&quot;</span><span class="p">,</span><span class="n">item_title</span><span class="p">,</span><span class="s2">&quot;so:&quot;</span>
-                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">new_list</span><span class="p">)):</span>
-                    <span class="k">print</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="s2">&quot;:&quot;</span><span class="p">,</span><span class="n">new_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="c1"># print input_title,&quot;is less than&quot;,item_title,&quot;so:&quot;</span>
+                <span class="c1"># for i in xrange(len(new_list)):</span>
+                <span class="c1">#     print &quot;\t&quot;,i,&quot;:&quot;,new_list[i]</span>
                 <span class="n">is_inserted</span> <span class="o">=</span> <span class="bp">True</span>
                 <span class="k">break</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">is_inserted</span><span class="p">:</span>
         <span class="n">new_list</span> <span class="o">=</span> <span class="n">the_list</span>
         <span class="n">new_list</span> <span class="o">+=</span> <span class="n">the_input</span>
-        <span class="k">print</span> <span class="s2">&quot;End of list, so:&quot;</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">new_list</span><span class="p">)):</span>
-            <span class="k">print</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="s2">&quot;:&quot;</span><span class="p">,</span><span class="n">new_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="c1"># print &quot;End of list, so:&quot;</span>
+        <span class="c1"># for i in xrange(len(new_list)):</span>
+        <span class="c1">#     print &quot;\t&quot;,i,&quot;:&quot;,new_list[i]</span>
 
     <span class="k">print</span> <span class="s2">&quot;Added: &quot;</span> <span class="o">+</span> <span class="n">__get_title_from_termx_info</span><span class="p">(</span><span class="n">the_input</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">__str__</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
 

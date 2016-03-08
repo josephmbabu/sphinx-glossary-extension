@@ -2311,8 +2311,8 @@ a new directive).</p>
 note that most of the embedded directives shown are examples only and
 have not been implemented.</p>
 <dl class="docutils">
-<dt>Objects</dt>
-<dd><p class="first">Substitution references may be used to associate ambiguous text
+<dt>Objects<div class="admonition">
+<p class="first">Substitution references may be used to associate ambiguous text
 with a unique object identifier.</p>
 <p>For example, many sites may wish to implement an inline &#8220;user&#8221;
 directive:</p>
@@ -2349,9 +2349,9 @@ transformed output.
 .. |runString| function:: module=xml.xslt class=Processor
 </pre></div>
 </div>
-</dd>
-<dt>Images</dt>
-<dd><p class="first">Images are a common use for substitution references:</p>
+</div>
+<dt>Images<div class="admonition">
+<p class="first">Images are a common use for substitution references:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>West led the |H| 3, covered by dummy&#39;s |H| Q, East&#39;s |H| K,
 and trumped in hand with the |S| 2.
 
@@ -2377,9 +2377,9 @@ and trumped in hand with the |S| 2.
 </pre></div>
 </div>
 <p class="last">The &#8220;<a class="reference external" href="directives.html#image">image</a>&#8221; directive has been implemented.</p>
-</dd>
-<dt>Styles <a class="footnote-reference" href="#id22" id="id21">[9]</a></dt>
-<dd><p class="first">Substitution references may be used to associate inline text with
+</div>
+<dt>Styles <a class="footnote-reference" href="#id22" id="id21">[9]</a><div class="admonition">
+<p class="first">Substitution references may be used to associate inline text with
 an externally defined presentation style:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>Even |the text in Texas| is big.
 
@@ -2399,9 +2399,9 @@ text role syntax.  The substitution mechanism is cumbersome for
 simple text styling.</td></tr>
 </tbody>
 </table>
-</dd>
-<dt>Templates</dt>
-<dd><p class="first">Inline markup may be used for later processing by a template
+</div>
+<dt>Templates<div class="admonition">
+<p class="first">Inline markup may be used for later processing by a template
 engine.  For example, a <a class="reference external" href="http://www.zope.com/">Zope</a> author might write:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>Welcome back, |name|!
 
@@ -2415,9 +2415,9 @@ engine.  For example, a <a class="reference external" href="http://www.zope.com/
 </div>
 <p class="last">Zope would then transform this to something like &#8220;Welcome back,
 David!&#8221; during a session with an actual user.</p>
-</dd>
-<dt>Replacement text</dt>
-<dd><p class="first">The substitution mechanism may be used for simple macro
+</div>
+<dt>Replacement text<div class="admonition">
+<p class="first">The substitution mechanism may be used for simple macro
 substitution.  This may be appropriate when the replacement text
 is repeated many times throughout one or more documents,
 especially if it may need to change later.  A short example is
@@ -2448,7 +2448,7 @@ __ http://developer.java.sun.com/developer/earlyAccess/
 </pre></div>
 </div>
 <p class="last">The &#8220;<a class="reference external" href="directives.html#replace">replace</a>&#8221; directive has been implemented.</p>
-</dd>
+</div>
 </dl>
 </div>
 <div class="section" id="comments">
