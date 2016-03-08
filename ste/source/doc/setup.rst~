@@ -10,6 +10,10 @@ To use this extension, you need to:
 * place the terminology.py script somewhere
 * edit the conf.py 
 
+.. index::
+   triple: find; terminology.py; location
+   pair: place; terminology.py
+
 Place terminology.py
 ============================
 
@@ -35,28 +39,55 @@ If you downloaded our
 You need to make three changes to conf.py:
 
 * set the path to terminology.py
-* 
+* add to extension list
+* set include to true
+
+Set the path
+--------------------
+
+The default conf.py as of 2016 included a line ``# If extensions (or modules to document with autodoc) are in another directory,`` which is near the top of the script. It explains you should the path for the extension if it is not in a place it will be found. 
+
+For example, we have the extension in the code folder of our documentation so we added the line::
+
+   sys.path.insert(0,os.path.abspath('./code'))
+
+Remember, the dot means the current folder. 
+
+You can also give the full path in quotes, such as::
+
+   sys.path.insert(0,"/home/user/ste/source/code")
 
 
 
+Extension list
+--------------------
+
+Search for ``extensions =`` and you'll find a list of extensions being used. Add terminology to the end of the list.
+
+::
+
+   extensions = [
+       'sphinx.ext.autodoc',
+       'sphinx.ext.doctest',
+       'sphinx.ext.intersphinx',
+       'sphinx.ext.todo',
+       'sphinx.ext.viewcode',
+       'terminology',
+   ]
+
+You probably will not be using the same extensions as our example. The point is to add terminology to the end of the list.
+
+
+Set include
+--------------------
+
+Search ``todo_inc``. Add these lines below that line::
+
+   # If true, 'terminology' and 'terminologylist' produce output, else they produce nothing.
+   terminology_include_terminologys = True
 
 
 
-
-
-/home/admin2/it@houghton.academy/syncPetrillo/Jobs/Courses/Sphinx/sge/sphinx-glossary-extension/sge/source
-
-
-conf.py is /home/admin2/it@houghton.academy/syncPetrillo/Jobs/Courses/Sphinx/sge/sphinx-glossary-extension/SphinxCourse/source
-
-termx.py is /home/admin2/it@houghton.academy/syncPetrillo/Jobs/Courses/Sphinx/sge/sphinx-glossary-extension/sge/
-
-sys.path.insert(0,os.path.abspath('../../sge'))
-
-inserts the absolute path of termx.py into the system path relative to the conf.py we are running
-
-
-sys.path.insert(0,"/home/admin2/it@houghton.academy/syncPetrillo/Jobs/Courses/Sphinx/sge/sphinx-glossary-extension/sge/")
 
 
 **********************
@@ -66,7 +97,7 @@ Optional changes
 Terminology list hyperlink
 ======================================
 
-You can change the appearance of the hyperlink at ... ~~~
+You can change the appearance of the hyperlink. In terminology.py the ``process_termx_nodes()`` function has ``description`` string. You can change the string to how what you desire for the hyperlink that takes you back to where the term was defined. 
 
 
 .. _moreWords:
