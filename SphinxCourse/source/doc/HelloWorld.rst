@@ -36,6 +36,10 @@ In a terminal do the following (remember that the > represent the terminal promp
 
 The following are the questions you'll be asked. Answer yours like we answer here. You'll see what each of these mean as we play around the different features. 
 
+.. termx:: Jaguar
+
+   The jaguar (Panthera onca) is a big cat, a feline in the Panthera genus, and is the only extant Panthera species native to the Americas.
+
 .. code::
 
    Welcome to the Sphinx 1.3.1 quickstart utility.
