@@ -41,13 +41,21 @@ From the Terminal: [#f1]_
 * sudo apt-get install python3-pygments
 * sudo pip install Sphinx
 
+.. glossary:: ABC123
+   The ABC123 should be in index
+
+
+
 .. termx:: Title
 
    go back to other document and see if I need to load pip on this newer python or test it. 
 
 Or you can use the Synaptic Package Manager or the software loading method used by the Linux distro you are using, such as the Ubuntu Software Center. 
 
-.. termx:: The Term
+.. index::
+   pair: ABC456; pig
+
+.. termx:: Lion
    
    My system seems to be using Python 2. I'm not sure how to clean that up before we build a linux iso for the course? ajp
 
@@ -56,6 +64,9 @@ Or you can use the Synaptic Package Manager or the software loading method used 
    Example term for todox.
 
 .. termxlist::
+
+.. index::
+   pair: ABC456; pig
 
 
 Windows
@@ -81,3 +92,6 @@ Windows
           :align: middle
           :alt: Try It
           :width: 38 px
+
+.. glossary:: ABC123
+   The ABC123 should be in index

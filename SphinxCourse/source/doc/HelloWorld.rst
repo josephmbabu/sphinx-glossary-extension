@@ -36,6 +36,10 @@ In a terminal do the following (remember that the > represent the terminal promp
 
 The following are the questions you'll be asked. Answer yours like we answer here. You'll see what each of these mean as we play around the different features. 
 
+.. termx:: Tiger
+   
+   A 4-legged bird.
+
 .. code::
 
    Welcome to the Sphinx 1.3.1 quickstart utility.

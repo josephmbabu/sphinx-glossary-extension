@@ -22,6 +22,9 @@ Subsubsections
 Paragraphs
 """"""""""""""""""""
 
+.. termx:: Tango
+
+   A fast-moving bear.
  
 
 .. rubric:: Footnotes
