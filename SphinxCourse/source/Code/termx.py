@@ -1,5 +1,3 @@
-
-
 from docutils import nodes
 
 class termx(nodes.Admonition, nodes.Element):
@@ -29,13 +27,19 @@ class TermxDirective(Directive):
     # this enables content in the directive
     has_content = True
 
+    # Allows 15 directive arguments max, requires 1
+    required_arguments = 1
+    optional_arguments = 14
+    final_argument_whitespace = False
+
     def run(self):
         env = self.state.document.settings.env
 
         targetid = "termx-%d" % env.new_serialno('termx')
         targetnode = nodes.target('', '', ids=[targetid])
-
-        ad = make_admonition(termx, self.name, [_('Termx')], self.options,
+        print 'arguments:'
+        print self.arguments
+        ad = make_admonition(termx, self.name, [_(" ".join(self.arguments))], self.options,
                              self.content, self.lineno, self.content_offset,
                              self.block_text, self.state, self.state_machine)
 
