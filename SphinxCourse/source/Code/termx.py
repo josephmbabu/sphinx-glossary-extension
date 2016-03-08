@@ -26,6 +26,8 @@ class TermxDirective(Directive):
 
     # this enables content in the directive
     has_content = True
+
+    # Allows 15 directive arguments max, requires 1
     required_arguments = 1
     optional_arguments = 14
     final_argument_whitespace = False
