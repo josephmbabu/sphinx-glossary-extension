@@ -58,6 +58,7 @@
 <li><a class="reference internal" href="#">Setup</a><ul>
 <li><a class="reference internal" href="#locate-terminology-py">Locate terminology.py</a></li>
 <li><a class="reference internal" href="#edit-conf-py">Edit conf.py</a></li>
+<li><a class="reference internal" href="#changing-number-of-words-in-the-term">Changing number of words in the &#8220;term&#8221;</a></li>
 </ul>
 </li>
 </ul>
@@ -109,6 +110,14 @@
 </div>
 <div class="section" id="edit-conf-py">
 <h2>Edit conf.py<a class="headerlink" href="#edit-conf-py" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="changing-number-of-words-in-the-term">
+<span id="morewords"></span><h2>Changing number of words in the &#8220;term&#8221;<a class="headerlink" href="#changing-number-of-words-in-the-term" title="Permalink to this headline">¶</a></h2>
+<p>The extension ships with the number of words in the term being a maximum of 15. You can change this by editing the extension, file terminology.py. Find this line:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">optional_arguments</span> <span class="o">=</span> <span class="mi">14</span>
+</pre></div>
+</div>
+<p>Then change the 14 to the number you desire. Remember, the count starts at 0, hence setting to 14 gives you up to 15 words in the term.</p>
 </div>
 </div>
 

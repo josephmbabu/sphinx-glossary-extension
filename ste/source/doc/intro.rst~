@@ -11,4 +11,13 @@ Sphinx Terminlogy Extension is similar to the glossary directive. The primary di
 Directives
 *****************************
 
-There are 
+The directives are::
+
+   .. terminology:: term to define
+      The definition goes here.
+
+   .. terminologylist::
+
+The `.. terminlogy::` directive requires at least one word and can have up to 15 words. See :ref:`moreWords` if you want a different number of words. 
+
+If you setup the conf.py correctly, 
