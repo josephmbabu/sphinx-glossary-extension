@@ -1,4 +1,5 @@
 from docutils import nodes
+import re
 
 class termx(nodes.Admonition, nodes.Element):
     pass
@@ -95,11 +96,38 @@ def process_termx_nodes(app, doctree, fromdocname):
             para += newnode
             para += nodes.Text('.)', '.)')
 
-            # Insert into the termxlist
-            content.append(termx_info['termx'])
-            content.append(para)
+            input_list = [termx_info['termx'], para]
+            content = __insert_in_order(input_list, content)
 
+            # Insert into the termxlist
+            # content.append(termx_info['termx'])
+            # content.append(para)
+
+        # newlist = sorted(content, key=lambda x: x, reverse=True)
         node.replace_self(content)
+
+def __insert_in_order(the_input, the_list):
+    new_list =[]
+    is_inserted = False
+
+    for item in xrange(len(the_list)):
+        if the_list[item].__str__().find('<termx') != -1:
+            input_title = __get_title_from_termx_info(the_input[0].__str__())[0]
+            item_title = __get_title_from_termx_info(the_list[item].__str__())[0]
+            if item_title > input_title:
+                # Insert our entry into content
+                new_list = the_input + the_list[:item] + the_list[item:]
+                is_inserted = True
+
+    if not is_inserted:
+        new_list.append(the_input[0])
+        new_list.append(the_input[1])
+
+    return new_list
+
+def __get_title_from_termx_info(info):
+    return re.findall('(?<=<title>)(.*?)(?=<\/title>)', info)
+
 
 def setup(app):
     app.add_config_value('termx_include_termxs', False, 'html')
