@@ -4,9 +4,6 @@
 Installation
 **************************
 
-JOSEPH IS HERE!
-
-
 We will begin the Sphinx installation in this chapter. But as we experiment with Sphinx we may find that we've missed some pieces and will need to add them as we go.
 
 .. Glossary:: Term
