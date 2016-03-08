@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Setup &mdash; Sphinx Course</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Sphinx Course" href="../index.html" />
+    <link rel="up" title="Documentation" href="doc.html" />
+    <link rel="next" title="code" href="../coderst/modules.html" />
+    <link rel="prev" title="Introduction" href="intro.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../coderst/modules.html" title="code"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="Introduction"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Sphinx Course</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="doc.html" accesskey="U">Documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/TEN3Logo.gif" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Setup</a><ul>
+<li><a class="reference internal" href="#locate-terminology-py">Locate terminology.py</a></li>
+<li><a class="reference internal" href="#edit-conf-py">Edit conf.py</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="intro.html"
+                        title="previous chapter">Introduction</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../coderst/modules.html"
+                        title="next chapter">code</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/doc/setup.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="setup">
+<span id="id1"></span><h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="locate-terminology-py">
+<h2>Locate terminology.py<a class="headerlink" href="#locate-terminology-py" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="mailto:/home/admin2/it&#37;&#52;&#48;houghton&#46;academy/syncPetrillo/Jobs/Courses/Sphinx/sge/sphinx-glossary-extension/sge/source">/home/admin2/it<span>&#64;</span>houghton<span>&#46;</span>academy/syncPetrillo/Jobs/Courses/Sphinx/sge/sphinx-glossary-extension/sge/source</a></p>
+<p>conf.py is <a class="reference external" href="mailto:/home/admin2/it&#37;&#52;&#48;houghton&#46;academy/syncPetrillo/Jobs/Courses/Sphinx/sge/sphinx-glossary-extension/SphinxCourse/source">/home/admin2/it<span>&#64;</span>houghton<span>&#46;</span>academy/syncPetrillo/Jobs/Courses/Sphinx/sge/sphinx-glossary-extension/SphinxCourse/source</a></p>
+<p>termx.py is <a class="reference external" href="mailto:/home/admin2/it&#37;&#52;&#48;houghton&#46;academy/syncPetrillo/Jobs/Courses/Sphinx/sge/sphinx-glossary-extension/sge/">/home/admin2/it<span>&#64;</span>houghton<span>&#46;</span>academy/syncPetrillo/Jobs/Courses/Sphinx/sge/sphinx-glossary-extension/sge/</a></p>
+<p>sys.path.insert(0,os.path.abspath(&#8216;../../sge&#8217;))</p>
+<p>inserts the absolute path of termx.py into the system path relative to the conf.py we are running</p>
+<p>sys.path.insert(0,&#8221;<a class="reference external" href="mailto:/home/admin2/it&#37;&#52;&#48;houghton&#46;academy/syncPetrillo/Jobs/Courses/Sphinx/sge/sphinx-glossary-extension/sge/">/home/admin2/it<span>&#64;</span>houghton<span>&#46;</span>academy/syncPetrillo/Jobs/Courses/Sphinx/sge/sphinx-glossary-extension/sge/</a>&#8221;)</p>
+</div>
+<div class="section" id="edit-conf-py">
+<h2>Edit conf.py<a class="headerlink" href="#edit-conf-py" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../coderst/modules.html" title="code"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="Introduction"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Sphinx Course</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="doc.html" >Documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, TEN3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.3.
+    </div>
+  </body>
+</html>

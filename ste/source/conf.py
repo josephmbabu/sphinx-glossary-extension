@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 #
-# Sphinx Course 
+# Sphinx Terminlogy Extension 
 #
-# documentation build configuration file, created by
-# sphinx-quickstart on Sun Dec 27 11:33:08 2015.
+# created by Marc Bohler, Joseph Mbaba, Anthony Petrillo
 #
 #3# TEN3 changes commented with #3#
 #
@@ -25,9 +24,7 @@ import shlex
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
 #3# Python code path added
-#sys.path.insert(0,'/home/anthony/it@houghton.academy/insyncLimited/Sphinx/SphinxCourse/source/Code')
-#sys.path.insert(0,'/home/admin2/it@houghton.academy/insyncLimited/Sphinx/SphinxCourse/source/Code')
-sys.path.insert(0,os.path.abspath('./Code'))
+sys.path.insert(0,os.path.abspath('./code'))
 
 
 # -- General configuration ------------------------------------------------
