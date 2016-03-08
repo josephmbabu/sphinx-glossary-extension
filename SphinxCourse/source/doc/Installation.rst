@@ -41,7 +41,8 @@ From the Terminal: [#f1]_
 * sudo apt-get install python3-pygments
 * sudo pip install Sphinx
 
-.. todo::
+.. termx:: Title
+
    go back to other document and see if I need to load pip on this newer python or test it. 
 
 Or you can use the Synaptic Package Manager or the software loading method used by the Linux distro you are using, such as the Ubuntu Software Center. 
