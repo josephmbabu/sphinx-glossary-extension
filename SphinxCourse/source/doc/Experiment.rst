@@ -89,6 +89,10 @@ We typically put our images in a directory called source/images. This means our 
 
 |pencil| try to include some images into your site. Feel free to copy some images from our images directory. Also, remember you can see our source code by going to a page with an image and pressing the Show Source link.
 
+.. termx:: Lion
+   
+   The lion (Panthera leo) is one of the five big cats in the genus Panthera and a member of the family Felidae. The commonly used term African lion collectively denotes the several subspecies found in Africa
+
 .. index::
    pair: todo; extension
    single: todo; explained

@@ -52,16 +52,9 @@ From the Terminal: [#f1]_
 
 Or you can use the Synaptic Package Manager or the software loading method used by the Linux distro you are using, such as the Ubuntu Software Center. 
 
-.. index::
-   pair: ABC456; pig
-
-.. termx:: Lion
+.. termx:: Tiger
    
-   My system seems to be using Python 2. I'm not sure how to clean that up before we build a linux iso for the course? ajp
-
-.. termx:: Term1
-   
-   Example term for todox.
+   The tiger (Panthera tigris) is the largest cat species, reaching a total body length of up to 3.38 m (11.1 ft) over curves and exceptionally weighing up to 388.7 kg (857 lb) in the wild
 
 .. termxlist::
 
