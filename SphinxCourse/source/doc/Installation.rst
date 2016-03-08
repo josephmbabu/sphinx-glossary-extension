@@ -38,6 +38,11 @@ From the Terminal: [#f1]_
 * sudo apt-get install python3-pygments
 * sudo pip install Sphinx
 
+.. glossary:: ABC123
+   The ABC123 should be in index
+
+
+
 .. termx:: Title
 
    go back to other document and see if I need to load pip on this newer python or test it. 
@@ -49,6 +54,9 @@ Or you can use the Synaptic Package Manager or the software loading method used 
    The tiger (Panthera tigris) is the largest cat species, reaching a total body length of up to 3.38 m (11.1 ft) over curves and exceptionally weighing up to 388.7 kg (857 lb) in the wild
 
 .. termxlist::
+
+.. index::
+   pair: ABC456; pig
 
 
 Windows
@@ -74,3 +82,6 @@ Windows
           :align: middle
           :alt: Try It
           :width: 38 px
+
+.. glossary:: ABC123
+   The ABC123 should be in index

@@ -1,6 +1,17 @@
 .. index::
    single: todo; list
 
+.. index::
+   single: Tortoise
+
+.. termx:: Tortoises
+
+   A slow-moving rabbit.
+
+.. termx:: Tile
+
+   A artichoke.
+
 .. _todo:
 
 ########################################

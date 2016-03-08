@@ -7,6 +7,10 @@ Introduction
 
 Sphinx Terminlogy Extension is similar to the glossary directive. The primary difference is that the terminology extension has a directive to list all the terms. The terminology extension requires the use of the `.. terminology::` directive for each term. The terminlogy extension does not support defining multiple terms with the same definition. 
 
+The terms are also placed in the index.
+
+This documenation assumes you are familiar with using Sphinx. 
+
 *****************************
 Directives
 *****************************
@@ -20,4 +24,41 @@ The directives are::
 
 The `.. terminlogy::` directive requires at least one word and can have up to 15 words. See :ref:`moreWords` if you want a different number of words. 
 
+<<<<<<< HEAD
 If you setup the conf.py correctly, 
+=======
+If you setup the conf.py correctly, `.. terminology::` directive will place the term and defintion on your page.
+
+The `.. terminilogylist::` directive is used to place a sorted list of the terms anywhere in your documentation. For example, you might make a glossary page and include the `.. terminilogylist::` directive to get a sorted list of all the terms you have defined.
+
+*****************************
+Examples
+*****************************
+
+Two terms follow:
+
+.. termx:: Term A
+   Definition of term A
+
+
+.. termx:: B term
+   Definition of term B
+
+The alphabetic list of the terms follow:
+
+.. termxlist::
+
+
+
+.. _download:
+
+*****************************
+Download
+*****************************
+
+* Code and documentation: :download:`sve.zip <../zipped/ste.zip>`
+* Code only: Click :download:`here <../code/termx.py>` then use file > save and name it ``terminology.py``.
+
+
+
+>>>>>>> 39d6ea7588e752f7702956e5182abd11a2564b68
