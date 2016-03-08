@@ -1,6 +1,6 @@
-.. _TEN3ProgDB1Course:
+.. _sge:
 
-TEN3's Programming & Database 1 Course
+Sphinx Glossary Extension
 =========================================
 
 Contents:
@@ -9,7 +9,6 @@ Contents:
    :maxdepth: 2
 
    doc/doc
-   scode/scode
    coderst/modules
 
 
