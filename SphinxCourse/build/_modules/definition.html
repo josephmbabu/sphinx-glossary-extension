@@ -68,7 +68,11 @@
             
   <h1>Source code for definition</h1><div class="highlight"><pre>
 <span></span><span class="kn">from</span> <span class="nn">docutils</span> <span class="kn">import</span> <span class="n">nodes</span>
+<span class="kn">from</span> <span class="nn">docutils.parsers.rst</span> <span class="kn">import</span> <span class="n">Directive</span>
+<span class="kn">from</span> <span class="nn">sphinx.util.compat</span> <span class="kn">import</span> <span class="n">make_admonition</span>
+<span class="kn">from</span> <span class="nn">sphinx.addnodes</span> <span class="kn">import</span> <span class="n">index</span>
 <span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">sphinx.locale</span> <span class="kn">import</span> <span class="n">_</span>
 
 <div class="viewcode-block" id="definition"><a class="viewcode-back" href="../coderst/definition.html#definition.definition">[docs]</a><span class="k">class</span> <span class="nc">definition</span><span class="p">(</span><span class="n">nodes</span><span class="o">.</span><span class="n">Admonition</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Element</span><span class="p">):</span>
     <span class="k">pass</span></div>
@@ -82,15 +86,10 @@
 <div class="viewcode-block" id="depart_definition_node"><a class="viewcode-back" href="../coderst/definition.html#definition.depart_definition_node">[docs]</a><span class="k">def</span> <span class="nf">depart_definition_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">depart_admonition</span><span class="p">(</span><span class="n">node</span><span class="p">)</span></div>
 
-<span class="kn">from</span> <span class="nn">docutils.parsers.rst</span> <span class="kn">import</span> <span class="n">Directive</span>
-
 <div class="viewcode-block" id="DefinitionlistDirective"><a class="viewcode-back" href="../coderst/definition.html#definition.DefinitionlistDirective">[docs]</a><span class="k">class</span> <span class="nc">DefinitionlistDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
 
 <div class="viewcode-block" id="DefinitionlistDirective.run"><a class="viewcode-back" href="../coderst/definition.html#definition.DefinitionlistDirective.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">definitionlist</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)]</span></div></div>
-
-<span class="kn">from</span> <span class="nn">sphinx.util.compat</span> <span class="kn">import</span> <span class="n">make_admonition</span>
-<span class="kn">from</span> <span class="nn">sphinx.locale</span> <span class="kn">import</span> <span class="n">_</span>
 
 <div class="viewcode-block" id="DefinitionDirective"><a class="viewcode-back" href="../coderst/definition.html#definition.DefinitionDirective">[docs]</a><span class="k">class</span> <span class="nc">DefinitionDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
 

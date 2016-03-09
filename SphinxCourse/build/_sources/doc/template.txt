@@ -22,7 +22,7 @@ Subsubsections
 Paragraphs
 """"""""""""""""""""
 
-.. termx:: Tango
+.. definition:: Tango
 
    A fast-moving bear.
  

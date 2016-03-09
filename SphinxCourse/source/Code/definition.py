@@ -1,5 +1,9 @@
 from docutils import nodes
+from docutils.parsers.rst import Directive
+from sphinx.util.compat import make_admonition
+from sphinx.addnodes import index
 import re
+from sphinx.locale import _
 
 class definition(nodes.Admonition, nodes.Element):
     pass
@@ -13,15 +17,10 @@ def visit_definition_node(self, node):
 def depart_definition_node(self, node):
     self.depart_admonition(node)
 
-from docutils.parsers.rst import Directive
-
 class DefinitionlistDirective(Directive):
 
     def run(self):
         return [definitionlist('')]
-
-from sphinx.util.compat import make_admonition
-from sphinx.locale import _
 
 class DefinitionDirective(Directive):
 

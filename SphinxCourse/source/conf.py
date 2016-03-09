@@ -46,7 +46,6 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.viewcode',
-    'termx',
     'definition'
 ]
 
