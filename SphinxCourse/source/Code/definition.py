@@ -12,15 +12,15 @@ class definition(nodes.Admonition, nodes.Element):
 class definitionlist(nodes.General, nodes.Element):
     pass
 
-class TerminologyIndex(Index):
+class DefinitionIndex(Index):
     """
     Adds terminologies to the index
     """
-    name = 'terminologyindex'
-    localname = 'Terminology Index'
-    shortname = 'terminologies'
+    name = 'definitionindex'
+    localname = 'Definition Index'
+    shortname = 'definitions'
 
-    def generate(self,  docnames=None):
+    def generate(self,  docnames = None):
 
         collapse = False
         content = []
@@ -177,9 +177,13 @@ def __get_title_from_definition_info(info):
 
 
 def setup(app):
-    app.add_index_to_domain('std', TerminologyIndex)
-    StandardDomain.initial_data['labels']['terminologyindex'] = ('std-terminologyindex', '', 'Terminology Index')
-    StandardDomain.initial_data['anonlabels']['terminologyindex'] = ('std-terminologyindex', '')
+    """
+    Todo:
+        Fix it so that it adds definitions to the index domain using the our custom 'definition' directive
+    """
+    #app.add_index_to_domain('std', DefinitionIndex)
+    #StandardDomain.initial_data['labels']['definitionindex'] = ('std-definitionindex', '', 'Definition Index')
+    #StandardDomain.initial_data['anonlabels']['definitionindex'] = ('std-definitionindex', '')
     app.add_config_value('definition_include_definitions', False, 'html')
     app.add_node(definitionlist)
     app.add_node(definition,
