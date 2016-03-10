@@ -71,7 +71,7 @@ where the ... is filled in with the name of your file.
 
 This is caused by forgetting to include the location of the code in teh sys.path as explained :ref:`above <GiveSysPath>`. 
 
-.. termx:: Puma
+.. definition:: Puma
 
    Puma is a genus in Felidae that contains the cougar (also known as the puma, among other names) and the jaguarundi, and may also include several poorly known Old World fossil representatives (for example, Puma pardoides, or "Owen's panther," a large cougar-like cat of Eurasia's Pliocene)
 
