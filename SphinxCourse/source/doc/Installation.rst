@@ -4,14 +4,10 @@
 Installation
 **************************
 
-JOSEPH IS HERE!
-
-
 We will begin the Sphinx installation in this chapter. But as we experiment with Sphinx we may find that we've missed some pieces and will need to add them as we go.
 
 .. Glossary:: Term
    Here is my definition.
-   I think i'll try multiple lines.
 
 .. Note::
    Teacher, please show the student where the Sphinx folder is that contains the course and the documentation. Then guide them to the build/intro.html file. We could put a link to the intro.html file but at this point we want to get the students comfortable navigating the directory/folder structure because they will be doing that quite a bit. 
@@ -86,5 +82,3 @@ Windows
           :alt: Try It
           :width: 38 px
 
-.. glossary:: ABC123
-   The ABC123 should be in index

@@ -4,7 +4,7 @@
 Changing the theme
 *************************
 
-.. termx:: Manx cat
+.. definition:: Manx cat
 
    The Manx cat (/ˈmæŋks/, in earlier times often spelled Manks), is a breed of domestic cat (Felis catus) originating on the Isle of Man, with a naturally occurring mutation that shortens the tail
 

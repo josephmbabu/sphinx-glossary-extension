@@ -34,6 +34,9 @@ Directives
 
 The `.. terminlogy::` directive requires at least one word and can have up to 15 words. See :ref:`moreWords` if you want a different number of words. 
 
+<<<<<<< HEAD
+If you setup the conf.py correctly, 
+=======
 If you setup the conf.py correctly, `.. terminology::` directive will place the term and defintion on your page.
 
 ::
@@ -78,3 +81,4 @@ Download
 
 
 
+>>>>>>> 39d6ea7588e752f7702956e5182abd11a2564b68

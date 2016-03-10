@@ -1,5 +1,10 @@
-from docutils import nodes
 import re
+from docutils import nodes
+from docutils.parsers.rst import Directive
+from sphinx.util.compat import make_admonition
+from sphinx.domains.std import StandardDomain
+from sphinx.domains import Index
+from sphinx.locale import _
 
 class definition(nodes.Admonition, nodes.Element):
     pass
@@ -7,21 +12,39 @@ class definition(nodes.Admonition, nodes.Element):
 class definitionlist(nodes.General, nodes.Element):
     pass
 
+class TerminologyIndex(Index):
+    """
+    Adds terminologies to the index
+    """
+    name = 'terminologyindex'
+    localname = 'Terminology Index'
+    shortname = 'terminologies'
+
+    def generate(self,  docnames=None):
+
+        collapse = False
+        content = []
+
+        for i in self.domain.data['objects']:
+            dirtype, name = i
+            print name
+            docname, anchor = self.domain.data['objects'][i]
+            #print docname
+            entries = [name, 0, docname, anchor, '','','']
+            letter = name[0]
+            content.append((letter, [entries]))
+        return (content, collapse)
+
 def visit_definition_node(self, node):
     self.visit_admonition(node)
 
 def depart_definition_node(self, node):
     self.depart_admonition(node)
 
-from docutils.parsers.rst import Directive
-
 class DefinitionlistDirective(Directive):
 
     def run(self):
         return [definitionlist('')]
-
-from sphinx.util.compat import make_admonition
-from sphinx.locale import _
 
 class DefinitionDirective(Directive):
 
@@ -144,7 +167,7 @@ def __insert_in_order(the_input, the_list):
         # for i in xrange(len(new_list)):
         #     print "\t",i,":",new_list[i]
 
-    print "Added: " + __get_title_from_definition_info(the_input[0].__str__())[0]
+    #print "Added: " + __get_title_from_definition_info(the_input[0].__str__())[0]
 
     return new_list
 
@@ -154,8 +177,10 @@ def __get_title_from_definition_info(info):
 
 
 def setup(app):
+    app.add_index_to_domain('std', TerminologyIndex)
+    StandardDomain.initial_data['labels']['terminologyindex'] = ('std-terminologyindex', '', 'Terminology Index')
+    StandardDomain.initial_data['anonlabels']['terminologyindex'] = ('std-terminologyindex', '')
     app.add_config_value('definition_include_definitions', False, 'html')
-
     app.add_node(definitionlist)
     app.add_node(definition,
                  html=(visit_definition_node, depart_definition_node),
@@ -168,5 +193,3 @@ def setup(app):
     app.connect('env-purge-doc', purge_definitions)
 
     return {'version': '0.1'}   # identifies the version of our extension
-
-
