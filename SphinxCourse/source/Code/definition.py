@@ -180,9 +180,17 @@ def setup(app):
     Todo:
         Fix it so that it adds definitions to the index domain using the our custom 'definition' directive
     """
+<<<<<<< HEAD
     app.add_index_to_domain('std', DefinitionIndex)
     StandardDomain.initial_data['labels']['definitionindex'] = ('std-definitionindex', '', 'Definition Index')
     StandardDomain.initial_data['anonlabels']['definitionindex'] = ('std-definitionindex', '')
+=======
+    app.add_object_type('definition', 'dir', 'single: %s; definition')
+    # app.add_index_to_domain('std', DefinitionIndex)
+    # StandardDomain.initial_data['labels']['definitionindex'] = ('std-definitionindex', '', 'Definition Index')
+    # StandardDomain.initial_data['anonlabels']['definitionindex'] = ('std-definitionindex', '')
+    
+>>>>>>> ebd41036442a54a30c177359c5c2bc820eb19de1
     app.add_config_value('definition_include_definitions', False, 'html')
     app.add_node(definitionlist)
     app.add_node(definition,

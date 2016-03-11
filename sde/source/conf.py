@@ -127,9 +127,12 @@ definition_include_definitions = True
 #html_theme = 'alabaster'
 #I've had some trouble with TEN3, so am using sphinxdoc3 for now. It can be changed by someone later if they desire. 
 #html_theme = 'ten3' 
-#html_theme = 'sphinxdoc3'
-html_theme = 'sphinxdoc'
-#html_theme = 'classic'
+html_theme = 'sphinxdoc3'
+#html_theme = 'sphinxdoc'
+#html_theme = 'classic3'
+
+
+
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -141,11 +144,11 @@ html_theme = 'sphinxdoc'
 #}
 
 # Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = []
+html_theme_path = ['./styles']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = u'Sphinx Definition Extension'
+html_title = u'Sphinx Definition Extension (' + release + ')'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None

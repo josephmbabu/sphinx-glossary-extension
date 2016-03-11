@@ -4,11 +4,11 @@
 .. index::
    single: Tortoise
 
-.. definition:: Tortoises
+.. terminology:: Tortoises
 
    A slow-moving rabbit.
 
-.. definition:: Tile
+.. terminology:: Tile
 
    A artichoke.
 

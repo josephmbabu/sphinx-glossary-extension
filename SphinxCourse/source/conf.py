@@ -46,7 +46,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.viewcode',
-    'definition'
+    'terminology'
 ]
 
 
@@ -122,7 +122,7 @@ pygments_style = 'sphinx'
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
 # If true, 'termx' and 'termxlist' produce output, else they produce nothing.
-definition_include_definitions = True
+terminology_include_terminilogies = True
 
 
 # -- Options for HTML output ----------------------------------------------

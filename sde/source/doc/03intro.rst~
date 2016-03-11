@@ -4,18 +4,22 @@
 Introduction
 **************************
 
+<<<<<<< HEAD
 .. definition:: Python
    
    A high-level object oriented programming language.
 
 The definition extension allows you to define "terms" that show up in the document and also make a list of all the "terms" in the document. We quote "terms" because you can define multiple word terms and statements. For example, if you wanted to define the idiom "pushing up daisies", then you can put that as the term and then give the definition. So we are extending the idea of just a term glossary to definitions of anything. 
+=======
+The definition extension allows you to define "terms" that show up in the document and also make an alphabetic list of all the "terms" in the document. We quote "terms" because you can define multiple word terms and statements. For example, if you wanted to define the idiom "pushing up daisies", then you can put that as the term and then give the definition. We are extending the idea of just a term glossary to definitions of anything. 
+>>>>>>> ebd41036442a54a30c177359c5c2bc820eb19de1
 
 This documenation assumes you are familiar with using Sphinx. 
 
 Sphinx Definition Extension is similar to the glossary directive. Differences include:
 
-* definition extension has a directive to list all the terms
-* definition extension requires the use of the `.. definition::` directive for each term. That is, our extension does not support defining multiple terms with the same definition as the glossary does.
+* definition extension has a directive to list all the terms in alphabetic order
+* definition extension requires the use of the `.. definition::` directive for each term. That is, our extension does not support defining multiple terms with the same definition as the glossary directive does.
 * definition extension does not enter the term in the general index.
 
 Because we are defining more than just terms, we are not automatically including indexing but are recommending using the `.. index::` directive. For example idiom example we might use::
@@ -76,6 +80,7 @@ The alphabetic list of the terms follow:
 
 .. definitionlist::
 
+You can change the statement between each term by changing the  :ref:`defHyperlink`.
 
 .. _download:
 
@@ -85,5 +90,6 @@ Download
 
 * Code and documentation: `here <https://work.ten3.org/ten3/attach/TEN3.Materials.Public/sde.zip>`_. 
 * Code only: Click :download:`here <../code/definition.py>` then use file > save and name it ``definition.py``.
+
 
 
