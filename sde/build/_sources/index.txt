@@ -1,6 +1,6 @@
 .. _sde:
 
-Sphinx Definition Extension
+Sphinx Definition Extension (|release|)
 =========================================
 
 Contents:
@@ -17,6 +17,5 @@ Indices and tables
 
 * :ref:`genindex`
 * :ref:`search`
-
 
 

@@ -17,7 +17,7 @@ To use this extension, you need to:
 Place definition.py
 ============================
 
-If you downloaded `the documentation and code <https://work.ten3.org/ten3/attach/TEN3.Materials.Public/sde.zip>`_, you can unzip it and read this documentation on your system. You will find the definition.py in /build/downloads/ folder. 
+If you downloaded `the documentation and code <https://work.ten3.org/ten3/attach/TEN3.Materials.Public/sde.zip>`_, you can unzip it and read this documentation on your system. You will find the definition.py in /build/_downloads/ folder. 
 
 Otherwise you saved definition.py using the method under :ref:`download`. 
 
@@ -27,13 +27,11 @@ You now need to decide where you want to place the definition.py script on your 
 * in a directory that you want to reference for multiple Sphinx projects
 * with the Sphinx software or another location you know is already in system path
 
-For this Sphinx site, we have placed definition in our code and have included it in the site so you can look at the code and comments. This is shown in our conf.py. 
+For this Sphinx site, we have placed definition in our code directory and have included it in the site so you can look at the code and comments. 
 
 
 Edit conf.py
 =======================
-
-If you downloaded our
 
 You need to make three changes to conf.py:
 
@@ -103,10 +101,12 @@ Optional changes
 .. index:: 
    pair: hyperlink; change
 
+.. _defHyperlink:
+
 Definition list hyperlink
 ======================================
 
-You can change the appearance of the hyperlink. In definition.py the ``process_definition_nodes()`` function has ``description`` string. You can change the string to how what you desire for the hyperlink that takes you back to where the term was defined. 
+You can change the appearance of the hyperlink between the terms that are given via `.. definitionlist::`. In definition.py the ``process_definition_nodes()`` function has ``description`` string. You can change the string to how what you desire for the hyperlink that takes you back to where the term was defined. 
 
 
 .. index::
@@ -122,6 +122,7 @@ The extension ships with the number of words in the term being a maximum of 15. 
    optional_arguments = 14
 
 Then change the 14 to the number you desire. Remember, the count starts at 0, hence setting to 14 gives you up to 15 words in the term.
+
 
 
 
