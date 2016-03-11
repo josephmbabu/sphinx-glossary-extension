@@ -41,7 +41,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.viewcode',
-    'termx'
+    'terminology'
 ]
 
 
@@ -62,7 +62,7 @@ master_doc = 'index'
 # General information about the project.
 project = u'Sphinx Terminlogy Extension'
 copyright = u'2016, TEN3'
-author = u'Marc Bohler, Joseph Mbaba, Anthony Petrillo'
+author = u'Marc Bohler, Joseph Mbabu, Anthony Petrillo'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -116,8 +116,8 @@ pygments_style = 'sphinx'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
-# If true, 'termx' and 'termxlist' produce output, else they produce nothing.
-termx_include_termxs = True
+# If true, 'definition' and 'definitionlist' produce output, else they produce nothing.
+definition_include_definitions = True
 
 
 # -- Options for HTML output ----------------------------------------------
@@ -127,9 +127,12 @@ termx_include_termxs = True
 #html_theme = 'alabaster'
 #I've had some trouble with TEN3, so am using sphinxdoc3 for now. It can be changed by someone later if they desire. 
 #html_theme = 'ten3' 
-#html_theme = 'sphinxdoc3'
-html_theme = 'sphinxdoc'
-#html_theme = 'classic'
+html_theme = 'sphinxdoc3'
+#html_theme = 'sphinxdoc'
+#html_theme = 'classic3'
+
+
+
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -141,11 +144,11 @@ html_theme = 'sphinxdoc'
 #}
 
 # Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = []
+html_theme_path = ['./styles']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = u'Sphinx Terminology Extension'
+html_title = u'Sphinx Definition Extension (' + release + ')'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -227,7 +230,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'SphinxTerminologyExtensiondoc'
+htmlhelp_basename = 'SphinxDefinitionExtensiondoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -249,7 +252,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'SphinxTerminologyExtension.tex', u'Sphinx Terminology Extension',
+  (master_doc, 'SphinxDefinitionExtension.tex', u'Sphinx Definition Extension',
    u'TEN3', 'manual'),
 ]
 
@@ -279,7 +282,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'sphinxterminologyextension', u'Sphinx Terminology Extension',
+    (master_doc, 'sphinxdefinitionextension', u'Sphinx Definition Extension',
      [author], 1)
 ]
 
@@ -293,8 +296,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'SphinxTerminologyExtension', u'Sphinx Terminology Extension',
-   author, 'SphinxTerminologyExtension', 'Give term and definition (like glossary) and list all the terms.',
+  (master_doc, 'SphinxDefinitionExtension', u'Sphinx Definition Extension',
+   author, 'SphinxDefinitionExtension', 'Give term and definition (like glossary) and list all the terms.',
    'Sphinx Extension'),
 ]
 

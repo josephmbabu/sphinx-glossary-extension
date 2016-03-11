@@ -1,8 +1,0 @@
-.. comment: We keep this in one file and include them so we can change them for the entire site in one place.
-
-.. |pencil| image:: ../images/Pencil.png
-          :align: middle
-          :alt: Try It
-          :width: 38 px
-
-
