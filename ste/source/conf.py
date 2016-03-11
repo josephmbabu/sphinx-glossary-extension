@@ -117,7 +117,7 @@ pygments_style = 'sphinx'
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
 # If true, 'definition' and 'definitionlist' produce output, else they produce nothing.
-definition_include_definitions = True
+terminology_include_terminologies = True
 
 
 # -- Options for HTML output ----------------------------------------------

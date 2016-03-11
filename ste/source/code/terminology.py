@@ -42,10 +42,10 @@ class TerminologyDirective(Directive):
                              self.content, self.lineno, self.content_offset,
                              self.block_text, self.state, self.state_machine)
 
-        # terminology_all_terminologies must be set to True in config.py
-        if not hasattr(env, 'terminology_all_terminologies'):
-            env.terminology_all_terminologies = []
-        env.terminology_all_terminologies.append({
+        # terminology_all_terminologys must be set to True in config.py
+        if not hasattr(env, 'terminology_all_terminologys'):
+            env.terminology_all_terminologys = []
+        env.terminology_all_terminologys.append({
             'docname': env.docname,
             'lineno': self.lineno,
             'terminology': ad[0].deepcopy(),
@@ -54,31 +54,32 @@ class TerminologyDirective(Directive):
 
         return [targetnode] + ad
 
-def purge_terminologies(app, env, docname):
-    if not hasattr(env, 'terminology_all_terminologies'):
+def purge_terminologys(app, env, docname):
+    if not hasattr(env, 'terminology_all_terminologys'):
         return
-    env.terminology_all_terminologies = [terminology for terminology in env.terminology_all_terminologies
+    env.terminology_all_terminologys = [terminology for terminology in env.terminology_all_terminologys
                           if terminology['docname'] != docname]
+
 def process_terminology_nodes(app, doctree, fromdocname):
-    if not app.config.terminology_include_terminologies:
+    if not app.config.terminology_include_terminologys:
         for node in doctree.traverse(terminology):
             node.parent.remove(node)
 
-    # Replace all terminologylist nodes with a list of the collected terminologies.
+    # Replace all terminologylist nodes with a list of the collected terminologys.
     # Augment each terminology with a backlink to the original location.
     env = app.builder.env
 
     for node in doctree.traverse(terminologylist):
-        if not app.config.terminology_include_terminologies:
+        if not app.config.terminology_include_terminologys:
             node.replace_self([])
             continue
 
-        # The array to store all the terminologies accross the site
+        # The array to store all the terminologys accross the site
         # Structure: [term_info_1, term_reference_1, term_info_2, term_reference_2, ... term_info_n, term_reference_n]
         content = []
 
         # Loop through each terminology in the site environment
-        for terminology_info in env.terminology_all_terminologies:
+        for terminology_info in env.terminology_all_terminologys:
             para = nodes.paragraph()
             filename = env.doc2path(terminology_info['docname'], base=None)
             description = (
@@ -131,7 +132,7 @@ def __get_title_from_terminology_info(info):
 
 def setup(app):
     app.add_object_type('terminology', 'dir', 'single: %s; terminology')
-    app.add_config_value('terminology_include_terminologies', False, 'html')
+    app.add_config_value('terminology_include_terminologys', False, 'html')
     app.add_node(terminologylist)
     app.add_node(terminology,
                  html=(visit_terminology_node, depart_terminology_node),
@@ -141,6 +142,6 @@ def setup(app):
     app.add_directive('terminology', TerminologyDirective)
     app.add_directive('terminologylist', TerminologylistDirective)
     app.connect('doctree-resolved', process_terminology_nodes)
-    app.connect('env-purge-doc', purge_terminologies)
+    app.connect('env-purge-doc', purge_terminologys)
 
     return {'version': '0.1'}   # identifies the version of our extension
