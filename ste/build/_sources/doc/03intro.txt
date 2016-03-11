@@ -76,11 +76,19 @@ Four terms follow:
 
    A pome
 
+<<<<<<< HEAD
 **The alphabetic list of the terms follow:**
 
 .. terminologylist::
 
 You can change the statement between each term in the list by changing the  :ref:`defHyperlink`.
+=======
+The alphabetic list of the terms follow:
+
+.. terminologylist::
+
+You can change the statement between each term by changing the  :ref:`defHyperlink`.
+>>>>>>> cec7c09aa0ba5f6aff85135a33e219cd43d6f520
 
 .. _download:
 

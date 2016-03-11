@@ -152,7 +152,7 @@ def setup(app):
     Todo:
         Fix it so that it adds terminologies to the index domain using the our custom 'terminology' directive
     """
-    app.add_object_type('terminology', 'dir', 'single: %s; terminology')
+    #app.add_object_type('terminology', 'dir', 'single: %s; terminology')
     
     app.add_config_value('terminology_include_terminologies', False, 'html')
     app.add_node(terminologylist)
