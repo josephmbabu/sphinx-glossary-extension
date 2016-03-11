@@ -35,7 +35,8 @@ You now need to decide where you want to place the terminology.py script on your
 
 For this Sphinx site, we have placed terminology in our code and have included it in the site so you can look at the code and comments. This is shown in our conf.py. 
 
-
+.. index::
+   triple: example; Term A; B Term
 
 Edit conf.py
 =======================
@@ -47,6 +48,9 @@ You need to make three changes to conf.py:
 * set the path to terminology.py
 * add to extension list
 * set include to true
+
+.. index::
+   : conf.py; path; extension
 
 Set the path
 --------------------
@@ -64,6 +68,8 @@ You can also give the full path in quotes, such as::
    sys.path.insert(0,"/home/user/ste/source/code")
 
 
+.. index::
+   : conf.py; list; extension
 
 Extension list
 --------------------
@@ -90,6 +96,8 @@ Locate terminology.py
 
 You probably will not be using the same extensions as our example. The point is to add terminology to the end of the list.
 
+.. index::
+   : conf.py; include; extension
 
 Set include
 --------------------
@@ -111,6 +119,9 @@ Edit conf.py
 Optional changes
 **********************
 
+.. index:: 
+   pair: hyperlink; change
+
 Terminology list hyperlink
 ======================================
 
@@ -121,6 +132,9 @@ You can change the appearance of the hyperlink at ... ~~~
 You can change the appearance of the hyperlink. In terminology.py the ``process_termx_nodes()`` function has ``description`` string. You can change the string to how what you desire for the hyperlink that takes you back to where the term was defined. 
 >>>>>>> d36a7ff6e978b6d2760f63e7e5eea6e8c65ef75a
 
+
+.. index::
+   triple: word; count; term
 
 .. _moreWords:
 

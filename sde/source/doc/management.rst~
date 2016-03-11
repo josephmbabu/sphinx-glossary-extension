@@ -1,0 +1,25 @@
+.. _Management:
+
+**************************
+Management
+**************************
+
+This page is how to management the updating of this extension. 
+
+If you make changes to this extension, be sure to:
+
+* Update this documentation.
+* Place a new version of sde.zip (the build directory zipped) and place it in source/zipped directory. 
+
+.. todo::
+   Find out how to place the current version of the extension on this page. 
+
+***************************
+Updates Desired
+***************************
+
+* We would like to add to the extension the ability to add the terms to the general index such as the way the `.. glossary::` directive does. Hence, the user would not need to remember to use the `.. index::` directive. 
+* A different way to do downloads so the sde.zip is not part of the download. In other words, we are giving them two copies of the documentation and extension with the current method.
+
+
+

@@ -1,0 +1,85 @@
+.. _Introduction:
+
+**************************
+Introduction
+**************************
+
+The definition extension allows you to define "terms" that show up in the document and also make a list of all the "terms" in the document. We quote "terms" because you can define multiple word terms and statements. For example, if you wanted to define the idiom "pushing up daisies", then you can put that as the term and then give the definition. So we are extending the idea of just a term glossary to definitions of anything. 
+
+This documenation assumes you are familiar with using Sphinx. 
+
+Sphinx Definition Extension is similar to the glossary directive. Differences include:
+
+* definition extension has a directive to list all the terms
+* definition extension requires the use of the `.. definition::` directive for each term. That is, our extension does not support defining multiple terms with the same definition as the glossary does.
+* definition extension does not enter the term in the general index.
+
+Because we are defining more than just terms, we are not automatically including indexing but are recommending using the `.. index::` directive. For example idiom example we might use::
+
+   .. index::
+      triple : idiom; pushing up daisies; dead
+
+This extension is a modification of the example given on http://www.sphinx-doc.org/en/stable/extdev/tutorial.html. 
+
+.. index::
+   pair: directive; definition
+   pair: directive; definitionlist
+
+*****************************
+Directives
+*****************************
+
+::
+
+   .. definition:: term to define
+
+      The definition goes here.
+
+.. warning::
+
+   There needs to be a blank between the directive (and term) and the defintion.
+
+The `.. definition::` directive requires at least one word and can have up to 15 words. See :ref:`moreWords` if you want a different number of words in the term. 
+
+If you setup the conf.py correctly, `.. definition::` directive will place the term and defintion on your page.
+
+::
+
+   .. definitionlist::
+
+The `.. definitionlist::` directive is used to place a sorted list of the terms anywhere in your documentation. For example, you might make a glossary page and include the `.. definitionlist::` directive to get a sorted list of all the terms you have defined.
+
+.. index::
+   single: example
+
+
+*****************************
+Examples
+*****************************
+
+Two terms follow:
+
+.. definition:: Term A
+
+   Definition of term A
+
+
+.. definition:: B term
+
+   Definition of term B
+
+The alphabetic list of the terms follow:
+
+.. definitionlist::
+
+
+.. _download:
+
+*****************************
+Download
+*****************************
+
+* Code and documentation: `here <https://work.ten3.org/ten3/attach/TEN3.Materials.Public/sde.zip>`_. 
+* Code only: Click :download:`here <../code/definition.py>` then use file > save and name it ``definition.py``.
+
+

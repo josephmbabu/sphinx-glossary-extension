@@ -30,7 +30,6 @@ You now need to decide where you want to place the terminology.py script on your
 For this Sphinx site, we have placed terminology in our code and have included it in the site so you can look at the code and comments. This is shown in our conf.py. 
 
 
-
 Edit conf.py
 =======================
 

@@ -121,6 +121,33 @@
 </dd></dl>
 
 <dl class="class">
+<dt id="definition.DefinitionIndex">
+<em class="property">class </em><code class="descclassname">definition.</code><code class="descname">DefinitionIndex</code><span class="sig-paren">(</span><em>domain</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/definition.html#DefinitionIndex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#definition.DefinitionIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="/Users/Marc/Documents/SphinxCodeathon/SphinxTest/sphinx-glossary-extension/Sphinx1.3.3.Doc/build/extdev/domainapi.html#sphinx.domains.Index" title="(in Sphinx v1.3.3)"><code class="xref py py-class docutils literal"><span class="pre">sphinx.domains.Index</span></code></a></p>
+<p>Adds terminologies to the index</p>
+<dl class="method">
+<dt id="definition.DefinitionIndex.generate">
+<code class="descname">generate</code><span class="sig-paren">(</span><em>docnames=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/definition.html#DefinitionIndex.generate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#definition.DefinitionIndex.generate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="definition.DefinitionIndex.localname">
+<code class="descname">localname</code><em class="property"> = 'Definition Index'</em><a class="headerlink" href="#definition.DefinitionIndex.localname" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="definition.DefinitionIndex.name">
+<code class="descname">name</code><em class="property"> = 'definitionindex'</em><a class="headerlink" href="#definition.DefinitionIndex.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="definition.DefinitionIndex.shortname">
+<code class="descname">shortname</code><em class="property"> = 'definitions'</em><a class="headerlink" href="#definition.DefinitionIndex.shortname" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="definition.DefinitionlistDirective">
 <em class="property">class </em><code class="descclassname">definition.</code><code class="descname">DefinitionlistDirective</code><span class="sig-paren">(</span><em>name</em>, <em>arguments</em>, <em>options</em>, <em>content</em>, <em>lineno</em>, <em>content_offset</em>, <em>block_text</em>, <em>state</em>, <em>state_machine</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/definition.html#DefinitionlistDirective"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#definition.DefinitionlistDirective" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="/Users/Marc/Documents/SphinxCodeathon/SphinxTest/sphinx-glossary-extension/Sphinx1.3.3.Doc/build/extdev/markupapi.html#docutils.parsers.rst.Directive" title="(in Sphinx v1.3.3)"><code class="xref py py-class docutils literal"><span class="pre">docutils.parsers.rst.Directive</span></code></a></p>
@@ -161,7 +188,11 @@
 <dl class="function">
 <dt id="definition.setup">
 <code class="descclassname">definition.</code><code class="descname">setup</code><span class="sig-paren">(</span><em>app</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/definition.html#setup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#definition.setup" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><dl class="docutils">
+<dt>Todo:<div class="admonition">
+Fix it so that it adds definitions to the index domain using the our custom &#8216;definition&#8217; directive</div>
+</dl>
+</dd></dl>
 
 <dl class="function">
 <dt id="definition.visit_definition_node">

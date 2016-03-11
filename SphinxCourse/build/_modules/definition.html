@@ -67,11 +67,12 @@
           <div class="body" role="main">
             
   <h1>Source code for definition</h1><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">docutils</span> <span class="kn">import</span> <span class="n">nodes</span>
+<span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">docutils</span> <span class="kn">import</span> <span class="n">nodes</span>
 <span class="kn">from</span> <span class="nn">docutils.parsers.rst</span> <span class="kn">import</span> <span class="n">Directive</span>
 <span class="kn">from</span> <span class="nn">sphinx.util.compat</span> <span class="kn">import</span> <span class="n">make_admonition</span>
-<span class="kn">from</span> <span class="nn">sphinx.addnodes</span> <span class="kn">import</span> <span class="n">index</span>
-<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">sphinx.domains.std</span> <span class="kn">import</span> <span class="n">StandardDomain</span>
+<span class="kn">from</span> <span class="nn">sphinx.domains</span> <span class="kn">import</span> <span class="n">Index</span>
 <span class="kn">from</span> <span class="nn">sphinx.locale</span> <span class="kn">import</span> <span class="n">_</span>
 
 <div class="viewcode-block" id="definition"><a class="viewcode-back" href="../coderst/definition.html#definition.definition">[docs]</a><span class="k">class</span> <span class="nc">definition</span><span class="p">(</span><span class="n">nodes</span><span class="o">.</span><span class="n">Admonition</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Element</span><span class="p">):</span>
@@ -79,6 +80,29 @@
 
 <div class="viewcode-block" id="definitionlist"><a class="viewcode-back" href="../coderst/definition.html#definition.definitionlist">[docs]</a><span class="k">class</span> <span class="nc">definitionlist</span><span class="p">(</span><span class="n">nodes</span><span class="o">.</span><span class="n">General</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Element</span><span class="p">):</span>
     <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="DefinitionIndex"><a class="viewcode-back" href="../coderst/definition.html#definition.DefinitionIndex">[docs]</a><span class="k">class</span> <span class="nc">DefinitionIndex</span><span class="p">(</span><span class="n">Index</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Adds terminologies to the index</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;definitionindex&#39;</span>
+    <span class="n">localname</span> <span class="o">=</span> <span class="s1">&#39;Definition Index&#39;</span>
+    <span class="n">shortname</span> <span class="o">=</span> <span class="s1">&#39;definitions&#39;</span>
+
+<div class="viewcode-block" id="DefinitionIndex.generate"><a class="viewcode-back" href="../coderst/definition.html#definition.DefinitionIndex.generate">[docs]</a>    <span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>  <span class="n">docnames</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+
+        <span class="n">collapse</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">domain</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;objects&#39;</span><span class="p">]:</span>
+            <span class="n">dirtype</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="n">i</span>
+            <span class="k">print</span> <span class="n">name</span>
+            <span class="n">docname</span><span class="p">,</span> <span class="n">anchor</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">domain</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;objects&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+            <span class="c1">#print docname</span>
+            <span class="n">entries</span> <span class="o">=</span> <span class="p">[</span><span class="n">name</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">docname</span><span class="p">,</span> <span class="n">anchor</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">]</span>
+            <span class="n">letter</span> <span class="o">=</span> <span class="n">name</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">content</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">letter</span><span class="p">,</span> <span class="p">[</span><span class="n">entries</span><span class="p">]))</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">collapse</span><span class="p">)</span></div></div>
 
 <div class="viewcode-block" id="visit_definition_node"><a class="viewcode-back" href="../coderst/definition.html#definition.visit_definition_node">[docs]</a><span class="k">def</span> <span class="nf">visit_definition_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">visit_admonition</span><span class="p">(</span><span class="n">node</span><span class="p">)</span></div>
@@ -212,7 +236,7 @@
         <span class="c1"># for i in xrange(len(new_list)):</span>
         <span class="c1">#     print &quot;\t&quot;,i,&quot;:&quot;,new_list[i]</span>
 
-    <span class="k">print</span> <span class="s2">&quot;Added: &quot;</span> <span class="o">+</span> <span class="n">__get_title_from_definition_info</span><span class="p">(</span><span class="n">the_input</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">__str__</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="c1">#print &quot;Added: &quot; + __get_title_from_definition_info(the_input[0].__str__())[0]</span>
 
     <span class="k">return</span> <span class="n">new_list</span>
 
@@ -222,8 +246,14 @@
 
 
 <div class="viewcode-block" id="setup"><a class="viewcode-back" href="../coderst/definition.html#definition.setup">[docs]</a><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Todo:</span>
+<span class="sd">        Fix it so that it adds definitions to the index domain using the our custom &#39;definition&#39; directive</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#app.add_index_to_domain(&#39;std&#39;, DefinitionIndex)</span>
+    <span class="c1">#StandardDomain.initial_data[&#39;labels&#39;][&#39;definitionindex&#39;] = (&#39;std-definitionindex&#39;, &#39;&#39;, &#39;Definition Index&#39;)</span>
+    <span class="c1">#StandardDomain.initial_data[&#39;anonlabels&#39;][&#39;definitionindex&#39;] = (&#39;std-definitionindex&#39;, &#39;&#39;)</span>
     <span class="n">app</span><span class="o">.</span><span class="n">add_config_value</span><span class="p">(</span><span class="s1">&#39;definition_include_definitions&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="s1">&#39;html&#39;</span><span class="p">)</span>
-
     <span class="n">app</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">definitionlist</span><span class="p">)</span>
     <span class="n">app</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">definition</span><span class="p">,</span>
                  <span class="n">html</span><span class="o">=</span><span class="p">(</span><span class="n">visit_definition_node</span><span class="p">,</span> <span class="n">depart_definition_node</span><span class="p">),</span>
@@ -236,8 +266,6 @@
     <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;env-purge-doc&#39;</span><span class="p">,</span> <span class="n">purge_definitions</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;0.1&#39;</span><span class="p">}</span>   <span class="c1"># identifies the version of our extension</span></div>
-
-
 </pre></div>
 
           </div>
