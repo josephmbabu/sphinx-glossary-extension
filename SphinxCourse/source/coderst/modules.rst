@@ -7,4 +7,5 @@ Code
    definition
    hello
    moduleExample
+   terminology
    termx
