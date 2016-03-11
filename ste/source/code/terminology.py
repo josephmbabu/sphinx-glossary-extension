@@ -59,6 +59,7 @@ def purge_terminologies(app, env, docname):
         return
     env.terminology_all_terminologies = [terminology for terminology in env.terminology_all_terminologies
                           if terminology['docname'] != docname]
+
 def process_terminology_nodes(app, doctree, fromdocname):
     if not app.config.terminology_include_terminologies:
         for node in doctree.traverse(terminology):
@@ -102,7 +103,16 @@ def process_terminology_nodes(app, doctree, fromdocname):
 
             # Add the input to the terminologylist in order
             content = __insert_in_order(input_list, content)
+
+            # Insert into the terminologylist
+            # content.append(terminology_info['terminology'])
+            # content.append(para)
             
+        # for item2 in content:
+        #     title = __get_title_from_terminology_info(item2.__str__())
+        #     if len(title) > 0:
+        #         print title[0]
+
         node.replace_self(content)
 
 # Insert a terminology into a terminologylist in order
@@ -117,20 +127,33 @@ def __insert_in_order(the_input, the_list):
             if item_title > input_title:
                 # Insert our entry into content
                 new_list = the_list[:item] + the_input +  the_list[item:]
+                # print input_title,"is less than",item_title,"so:"
+                # for i in xrange(len(new_list)):
+                #     print "\t",i,":",new_list[i]
                 is_inserted = True
                 break
 
     if not is_inserted:
         new_list = the_list
         new_list += the_input
+        # print "End of list, so:"
+        # for i in xrange(len(new_list)):
+        #     print "\t",i,":",new_list[i]
+
     return new_list
 
 # Search the title of the terminology object
 def __get_title_from_terminology_info(info):
     return re.findall('(?<=<title>)(.*?)(?=<\/title>)', info)
 
+
 def setup(app):
+    """
+    Todo:
+        Fix it so that it adds terminologies to the index domain using the our custom 'terminology' directive
+    """
     app.add_object_type('terminology', 'dir', 'single: %s; terminology')
+    
     app.add_config_value('terminology_include_terminologies', False, 'html')
     app.add_node(terminologylist)
     app.add_node(terminology,
