@@ -67,7 +67,7 @@
           <div class="body" role="main">
             
   <h1>Source code for terminology</h1><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">from</span> <span class="nn">docutils</span> <span class="kn">import</span> <span class="n">nodes</span>
 <span class="kn">from</span> <span class="nn">docutils.parsers.rst</span> <span class="kn">import</span> <span class="n">Directive</span>
 <span class="kn">from</span> <span class="nn">sphinx.util.compat</span> <span class="kn">import</span> <span class="n">make_admonition</span>
@@ -90,14 +90,14 @@
 <div class="viewcode-block" id="TerminologylistDirective"><a class="viewcode-back" href="../coderst/terminology.html#terminology.TerminologylistDirective">[docs]</a><span class="k">class</span> <span class="nc">TerminologylistDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
 
 <div class="viewcode-block" id="TerminologylistDirective.run"><a class="viewcode-back" href="../coderst/terminology.html#terminology.TerminologylistDirective.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="p">[</span><span class="n">terminologylist</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)]</span></div></div>
+        <span class="k">return</span> <span class="p">[</span><span class="n">terminologylist</span><span class="p">(</span><span class="s">&#39;&#39;</span><span class="p">)]</span></div></div>
 
 <div class="viewcode-block" id="TerminologyDirective"><a class="viewcode-back" href="../coderst/terminology.html#terminology.TerminologyDirective">[docs]</a><span class="k">class</span> <span class="nc">TerminologyDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
 
-    <span class="c1"># this enables content in the directive</span>
+    <span class="c"># this enables content in the directive</span>
     <span class="n">has_content</span> <span class="o">=</span> <span class="bp">True</span>
 
-    <span class="c1"># Allows 15 directive arguments max, requires 1</span>
+    <span class="c"># Allows 15 directive arguments max, requires 1</span>
     <span class="n">required_arguments</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="n">optional_arguments</span> <span class="o">=</span> <span class="mi">14</span>
     <span class="n">final_argument_whitespace</span> <span class="o">=</span> <span class="bp">False</span>
@@ -105,37 +105,37 @@
 <div class="viewcode-block" id="TerminologyDirective.run"><a class="viewcode-back" href="../coderst/terminology.html#terminology.TerminologyDirective.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">env</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">document</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">env</span>
 
-        <span class="n">targetid</span> <span class="o">=</span> <span class="s2">&quot;terminology-</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">env</span><span class="o">.</span><span class="n">new_serialno</span><span class="p">(</span><span class="s1">&#39;terminology&#39;</span><span class="p">)</span>
-        <span class="n">targetnode</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">target</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="n">targetid</span><span class="p">])</span>
-        <span class="n">ad</span> <span class="o">=</span> <span class="n">make_admonition</span><span class="p">(</span><span class="n">terminology</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="p">[</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">arguments</span><span class="p">))],</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span>
+        <span class="n">targetid</span> <span class="o">=</span> <span class="s">&quot;terminology-</span><span class="si">%d</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">env</span><span class="o">.</span><span class="n">new_serialno</span><span class="p">(</span><span class="s">&#39;terminology&#39;</span><span class="p">)</span>
+        <span class="n">targetnode</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">target</span><span class="p">(</span><span class="s">&#39;&#39;</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="n">targetid</span><span class="p">])</span>
+        <span class="n">ad</span> <span class="o">=</span> <span class="n">make_admonition</span><span class="p">(</span><span class="n">terminology</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="p">[</span><span class="n">_</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">arguments</span><span class="p">))],</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span>
                              <span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lineno</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_offset</span><span class="p">,</span>
                              <span class="bp">self</span><span class="o">.</span><span class="n">block_text</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">state_machine</span><span class="p">)</span>
 
-        <span class="c1"># terminology_all_terminologies must be set to True in config.py</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="s1">&#39;terminology_all_terminologies&#39;</span><span class="p">):</span>
+        <span class="c"># terminology_all_terminologies must be set to True in config.py</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="s">&#39;terminology_all_terminologies&#39;</span><span class="p">):</span>
             <span class="n">env</span><span class="o">.</span><span class="n">terminology_all_terminologies</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">env</span><span class="o">.</span><span class="n">terminology_all_terminologies</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-            <span class="s1">&#39;docname&#39;</span><span class="p">:</span> <span class="n">env</span><span class="o">.</span><span class="n">docname</span><span class="p">,</span>
-            <span class="s1">&#39;lineno&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">lineno</span><span class="p">,</span>
-            <span class="s1">&#39;terminology&#39;</span><span class="p">:</span> <span class="n">ad</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(),</span>
-            <span class="s1">&#39;target&#39;</span><span class="p">:</span> <span class="n">targetnode</span><span class="p">,</span>
+            <span class="s">&#39;docname&#39;</span><span class="p">:</span> <span class="n">env</span><span class="o">.</span><span class="n">docname</span><span class="p">,</span>
+            <span class="s">&#39;lineno&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">lineno</span><span class="p">,</span>
+            <span class="s">&#39;terminology&#39;</span><span class="p">:</span> <span class="n">ad</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(),</span>
+            <span class="s">&#39;target&#39;</span><span class="p">:</span> <span class="n">targetnode</span><span class="p">,</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="p">[</span><span class="n">targetnode</span><span class="p">]</span> <span class="o">+</span> <span class="n">ad</span></div></div>
 
 <div class="viewcode-block" id="purge_terminologies"><a class="viewcode-back" href="../coderst/terminology.html#terminology.purge_terminologies">[docs]</a><span class="k">def</span> <span class="nf">purge_terminologies</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">env</span><span class="p">,</span> <span class="n">docname</span><span class="p">):</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="s1">&#39;terminology_all_terminologies&#39;</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="s">&#39;terminology_all_terminologies&#39;</span><span class="p">):</span>
         <span class="k">return</span>
     <span class="n">env</span><span class="o">.</span><span class="n">terminology_all_terminologies</span> <span class="o">=</span> <span class="p">[</span><span class="n">terminology</span> <span class="k">for</span> <span class="n">terminology</span> <span class="ow">in</span> <span class="n">env</span><span class="o">.</span><span class="n">terminology_all_terminologies</span>
-                          <span class="k">if</span> <span class="n">terminology</span><span class="p">[</span><span class="s1">&#39;docname&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">docname</span><span class="p">]</span></div>
+                          <span class="k">if</span> <span class="n">terminology</span><span class="p">[</span><span class="s">&#39;docname&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">docname</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="process_terminology_nodes"><a class="viewcode-back" href="../coderst/terminology.html#terminology.process_terminology_nodes">[docs]</a><span class="k">def</span> <span class="nf">process_terminology_nodes</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">doctree</span><span class="p">,</span> <span class="n">fromdocname</span><span class="p">):</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">terminology_include_terminologies</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">doctree</span><span class="o">.</span><span class="n">traverse</span><span class="p">(</span><span class="n">terminology</span><span class="p">):</span>
             <span class="n">node</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
 
-    <span class="c1"># Replace all terminologylist nodes with a list of the collected terminologies.</span>
-    <span class="c1"># Augment each terminology with a backlink to the original location.</span>
+    <span class="c"># Replace all terminologylist nodes with a list of the collected terminologies.</span>
+    <span class="c"># Augment each terminology with a backlink to the original location.</span>
     <span class="n">env</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">env</span>
 
     <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">doctree</span><span class="o">.</span><span class="n">traverse</span><span class="p">(</span><span class="n">terminologylist</span><span class="p">):</span>
@@ -143,77 +143,77 @@
             <span class="n">node</span><span class="o">.</span><span class="n">replace_self</span><span class="p">([])</span>
             <span class="k">continue</span>
 
-        <span class="c1"># The array to store all the terminologies accross the site</span>
-        <span class="c1"># Structure: [term_info_1, term_reference_1, term_info_2, term_reference_2, ... term_info_n, term_reference_n]</span>
+        <span class="c"># The array to store all the terminologies accross the site</span>
+        <span class="c"># Structure: [term_info_1, term_reference_1, term_info_2, term_reference_2, ... term_info_n, term_reference_n]</span>
         <span class="n">content</span> <span class="o">=</span> <span class="p">[]</span>
 
-        <span class="c1"># Loop through each terminology in the site environment</span>
+        <span class="c"># Loop through each terminology in the site environment</span>
         <span class="k">for</span> <span class="n">terminology_info</span> <span class="ow">in</span> <span class="n">env</span><span class="o">.</span><span class="n">terminology_all_terminologies</span><span class="p">:</span>
             <span class="n">para</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">paragraph</span><span class="p">()</span>
-            <span class="n">filename</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">doc2path</span><span class="p">(</span><span class="n">terminology_info</span><span class="p">[</span><span class="s1">&#39;docname&#39;</span><span class="p">],</span> <span class="n">base</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+            <span class="n">filename</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">doc2path</span><span class="p">(</span><span class="n">terminology_info</span><span class="p">[</span><span class="s">&#39;docname&#39;</span><span class="p">],</span> <span class="n">base</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
             <span class="n">description</span> <span class="o">=</span> <span class="p">(</span>
-                <span class="n">_</span><span class="p">(</span><span class="s1">&#39;(The original entry is located in </span><span class="si">%s</span><span class="s1">, line </span><span class="si">%d</span><span class="s1"> and can be found &#39;</span><span class="p">)</span> <span class="o">%</span>
-                <span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">terminology_info</span><span class="p">[</span><span class="s1">&#39;lineno&#39;</span><span class="p">]))</span>
+                <span class="n">_</span><span class="p">(</span><span class="s">&#39;(The original entry is located in </span><span class="si">%s</span><span class="s">, line </span><span class="si">%d</span><span class="s"> and can be found &#39;</span><span class="p">)</span> <span class="o">%</span>
+                <span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">terminology_info</span><span class="p">[</span><span class="s">&#39;lineno&#39;</span><span class="p">]))</span>
             <span class="n">para</span> <span class="o">+=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="n">description</span><span class="p">,</span> <span class="n">description</span><span class="p">)</span>
 
-            <span class="c1"># Create a reference</span>
-            <span class="n">newnode</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">reference</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
-            <span class="n">innernode</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">emphasis</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s1">&#39;here&#39;</span><span class="p">),</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;here&#39;</span><span class="p">))</span>
-            <span class="n">newnode</span><span class="p">[</span><span class="s1">&#39;refdocname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">terminology_info</span><span class="p">[</span><span class="s1">&#39;docname&#39;</span><span class="p">]</span>
-            <span class="n">newnode</span><span class="p">[</span><span class="s1">&#39;refuri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">get_relative_uri</span><span class="p">(</span>
-                <span class="n">fromdocname</span><span class="p">,</span> <span class="n">terminology_info</span><span class="p">[</span><span class="s1">&#39;docname&#39;</span><span class="p">])</span>
-            <span class="n">newnode</span><span class="p">[</span><span class="s1">&#39;refuri&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="n">terminology_info</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">][</span><span class="s1">&#39;refid&#39;</span><span class="p">]</span>
+            <span class="c"># Create a reference</span>
+            <span class="n">newnode</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">reference</span><span class="p">(</span><span class="s">&#39;&#39;</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">)</span>
+            <span class="n">innernode</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">emphasis</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s">&#39;here&#39;</span><span class="p">),</span> <span class="n">_</span><span class="p">(</span><span class="s">&#39;here&#39;</span><span class="p">))</span>
+            <span class="n">newnode</span><span class="p">[</span><span class="s">&#39;refdocname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">terminology_info</span><span class="p">[</span><span class="s">&#39;docname&#39;</span><span class="p">]</span>
+            <span class="n">newnode</span><span class="p">[</span><span class="s">&#39;refuri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">get_relative_uri</span><span class="p">(</span>
+                <span class="n">fromdocname</span><span class="p">,</span> <span class="n">terminology_info</span><span class="p">[</span><span class="s">&#39;docname&#39;</span><span class="p">])</span>
+            <span class="n">newnode</span><span class="p">[</span><span class="s">&#39;refuri&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="s">&#39;#&#39;</span> <span class="o">+</span> <span class="n">terminology_info</span><span class="p">[</span><span class="s">&#39;target&#39;</span><span class="p">][</span><span class="s">&#39;refid&#39;</span><span class="p">]</span>
             <span class="n">newnode</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">innernode</span><span class="p">)</span>
             <span class="n">para</span> <span class="o">+=</span> <span class="n">newnode</span>
-            <span class="n">para</span> <span class="o">+=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s1">&#39;.)&#39;</span><span class="p">,</span> <span class="s1">&#39;.)&#39;</span><span class="p">)</span>
+            <span class="n">para</span> <span class="o">+=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s">&#39;.)&#39;</span><span class="p">,</span> <span class="s">&#39;.)&#39;</span><span class="p">)</span>
 
-            <span class="c1"># The data to enter into the terminologylist array</span>
-            <span class="n">input_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">terminology_info</span><span class="p">[</span><span class="s1">&#39;terminology&#39;</span><span class="p">],</span> <span class="n">para</span><span class="p">]</span>
+            <span class="c"># The data to enter into the terminologylist array</span>
+            <span class="n">input_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">terminology_info</span><span class="p">[</span><span class="s">&#39;terminology&#39;</span><span class="p">],</span> <span class="n">para</span><span class="p">]</span>
 
-            <span class="c1"># Add the input to the terminologylist in order</span>
+            <span class="c"># Add the input to the terminologylist in order</span>
             <span class="n">content</span> <span class="o">=</span> <span class="n">__insert_in_order</span><span class="p">(</span><span class="n">input_list</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span>
 
-            <span class="c1"># Insert into the terminologylist</span>
-            <span class="c1"># content.append(terminology_info[&#39;terminology&#39;])</span>
-            <span class="c1"># content.append(para)</span>
+            <span class="c"># Insert into the terminologylist</span>
+            <span class="c"># content.append(terminology_info[&#39;terminology&#39;])</span>
+            <span class="c"># content.append(para)</span>
             
-        <span class="c1"># for item2 in content:</span>
-        <span class="c1">#     title = __get_title_from_terminology_info(item2.__str__())</span>
-        <span class="c1">#     if len(title) &gt; 0:</span>
-        <span class="c1">#         print title[0]</span>
+        <span class="c"># for item2 in content:</span>
+        <span class="c">#     title = __get_title_from_terminology_info(item2.__str__())</span>
+        <span class="c">#     if len(title) &gt; 0:</span>
+        <span class="c">#         print title[0]</span>
 
         <span class="n">node</span><span class="o">.</span><span class="n">replace_self</span><span class="p">(</span><span class="n">content</span><span class="p">)</span></div>
 
-<span class="c1"># Insert a terminology into a terminologylist in order</span>
+<span class="c"># Insert a terminology into a terminologylist in order</span>
 <span class="k">def</span> <span class="nf">__insert_in_order</span><span class="p">(</span><span class="n">the_input</span><span class="p">,</span> <span class="n">the_list</span><span class="p">):</span>
     <span class="n">new_list</span> <span class="o">=</span><span class="p">[]</span>
     <span class="n">is_inserted</span> <span class="o">=</span> <span class="bp">False</span>
 
     <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">the_list</span><span class="p">)):</span>
-        <span class="k">if</span> <span class="n">the_list</span><span class="p">[</span><span class="n">item</span><span class="p">]</span><span class="o">.</span><span class="n">__str__</span><span class="p">()</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;&lt;terminology&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">the_list</span><span class="p">[</span><span class="n">item</span><span class="p">]</span><span class="o">.</span><span class="n">__str__</span><span class="p">()</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&#39;&lt;terminology&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
             <span class="n">input_title</span> <span class="o">=</span> <span class="n">__get_title_from_terminology_info</span><span class="p">(</span><span class="n">the_input</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">__str__</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
             <span class="n">item_title</span> <span class="o">=</span> <span class="n">__get_title_from_terminology_info</span><span class="p">(</span><span class="n">the_list</span><span class="p">[</span><span class="n">item</span><span class="p">]</span><span class="o">.</span><span class="n">__str__</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
             <span class="k">if</span> <span class="n">item_title</span> <span class="o">&gt;</span> <span class="n">input_title</span><span class="p">:</span>
-                <span class="c1"># Insert our entry into content</span>
+                <span class="c"># Insert our entry into content</span>
                 <span class="n">new_list</span> <span class="o">=</span> <span class="n">the_list</span><span class="p">[:</span><span class="n">item</span><span class="p">]</span> <span class="o">+</span> <span class="n">the_input</span> <span class="o">+</span>  <span class="n">the_list</span><span class="p">[</span><span class="n">item</span><span class="p">:]</span>
-                <span class="c1"># print input_title,&quot;is less than&quot;,item_title,&quot;so:&quot;</span>
-                <span class="c1"># for i in xrange(len(new_list)):</span>
-                <span class="c1">#     print &quot;\t&quot;,i,&quot;:&quot;,new_list[i]</span>
+                <span class="c"># print input_title,&quot;is less than&quot;,item_title,&quot;so:&quot;</span>
+                <span class="c"># for i in xrange(len(new_list)):</span>
+                <span class="c">#     print &quot;\t&quot;,i,&quot;:&quot;,new_list[i]</span>
                 <span class="n">is_inserted</span> <span class="o">=</span> <span class="bp">True</span>
                 <span class="k">break</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">is_inserted</span><span class="p">:</span>
         <span class="n">new_list</span> <span class="o">=</span> <span class="n">the_list</span>
         <span class="n">new_list</span> <span class="o">+=</span> <span class="n">the_input</span>
-        <span class="c1"># print &quot;End of list, so:&quot;</span>
-        <span class="c1"># for i in xrange(len(new_list)):</span>
-        <span class="c1">#     print &quot;\t&quot;,i,&quot;:&quot;,new_list[i]</span>
+        <span class="c"># print &quot;End of list, so:&quot;</span>
+        <span class="c"># for i in xrange(len(new_list)):</span>
+        <span class="c">#     print &quot;\t&quot;,i,&quot;:&quot;,new_list[i]</span>
 
     <span class="k">return</span> <span class="n">new_list</span>
 
-<span class="c1"># Search the title of the terminology object</span>
+<span class="c"># Search the title of the terminology object</span>
 <span class="k">def</span> <span class="nf">__get_title_from_terminology_info</span><span class="p">(</span><span class="n">info</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;(?&lt;=&lt;title&gt;)(.*?)(?=&lt;\/title&gt;)&#39;</span><span class="p">,</span> <span class="n">info</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">&#39;(?&lt;=&lt;title&gt;)(.*?)(?=&lt;\/title&gt;)&#39;</span><span class="p">,</span> <span class="n">info</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="setup"><a class="viewcode-back" href="../coderst/terminology.html#terminology.setup">[docs]</a><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
@@ -221,21 +221,21 @@
 <span class="sd">    Todo:</span>
 <span class="sd">        Fix it so that it adds terminologies to the index domain using the our custom &#39;terminology&#39; directive</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_object_type</span><span class="p">(</span><span class="s1">&#39;terminology&#39;</span><span class="p">,</span> <span class="s1">&#39;dir&#39;</span><span class="p">,</span> <span class="s1">&#39;single: </span><span class="si">%s</span><span class="s1">; terminology&#39;</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_object_type</span><span class="p">(</span><span class="s">&#39;terminology&#39;</span><span class="p">,</span> <span class="s">&#39;dir&#39;</span><span class="p">,</span> <span class="s">&#39;single: </span><span class="si">%s</span><span class="s">; terminology&#39;</span><span class="p">)</span>
     
-    <span class="n">app</span><span class="o">.</span><span class="n">add_config_value</span><span class="p">(</span><span class="s1">&#39;terminology_include_terminologies&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="s1">&#39;html&#39;</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_config_value</span><span class="p">(</span><span class="s">&#39;terminology_include_terminologies&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="s">&#39;html&#39;</span><span class="p">)</span>
     <span class="n">app</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">terminologylist</span><span class="p">)</span>
     <span class="n">app</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">terminology</span><span class="p">,</span>
                  <span class="n">html</span><span class="o">=</span><span class="p">(</span><span class="n">visit_terminology_node</span><span class="p">,</span> <span class="n">depart_terminology_node</span><span class="p">),</span>
                  <span class="n">latex</span><span class="o">=</span><span class="p">(</span><span class="n">visit_terminology_node</span><span class="p">,</span> <span class="n">depart_terminology_node</span><span class="p">),</span>
                  <span class="n">text</span><span class="o">=</span><span class="p">(</span><span class="n">visit_terminology_node</span><span class="p">,</span> <span class="n">depart_terminology_node</span><span class="p">))</span>
 
-    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s1">&#39;terminology&#39;</span><span class="p">,</span> <span class="n">TerminologyDirective</span><span class="p">)</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s1">&#39;terminologylist&#39;</span><span class="p">,</span> <span class="n">TerminologylistDirective</span><span class="p">)</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;doctree-resolved&#39;</span><span class="p">,</span> <span class="n">process_terminology_nodes</span><span class="p">)</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;env-purge-doc&#39;</span><span class="p">,</span> <span class="n">purge_terminologies</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s">&#39;terminology&#39;</span><span class="p">,</span> <span class="n">TerminologyDirective</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s">&#39;terminologylist&#39;</span><span class="p">,</span> <span class="n">TerminologylistDirective</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;doctree-resolved&#39;</span><span class="p">,</span> <span class="n">process_terminology_nodes</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;env-purge-doc&#39;</span><span class="p">,</span> <span class="n">purge_terminologies</span><span class="p">)</span>
 
-    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;0.1&#39;</span><span class="p">}</span>   <span class="c1"># identifies the version of our extension</span></div>
+    <span class="k">return</span> <span class="p">{</span><span class="s">&#39;version&#39;</span><span class="p">:</span> <span class="s">&#39;0.1&#39;</span><span class="p">}</span>   <span class="c"># identifies the version of our extension</span></div>
 </pre></div>
 
           </div>
@@ -258,7 +258,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2016, TEN3.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.3.
     </div>
   </body>
 </html>

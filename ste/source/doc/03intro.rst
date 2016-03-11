@@ -49,6 +49,10 @@ If you setup the conf.py correctly, `.. terminology::` directive will place the 
 
 The `.. terminologylist::` directive is used to place a sorted list of the terms anywhere in your documentation. For example, you might make a glossary page and include the `.. terminologylist::` directive to get a sorted list of all the terms you have defined.
 
+.. note::
+
+   A terminologylist is only updated if the page on which you use the directive is rebuilt. Hence, if you want to make sure your site is up to date, it is best to delete the build and build and completely new site from the source.
+
 .. index::
    single: example
 
@@ -57,7 +61,7 @@ The `.. terminologylist::` directive is used to place a sorted list of the terms
 Examples
 *****************************
 
-Two terms follow:
+Four terms follow:
 
 .. terminology:: Term A
 
@@ -76,11 +80,11 @@ Two terms follow:
 
    A pome
 
+**The alphabetic list of the terms follow:**
+
 .. terminologylist::
 
-The alphabetic list of the terms follow:
-
-You can change the statement between each term by changing the  :ref:`defHyperlink`.
+You can change the statement between each term in the list by changing the  :ref:`defHyperlink`.
 
 .. _download:
 

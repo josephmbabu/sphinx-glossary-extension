@@ -57,7 +57,7 @@ The `.. terminologylist::` directive is used to place a sorted list of the terms
 Examples
 *****************************
 
-Two terms follow:
+Four terms follow:
 
 .. terminology:: Term A
 
@@ -76,11 +76,11 @@ Two terms follow:
 
    A pome
 
+**The alphabetic list of the terms follow:**
+
 .. terminologylist::
 
-The alphabetic list of the terms follow:
-
-You can change the statement between each term by changing the  :ref:`defHyperlink`.
+You can change the statement between each term in the list by changing the  :ref:`defHyperlink`.
 
 .. _download:
 

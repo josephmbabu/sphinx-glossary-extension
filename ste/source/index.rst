@@ -1,7 +1,7 @@
-.. _sde:
+.. _ste:
 
-Sphinx Definition Extension (|release|)
-=========================================
+Sphinx Terminology Extension DOggy (|release|)
+====================================================
 
 Contents:
 

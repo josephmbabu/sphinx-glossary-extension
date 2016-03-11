@@ -4,15 +4,7 @@
 Introduction
 **************************
 
-<<<<<<< HEAD
-.. definition:: Python
-   
-   A high-level object oriented programming language.
-
-The definition extension allows you to define "terms" that show up in the document and also make a list of all the "terms" in the document. We quote "terms" because you can define multiple word terms and statements. For example, if you wanted to define the idiom "pushing up daisies", then you can put that as the term and then give the definition. So we are extending the idea of just a term glossary to definitions of anything. 
-=======
 The definition extension allows you to define "terms" that show up in the document and also make an alphabetic list of all the "terms" in the document. We quote "terms" because you can define multiple word terms and statements. For example, if you wanted to define the idiom "pushing up daisies", then you can put that as the term and then give the definition. We are extending the idea of just a term glossary to definitions of anything. 
->>>>>>> ebd41036442a54a30c177359c5c2bc820eb19de1
 
 This documenation assumes you are familiar with using Sphinx. 
 
@@ -39,7 +31,7 @@ Directives
 
 ::
 
-   .. definition:: term to define
+   .. terminology:: term to define
 
       The definition goes here.
 
@@ -47,15 +39,19 @@ Directives
 
    There needs to be a blank between the directive (and term) and the defintion.
 
-The `.. definition::` directive requires at least one word and can have up to 15 words. See :ref:`moreWords` if you want a different number of words in the term. 
+The `.. terminology::` directive requires at least one word and can have up to 15 words. See :ref:`moreWords` if you want a different number of words in the term. 
 
-If you setup the conf.py correctly, `.. definition::` directive will place the term and defintion on your page.
+If you setup the conf.py correctly, `.. terminology::` directive will place the term and defintion on your page.
 
 ::
 
-   .. definitionlist::
+   .. terminologylist::
 
-The `.. definitionlist::` directive is used to place a sorted list of the terms anywhere in your documentation. For example, you might make a glossary page and include the `.. definitionlist::` directive to get a sorted list of all the terms you have defined.
+The `.. terminologylist::` directive is used to place a sorted list of the terms anywhere in your documentation. For example, you might make a glossary page and include the `.. terminologylist::` directive to get a sorted list of all the terms you have defined.
+
+.. note::
+
+   A terminologylist is only updated if the page on which you use the directive is rebuilt. Hence, if you want to make sure your site is up to date, it is best to delete the build and build and completely new site from the source.
 
 .. index::
    single: example
@@ -65,22 +61,30 @@ The `.. definitionlist::` directive is used to place a sorted list of the terms 
 Examples
 *****************************
 
-Two terms follow:
+Four terms follow:
 
-.. definition:: Term A
+.. terminology:: Term A
 
    Definition of term A
 
 
-.. definition:: B term
+.. terminology:: B term
 
    Definition of term B
 
-The alphabetic list of the terms follow:
+.. terminology:: Boy
 
-.. definitionlist::
+   The ancronym of girl
 
-You can change the statement between each term by changing the  :ref:`defHyperlink`.
+.. terminology:: Apple
+
+   A pome
+
+**The alphabetic list of the terms follow:**
+
+.. terminologylist::
+
+You can change the statement between each term in the list by changing the  :ref:`defHyperlink`.
 
 .. _download:
 
@@ -89,7 +93,8 @@ Download
 *****************************
 
 * Code and documentation: `here <https://work.ten3.org/ten3/attach/TEN3.Materials.Public/sde.zip>`_. 
-* Code only: Click :download:`here <../code/definition.py>` then use file > save and name it ``definition.py``.
+* Code only: Click :download:`here <../code/terminology.py>` then use file > save and name it ``terminology.py``.
+
 
 
 

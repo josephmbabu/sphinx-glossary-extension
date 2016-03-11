@@ -106,7 +106,7 @@
 <li>definition extension does not enter the term in the general index.</li>
 </ul>
 <p>Because we are defining more than just terms, we are not automatically including indexing but are recommending using the <cite>.. index::</cite> directive. For example idiom example we might use:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>.. index::
+<div class="highlight-python"><div class="highlight"><pre>.. index::
    triple : idiom; pushing up daisies; dead
 </pre></div>
 </div>
@@ -114,7 +114,7 @@
 </div>
 <div class="section" id="directives">
 <span id="index-0"></span><h1>Directives<a class="headerlink" href="#directives" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-python"><div class="highlight"><pre><span></span>.. terminology:: term to define
+<div class="highlight-python"><div class="highlight"><pre>.. terminology:: term to define
 
    The definition goes here.
 </pre></div>
@@ -125,14 +125,14 @@
 </div>
 <p>The <cite>.. terminology::</cite> directive requires at least one word and can have up to 15 words. See <a class="reference internal" href="07setup.html#morewords"><span>Changing number of words in the &#8220;term&#8221;</span></a> if you want a different number of words in the term.</p>
 <p>If you setup the conf.py correctly, <cite>.. terminology::</cite> directive will place the term and defintion on your page.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>.. terminologylist::
+<div class="highlight-python"><div class="highlight"><pre>.. terminologylist::
 </pre></div>
 </div>
 <p>The <cite>.. terminologylist::</cite> directive is used to place a sorted list of the terms anywhere in your documentation. For example, you might make a glossary page and include the <cite>.. terminologylist::</cite> directive to get a sorted list of all the terms you have defined.</p>
 </div>
 <div class="section" id="examples">
 <span id="index-1"></span><h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
-<p>Two terms follow:</p>
+<p>Four terms follow:</p>
 <dl class="terminology">
 <dt id="terminology-TermA">
 <code class="descname">Term A</code><a class="headerlink" href="#terminology-TermA" title="Permalink to this definition">¶</a></dt>
@@ -157,14 +157,14 @@
 <dd><p>A pome</p>
 </dd></dl>
 
-<p>The alphabetic list of the terms follow:</p>
-<p>You can change the statement between each term by changing the  <a class="reference internal" href="07setup.html#defhyperlink"><span>Definition list hyperlink</span></a>.</p>
+<p><strong>The alphabetic list of the terms follow:</strong></p>
+<p>You can change the statement between each term in the list by changing the  <a class="reference internal" href="07setup.html#defhyperlink"><span>Definition list hyperlink</span></a>.</p>
 </div>
 <div class="section" id="download">
 <span id="id2"></span><h1>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li>Code and documentation: <a class="reference external" href="https://work.ten3.org/ten3/attach/TEN3.Materials.Public/sde.zip">here</a>.</li>
-<li>Code only: Click <a class="reference download internal" href="../_downloads/terminology.py" download=""><code class="xref download docutils literal"><span class="pre">here</span></code></a> then use file &gt; save and name it <code class="docutils literal"><span class="pre">terminology.py</span></code>.</li>
+<li>Code only: Click <a class="reference download internal" href="../_downloads/terminology.py"><code class="xref download docutils literal"><span class="pre">here</span></code></a> then use file &gt; save and name it <code class="docutils literal"><span class="pre">terminology.py</span></code>.</li>
 </ul>
 </div>
 
@@ -195,7 +195,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2016, TEN3.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.3.
     </div>
   </body>
 </html>
