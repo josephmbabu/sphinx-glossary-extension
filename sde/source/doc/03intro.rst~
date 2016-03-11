@@ -4,6 +4,10 @@
 Introduction
 **************************
 
+.. definition:: Python
+   
+   A high-level object oriented programming language.
+
 The definition extension allows you to define "terms" that show up in the document and also make a list of all the "terms" in the document. We quote "terms" because you can define multiple word terms and statements. For example, if you wanted to define the idiom "pushing up daisies", then you can put that as the term and then give the definition. So we are extending the idea of just a term glossary to definitions of anything. 
 
 This documenation assumes you are familiar with using Sphinx. 

@@ -36,6 +36,9 @@
         <li class="right" >
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="../std-definitionindex.html" title="Definition Index"
+             >definitions</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Sphinx Course</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Module code</a> &raquo;</li> 
       </ul>
@@ -83,7 +86,7 @@
 
 <div class="viewcode-block" id="DefinitionIndex"><a class="viewcode-back" href="../coderst/definition.html#definition.DefinitionIndex">[docs]</a><span class="k">class</span> <span class="nc">DefinitionIndex</span><span class="p">(</span><span class="n">Index</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Adds terminologies to the index</span>
+<span class="sd">    Adds definitions to the index</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;definitionindex&#39;</span>
     <span class="n">localname</span> <span class="o">=</span> <span class="s1">&#39;Definition Index&#39;</span>
@@ -96,9 +99,7 @@
 
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">domain</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;objects&#39;</span><span class="p">]:</span>
             <span class="n">dirtype</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="n">i</span>
-            <span class="k">print</span> <span class="n">name</span>
             <span class="n">docname</span><span class="p">,</span> <span class="n">anchor</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">domain</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;objects&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
-            <span class="c1">#print docname</span>
             <span class="n">entries</span> <span class="o">=</span> <span class="p">[</span><span class="n">name</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">docname</span><span class="p">,</span> <span class="n">anchor</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">]</span>
             <span class="n">letter</span> <span class="o">=</span> <span class="n">name</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
             <span class="n">content</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">letter</span><span class="p">,</span> <span class="p">[</span><span class="n">entries</span><span class="p">]))</span>
@@ -246,13 +247,14 @@
 
 
 <div class="viewcode-block" id="setup"><a class="viewcode-back" href="../coderst/definition.html#definition.setup">[docs]</a><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+    <span class="k">print</span> <span class="n">app</span><span class="o">.</span><span class="n">add_object_type</span><span class="p">(</span><span class="s1">&#39;directive&#39;</span><span class="p">,</span> <span class="s1">&#39;dir&#39;</span><span class="p">,</span> <span class="s1">&#39;pair: </span><span class="si">%s</span><span class="s1">; directive&#39;</span><span class="p">)</span> 
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Todo:</span>
 <span class="sd">        Fix it so that it adds definitions to the index domain using the our custom &#39;definition&#39; directive</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1">#app.add_index_to_domain(&#39;std&#39;, DefinitionIndex)</span>
-    <span class="c1">#StandardDomain.initial_data[&#39;labels&#39;][&#39;definitionindex&#39;] = (&#39;std-definitionindex&#39;, &#39;&#39;, &#39;Definition Index&#39;)</span>
-    <span class="c1">#StandardDomain.initial_data[&#39;anonlabels&#39;][&#39;definitionindex&#39;] = (&#39;std-definitionindex&#39;, &#39;&#39;)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_index_to_domain</span><span class="p">(</span><span class="s1">&#39;std&#39;</span><span class="p">,</span> <span class="n">DefinitionIndex</span><span class="p">)</span>
+    <span class="n">StandardDomain</span><span class="o">.</span><span class="n">initial_data</span><span class="p">[</span><span class="s1">&#39;labels&#39;</span><span class="p">][</span><span class="s1">&#39;definitionindex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;std-definitionindex&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;Definition Index&#39;</span><span class="p">)</span>
+    <span class="n">StandardDomain</span><span class="o">.</span><span class="n">initial_data</span><span class="p">[</span><span class="s1">&#39;anonlabels&#39;</span><span class="p">][</span><span class="s1">&#39;definitionindex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;std-definitionindex&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
     <span class="n">app</span><span class="o">.</span><span class="n">add_config_value</span><span class="p">(</span><span class="s1">&#39;definition_include_definitions&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="s1">&#39;html&#39;</span><span class="p">)</span>
     <span class="n">app</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">definitionlist</span><span class="p">)</span>
     <span class="n">app</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">definition</span><span class="p">,</span>
@@ -282,6 +284,9 @@
         <li class="right" >
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="../std-definitionindex.html" title="Definition Index"
+             >definitions</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Sphinx Course</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >Module code</a> &raquo;</li> 
       </ul>

@@ -14,7 +14,7 @@ class definitionlist(nodes.General, nodes.Element):
 
 class DefinitionIndex(Index):
     """
-    Adds terminologies to the index
+    Adds definitions to the index
     """
     name = 'definitionindex'
     localname = 'Definition Index'
@@ -27,9 +27,7 @@ class DefinitionIndex(Index):
 
         for i in self.domain.data['objects']:
             dirtype, name = i
-            print name
             docname, anchor = self.domain.data['objects'][i]
-            #print docname
             entries = [name, 0, docname, anchor, '','','']
             letter = name[0]
             content.append((letter, [entries]))
@@ -177,13 +175,14 @@ def __get_title_from_definition_info(info):
 
 
 def setup(app):
+    print app.add_object_type('directive', 'dir', 'pair: %s; directive') 
     """
     Todo:
         Fix it so that it adds definitions to the index domain using the our custom 'definition' directive
     """
-    #app.add_index_to_domain('std', DefinitionIndex)
-    #StandardDomain.initial_data['labels']['definitionindex'] = ('std-definitionindex', '', 'Definition Index')
-    #StandardDomain.initial_data['anonlabels']['definitionindex'] = ('std-definitionindex', '')
+    app.add_index_to_domain('std', DefinitionIndex)
+    StandardDomain.initial_data['labels']['definitionindex'] = ('std-definitionindex', '', 'Definition Index')
+    StandardDomain.initial_data['anonlabels']['definitionindex'] = ('std-definitionindex', '')
     app.add_config_value('definition_include_definitions', False, 'html')
     app.add_node(definitionlist)
     app.add_node(definition,
