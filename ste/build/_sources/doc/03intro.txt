@@ -76,9 +76,9 @@ Two terms follow:
 
    A pome
 
-.. terminologylist::
-
 The alphabetic list of the terms follow:
+
+.. terminologylist::
 
 You can change the statement between each term by changing the  :ref:`defHyperlink`.
 
