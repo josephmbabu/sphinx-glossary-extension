@@ -115,7 +115,7 @@
 </ul>
 <div class="section" id="place-definition-py">
 <span id="index-0"></span><h2>Place definition.py<a class="headerlink" href="#place-definition-py" title="Permalink to this headline">¶</a></h2>
-<p>If you downloaded <a class="reference external" href="https://work.ten3.org/ten3/attach/TEN3.Materials.Public/sde.zip">the documentation and code</a>, you can unzip it and read this documentation on your system. You will find the definition.py in /build/downloads/ folder.</p>
+<p>If you downloaded <a class="reference external" href="https://work.ten3.org/ten3/attach/TEN3.Materials.Public/sde.zip">the documentation and code</a>, you can unzip it and read this documentation on your system. You will find the definition.py in /build/_downloads/ folder.</p>
 <p>Otherwise you saved definition.py using the method under <a class="reference internal" href="03intro.html#download"><span>Download</span></a>.</p>
 <p>You now need to decide where you want to place the definition.py script on your system so that it is found you do a build. For example:</p>
 <ul class="simple">
@@ -123,11 +123,10 @@
 <li>in a directory that you want to reference for multiple Sphinx projects</li>
 <li>with the Sphinx software or another location you know is already in system path</li>
 </ul>
-<p>For this Sphinx site, we have placed definition in our code and have included it in the site so you can look at the code and comments. This is shown in our conf.py.</p>
+<p>For this Sphinx site, we have placed definition in our code directory and have included it in the site so you can look at the code and comments.</p>
 </div>
 <div class="section" id="edit-conf-py">
 <h2>Edit conf.py<a class="headerlink" href="#edit-conf-py" title="Permalink to this headline">¶</a></h2>
-<p>If you downloaded our</p>
 <p>You need to make three changes to conf.py:</p>
 <ul class="simple">
 <li>set the path to definition.py</li>
@@ -175,8 +174,8 @@
 <div class="section" id="optional-changes">
 <h1>Optional changes<a class="headerlink" href="#optional-changes" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="definition-list-hyperlink">
-<span id="index-4"></span><h2>Definition list hyperlink<a class="headerlink" href="#definition-list-hyperlink" title="Permalink to this headline">¶</a></h2>
-<p>You can change the appearance of the hyperlink. In definition.py the <code class="docutils literal"><span class="pre">process_definition_nodes()</span></code> function has <code class="docutils literal"><span class="pre">description</span></code> string. You can change the string to how what you desire for the hyperlink that takes you back to where the term was defined.</p>
+<span id="defhyperlink"></span><span id="index-4"></span><h2>Definition list hyperlink<a class="headerlink" href="#definition-list-hyperlink" title="Permalink to this headline">¶</a></h2>
+<p>You can change the appearance of the hyperlink between the terms that are given via <cite>.. definitionlist::</cite>. In definition.py the <code class="docutils literal"><span class="pre">process_definition_nodes()</span></code> function has <code class="docutils literal"><span class="pre">description</span></code> string. You can change the string to how what you desire for the hyperlink that takes you back to where the term was defined.</p>
 </div>
 <div class="section" id="changing-number-of-words-in-the-term">
 <span id="morewords"></span><span id="index-5"></span><h2>Changing number of words in the &#8220;term&#8221;<a class="headerlink" href="#changing-number-of-words-in-the-term" title="Permalink to this headline">¶</a></h2>

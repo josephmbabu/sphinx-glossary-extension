@@ -19,38 +19,19 @@ If you make changes to this extension, be sure to:
 Rebulding Process
 =====================
 
-The downloadable zip ends up in the _download directory of the build directory we make. In other words, the site is contained in the site. To accomplish this you need to:
-
 * Make changes to the site.
-* Create an empty document and name it sde.zip, then store it in zipped directory overwriting the existing sde.zip. Hence, you have an sde.zip of file size 0. 
+* If this is a new release update the number in conf.py
 * delete the build directory. 
-* ``sphinx-build -b html source build`` to get a build directory that has an sde.zip of size 0 in the _download directory.
-* Compress the build directory naming it sde.zip. Place that in zipped directory overwirting the existing sde.zip. 
-* delete the build directory. 
-* ``sphinx-build -b html source build`` to get a build directory that has an sde.zip with the full site in the _download directory.
-* delete the build directory. 
-* ``sphinx-build -b html source build`` to get a build directory that has an sde.zip with the full site in the _download directory.
+* ``sphinx-build -b html source build`` to get a new build directory
+* Compress the build director and name it sde.zip
+* Upload the new version to TEN3 site pointed to in the 03intro.rst and the 07setup.rst files. 
 
-
-
-* We have a site that has a copy of itself in the _download folder so the user can download the full site including the code.
-* We make changes to the site, so we want to rebuild it and make that the new download. 
-* We replace zipped/sde.zip with an empty sde.zip file. (That is, we create a new file and name it sde.zip.)
-* We rebuild the site.
-* We then zip that new build directory (which has the empty sde.zip) and name it sde.zip then  store it in the zipped directory. 
-* We rebuild the site.
-* We then zip that new build directory (which has the the newest copy of the site in sde.zip) and name it sde.zip and store it in the zipped directory. 
-
-The result is that our site (build directory) has the newest version of the site both as the htlm and in the sde.zip which users can download. 
-
-The reason we include the step of an empty sde.zip is so we do not recursiviely keep adding versions of the exetention in the sde.zip. 
 
 
 ***************************
 Updates Desired
 ***************************
 
-* We may want to reconsider the zipping and downloading method.
 * We might want to add an option to have the term added to the general index automatically. This option would be able to be turned on our off so the user could decide what typing of indexing they want to use for the site they are building. For example, if they are using it as a basic glossary and they just want to add a list of the glossary terms, then they would turn automatic indexing on. 
 
 .. todo::

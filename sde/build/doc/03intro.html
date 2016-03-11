@@ -97,12 +97,12 @@
             
   <div class="section" id="introduction">
 <span id="id1"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>The definition extension allows you to define &#8220;terms&#8221; that show up in the document and also make a list of all the &#8220;terms&#8221; in the document. We quote &#8220;terms&#8221; because you can define multiple word terms and statements. For example, if you wanted to define the idiom &#8220;pushing up daisies&#8221;, then you can put that as the term and then give the definition. So we are extending the idea of just a term glossary to definitions of anything.</p>
+<p>The definition extension allows you to define &#8220;terms&#8221; that show up in the document and also make an alphabetic list of all the &#8220;terms&#8221; in the document. We quote &#8220;terms&#8221; because you can define multiple word terms and statements. For example, if you wanted to define the idiom &#8220;pushing up daisies&#8221;, then you can put that as the term and then give the definition. We are extending the idea of just a term glossary to definitions of anything.</p>
 <p>This documenation assumes you are familiar with using Sphinx.</p>
 <p>Sphinx Definition Extension is similar to the glossary directive. Differences include:</p>
 <ul class="simple">
-<li>definition extension has a directive to list all the terms</li>
-<li>definition extension requires the use of the <cite>.. definition::</cite> directive for each term. That is, our extension does not support defining multiple terms with the same definition as the glossary does.</li>
+<li>definition extension has a directive to list all the terms in alphabetic order</li>
+<li>definition extension requires the use of the <cite>.. definition::</cite> directive for each term. That is, our extension does not support defining multiple terms with the same definition as the glossary directive does.</li>
 <li>definition extension does not enter the term in the general index.</li>
 </ul>
 <p>Because we are defining more than just terms, we are not automatically including indexing but are recommending using the <cite>.. index::</cite> directive. For example idiom example we might use:</p>
@@ -152,6 +152,7 @@
 <p class="last">Definition of term A</p>
 </div>
 <p>(The original entry is located in doc/03intro.rst, line 62 and can be found <a class="reference external" href="#definition-0"><em>here</em></a>.)</p>
+<p>You can change the statement between each term by changing the  <a class="reference internal" href="07setup.html#defhyperlink"><span>Definition list hyperlink</span></a>.</p>
 </div>
 <div class="section" id="download">
 <span id="id2"></span><h1>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h1>

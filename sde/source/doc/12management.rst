@@ -32,7 +32,6 @@ Rebulding Process
 Updates Desired
 ***************************
 
-* We may want to reconsider the zipping and downloading method.
 * We might want to add an option to have the term added to the general index automatically. This option would be able to be turned on our off so the user could decide what typing of indexing they want to use for the site they are building. For example, if they are using it as a basic glossary and they just want to add a list of the glossary terms, then they would turn automatic indexing on. 
 
 .. todo::
