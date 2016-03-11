@@ -68,9 +68,17 @@ Two terms follow:
 
    Definition of term B
 
-The alphabetic list of the terms follow:
+.. terminology:: Boy
+
+   The ancronym of girl
+
+.. terminology:: Apple
+
+   A pome
 
 .. terminologylist::
+
+The alphabetic list of the terms follow:
 
 You can change the statement between each term by changing the  :ref:`defHyperlink`.
 
