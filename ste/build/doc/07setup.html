@@ -119,7 +119,6 @@
 <p>Otherwise you saved definition.py using the method under <a class="reference internal" href="03intro.html#download"><span>Download</span></a>.</p>
 <p>You now need to decide where you want to place the definition.py script on your system so that it is found you do a build. For example:</p>
 <ul class="simple">
-<li>in the same directory as the conf.py</li>
 <li>in a directory that you want to reference for multiple Sphinx projects</li>
 <li>with the Sphinx software or another location you know is already in system path</li>
 </ul>
@@ -164,8 +163,9 @@
 <div class="section" id="set-include">
 <span id="index-3"></span><h3>Set include<a class="headerlink" href="#set-include" title="Permalink to this headline">¶</a></h3>
 <p>Search <code class="docutils literal"><span class="pre">todo_inc</span></code>. Add these lines below that line:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># If true, &#39;definition&#39; and &#39;definitionlist&#39; produce output, else they produce nothing.</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># If these are true, &#39;definition&#39; and &#39;definitionlist&#39; produce output, else they produce nothing.</span>
 <span class="n">definition_include_definitions</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">definition_all_definitions</span> <span class="o">=</span> <span class="bp">True</span>
 </pre></div>
 </div>
 </div>

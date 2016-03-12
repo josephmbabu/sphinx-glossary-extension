@@ -23,7 +23,6 @@ Otherwise you saved definition.py using the method under :ref:`download`.
 
 You now need to decide where you want to place the definition.py script on your system so that it is found you do a build. For example:
 
-* in the same directory as the conf.py
 * in a directory that you want to reference for multiple Sphinx projects
 * with the Sphinx software or another location you know is already in system path
 
@@ -87,8 +86,9 @@ Set include
 
 Search ``todo_inc``. Add these lines below that line::
 
-   # If true, 'definition' and 'definitionlist' produce output, else they produce nothing.
+   # If these are true, 'definition' and 'definitionlist' produce output, else they produce nothing.
    definition_include_definitions = True
+   definition_all_definitions = True
 
 
 

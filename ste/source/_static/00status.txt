@@ -1,2 +1,0 @@
-If the _static folder does not exist, you get a warning. We included the folder and this file so the warning is not given and also so the folder is synced because empty folders are ignored with some zipping and some synching software. 
-
