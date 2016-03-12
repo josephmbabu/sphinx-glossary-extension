@@ -68,6 +68,14 @@ Two terms follow:
 
    Definition of term B
 
+.. terminology:: Boy
+
+   The ancronym of girl
+
+.. terminology:: Apple
+
+   A pome
+
 The alphabetic list of the terms follow:
 
 .. terminologylist::
